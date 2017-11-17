@@ -1,0 +1,49 @@
+[user]
+	name = Amy Bentley
+	email = leafybear@icloud.com
+[core]
+	excludesfile = $HOME/.gitignore_global
+	editor = vim
+[alias]
+	c = commit
+	s = status --short
+	b = branch
+	a = add -A
+	b = branch
+	d = diff --word-diff=color
+	dt = difftool
+	cb = checkout -b
+	co = checkout
+	m = mergetool -t opendiff
+	mlog = log --date=short --grep=Merge --format='%Cred%h %Cgreen%cr% %C(bold blue)%d %Creset%s%Creset'
+	author = shortlog -sn
+	f = grep --function-context
+	fc = diff HEAD^^ HEAD
+	pba = push -u bitbucket --all
+	pb = push -u bitbucket master
+	pga = push -u github --all
+	pg = push -u github master
+	r1 = log --author=Amy --since='yesterday' --until='now' --graph --format='%Cred%h %Creset%s%Creset'
+	l = log --author=Amy --date=short --graph --format='%Cred%h %Cgreen%cr |%C(bold blue)%d %Creset%s%Creset'
+	ll = log --author=Amy --date=short --since='yesterday' --until='now' --pretty=format:'%x23%x23 %s%n%b'
+[color]
+	ui = true
+	added = blue
+	changed = yellow
+	untracked = white ul
+[color "diff"]
+	meta = white bold
+	frag = magenta ul
+	old = red bold
+	new = green bold
+[commit]
+	template = $HOME/.gitmessage
+[branch]
+	autosetuprebase = always
+[mergetool]
+	keepBackup = false
+	prompt = false
+[difftool]
+	prompt = false
+[push]
+	default = simple

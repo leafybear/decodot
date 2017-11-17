@@ -1,0 +1,5 @@
+# amy's minimal
+
+PS1='%(!.%F{red}%m.%F{cyan}%m): %F{cyan}%~%f
+%(?.%F{green}.%F{red})%#%f '
+RPS1=''

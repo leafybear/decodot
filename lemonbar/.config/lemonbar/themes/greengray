@@ -1,0 +1,14 @@
+# colors, in the format "#<alpha><rr><gg><bb>"
+color_fg="#ffb5b6b5"    # bar foreground
+color_bg="#ff181c18"    # bar background
+color_ic="#ffcef318"    # icon color
+color_sep="#ff524d52"   # separator color
+# colors for workspaces
+color_01="#ffcef318"	  # focused & occupied
+color_02="#ffcef318"	  # focused & empty
+color_03="#ffcef318"	  # focused & urgent
+color_07="#ff404a40"	  # focused BG
+color_04="#ffb5b6b5"	  # unfocused & occupied
+color_05="#ff524d52"	  # unfocused & empty
+color_06="#ff427563"	  # unfocused & urgent
+color_08="#ff181c18"      # unfocused BG

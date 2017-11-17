@@ -1,0 +1,31 @@
+!!COLORS
+! Normal
+*cursorColor:                         #917154
+*colorUL:                             #CCE874
+*foreground:                          #EDDCD3
+*background:                          #181512
+
+! Black
+*color0:                              #33302C
+*color8:                              #4F4B47
+! Red
+*color1:                              #CC8996
+*color9:                              #E8A2B0
+! Green
+*color2:                              #BCCC89
+*color10:                             #D7E8A2
+! Yellow
+*color3:                              #CD9889
+*color11:                             #E8AEA2
+! Blue
+*color4:                              #9589CC
+*color12:                             #A2A8E8
+! Magenta
+*color5:                              #CC89B4
+*color13:                             #E8A2B9
+! Cyan
+*color6:                              #89CCAE
+*color14:                             #A2E8C6
+! White
+*color7:                              #CCC2B1
+*color15:                             #E8DFD1

@@ -1,0 +1,34 @@
+Amy's lemonbar setup based on:
+tb01110100's experimental bar setup
+
+## START
+Make a link from the bar you prefer to
+"bar". Minimal or Full
+
+## SETTINGS
+Change you fonts and color theme in the
+settings file.
+
+Can also change what icon/symbol/text
+precedes your data blocks in the bar.
+
+## COLOR THEMES
+Change the color theme in your settings file 
+to one from the themes/ folder
+
+## FONTS & SYMBOLS
+Copy the fontello font to $HOME/.fonts
+and run fc-cache -fv
+to update the font cache.
+
+Then use these letters for symbols
+in your bar:
+
+! audio
+" watch
+# disk
+$ computer
+) fire
+( music
++ beaker
+& calendar

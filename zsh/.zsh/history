@@ -1,0 +1,159 @@
+exit
+clear
+ls
+exit
+prompt -l
+prompt -p
+exit
+clear
+ls
+clear
+vim .zshenv
+ls
+ls -a
+mv .zshrc .zprofile .zcompdump .zsh
+ls
+ls -a
+exit
+ls .zshenv
+touch .zsh/.zshenv
+exit
+clear
+cp .bash/alias .zsh/alias
+vim .zsh/.zshrc
+clear
+ls
+whereis zsh
+chsh -s /usr/bin/zsh
+listmonofonts
+aur neofetch
+ls
+dropbox status
+df
+df
+sudo pacman -S python-pip
+python -c "import site; print(site.USER_BASE)"
+pip install --user instalooter
+vim .i3/config
+vim .config/compton.conf
+ls
+vim .config/compton.conf
+cp .config/compton-pretty .config/compton.conf
+vim .config/compton.conf
+ls
+clear
+ls
+clear
+startx
+startx
+df
+lsblk
+gdisk /dev/sdb
+sudo gdisk /dev/sdb
+lsblk
+df
+poweroff
+lsblk
+sudo mount /dev/sdb2 /mnt/sys
+sudo mount /dev/sdb1 /mnt/sys/boot
+cd /mnt/sys
+ls
+cd
+arch-chroot /mnt /bin/bash
+sudo arch-chroot /mnt /bin/bash
+lsblk
+sudo arch-chroot /mnt/sys /bin/bash
+rm /mnt/sys/etc/fstab
+sudo rm /mnt/sys/etc/fstab
+sudo genfstab -U -p /mnt/sys >> /mnt/sys/etc/fstab
+su
+sudo genfstab -U -p /mnt/sys >> /mnt/sys/etc/fstab
+su root
+sudo passwd root
+su root
+sudo passwd -l root
+poweroff
+lsblk
+gdisk /dev/sdb
+sudo gdisk /dev/sdb
+sudo passwd root
+su root
+sudo umount /dev/sdb2
+cd
+sudo umount /dev/sdb1
+sudo umount /dev/sdb2
+poweroff
+ls
+lsblk
+lsblk
+lsblk
+dd if=/dev/sdb of=/dev/sdc bs=64K conv=noerror,sync status=progress
+sudo dd if=/dev/sdb of=/dev/sdc bs=64K conv=noerror,sync status=progress
+clear
+ls
+parted /dev/sdc
+sudo pacman -S parted
+parted /dev/sdc
+sudo parted /dev/sdc
+sudo parted /dev/sdc
+sudo gdisk /dev/sdc
+sudo resize2fs /dev/sdc2
+sudo e2fsck -f /dev/sdc2
+sudo resize2fs /dev/sdc2
+df
+lsblk
+poweroff
+ls
+dropbox start
+clear
+dropbox staus
+dropbox status
+ip addr
+ping -c1 google.com
+ip addr
+dropbox start
+startx
+ranger
+dropbox status
+dropbox status
+dropbox
+dropbox autostart
+dropbox autostart y
+dropbox
+dropbox ls
+cd Dropbox
+dropbox ls
+dropbox start
+ls
+lsblk
+sudo dd if=/dev/sdb of=/dev/sdc bs=64K conv=noerror,sync status=progress
+sudo parted /dev/sdc
+lsblk
+sudo mount /dev/sdc2 /mnt/sys
+sudo mount /dev/sdc1 /mnt/sys/boot
+sudo arch-chroot /mnt/sys /bin/bash
+clear
+lsblk
+sudo mount /dev/sda2 /mnt/sys
+sudo mount /dev/sda1 /mnt/sys/boot
+sudo umount /mnt/boot
+sudo umount /mnt/sys/boot
+sudo umount /mnt/sys/
+sudo resize2fs /dev/sda2
+sudo e2fsck -f /dev/sda2
+sudo resize2fs /dev/sda2
+reboot
+ip addr
+sudo systemctl disable netctl-ifplugd@eth0.service
+vim .xinitrc
+sudo pacman -S xorg-xsetroot
+vim .xinitrc
+systemctl --user enable mpd
+vim .xinitrc
+dropbox start
+startx
+ls
+clear
+df
+dropbox status
+df

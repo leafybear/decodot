@@ -1,0 +1,23 @@
+background        no
+out_to_console    yes
+out_to_x          no
+update_interval   2
+total_run_times   0
+short_units       yes
+pad_percents      3
+
+override_utf8_locale yes
+
+default_color   #665c54
+default_shade_color white
+default_outline_color   white
+
+use_xft yes
+xftfont Luculent:size=13
+uppercase   no
+
+TEXT
+
+[{ "full_text" : " ${time %I:%M %P} ", "color":"\#c79765" },
+  { "full_text" : "  ${wireless_essid wlp2s0} - ${addr wlp2s0} ", "color":"\#92c276" },
+ { "full_text" : " [$battery_bar] ", "color":"\#b96ba8" }],

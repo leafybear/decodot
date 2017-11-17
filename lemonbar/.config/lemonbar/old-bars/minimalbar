@@ -1,0 +1,138 @@
+#!/bin/bash
+# Amy's lemonbar setup based on:
+# tb01110100's experimental bar setup
+
+if test ! -e $HOME/.config/lemonbar/settings; then
+    printf "$HOME/.config/lemonbar/settings does not exist, please create it\n" >&2
+    exit 1
+fi
+
+source $HOME/.config/lemonbar/settings
+
+BAR_FIFO=/tmp/bar-fifo  # you should probably just leave this alone
+
+modules() {
+  # BSPWM STATS
+  bspc control --subscribe > "$BAR_FIFO" &
+
+  # DATE & TIME
+  while true; do
+    date +"c${i_time} %l:%M %P"
+    sleep 1
+  done > "$BAR_FIFO" &
+
+  # DISK USAGE
+  while true; do
+	echo "d${i_disk}  $(df | grep "$mydisk" | awk '{print $5}')"
+	sleep 60
+  done > "$BAR_FIFO" &
+
+  # RAM USAGE
+  while true; do
+	  echo "r${i_mem} $(free | grep Mem | awk '{printf("%.f", $3/$2 * 100.0)}')%"
+	sleep 5
+  done > "$BAR_FIFO" &
+
+  # VOLUME (AMIXER)
+ while true; do
+   if [[ -z "$(amixer get $mysound | grep off)" ]]; then
+     echo "v${i_vol}  $(amixer get $mysound | tail -n 1 | awk '{print $4}' | tr -d '[]')"
+   else
+     echo "v${i_vol}  m"
+   fi
+   sleep .2
+ done > "$BAR_FIFO" &
+
+  
+  # CPU TEMPS (RASPBERRYPI FIRMWARE)
+  while true; do
+    core0=$(awk '{printf "%3.1f C\n", $1/1000}' /sys/class/thermal/thermal_zone0/temp)
+    echo "t${i_temp}  $core0"
+    sleep 1
+  done > "$BAR_FIFO" &
+
+
+}
+
+parse-module-output() {
+  while read -r line ; do
+    case $line in
+      #p*)
+        # set up mpd indicator
+      #  mpdinfo="${line#?}" ;;
+      #u*)
+        # set up update indicator
+      #  updates="${line#?}" ;;
+      #w*)
+      #  # set up weather
+      #  weather="${line#?}" ;;
+      t*)
+        # set up cpu temp indicator
+        cputemps="${line#?}" ;;
+      v*)
+        # set up volume indicator
+        volume="${line#?}" ;;
+      r*)
+        # set up mem indicator
+        mem="${line#?}" ;;
+      d*)
+        # set up rootfs indicator
+        rootfs="${line#?}" ;;
+      c*)
+        # set up clock
+        clock="${line#?}" ;;
+      W*)
+        # set up tags
+        wm_infos=""
+        IFS=':'
+        set -- ${line#?}
+        while [ $# -gt 0 ] ; do
+          item=$1
+          name=${item#?}
+          desk=" $name "
+          case $item in
+            O*)
+              # focused occupied desktop
+              wm_infos="$wm_infos%{F$color_01}%{B$color_07}%{A:bspc desktop -f $name:}$desk%{A}%{B$color_bg}" ;;
+            F*)
+              # focused empty desktop
+              wm_infos="$wm_infos%{F$color_02}%{B$color_07}%{A:bspc desktop -f $name:}$desk%{A}%{B$color_bg}" ;;
+            U*)
+              # focused urgent desktop
+              wm_infos="$wm_infos%{F$color_03}%{B$color_07}%{A:bspc desktop -f $name:}$desk%{A}%{B$color_bg}" ;;
+            o*)
+              # occupied desktop
+              wm_infos="$wm_infos%{F$color_04}%{B$color_08}%{A:bspc desktop -f $name:}$desk%{A}%{B$color_bg}" ;;
+            f*)
+              # free desktop
+              wm_infos="$wm_infos%{F$color_05}%{B$color_08}%{A:bspc desktop -f $name:}$desk%{A}%{B$color_bg}" ;;
+            u*)
+              # urgent desktop
+              wm_infos="$wm_infos%{F$color_06}%{B$color_08}%{A:bspc desktop -f $name:}$desk%{A}%{B$color_bg}" ;;
+            m*|M*)
+              # monitor seperator
+              wm_infos="$wm_infos%{F-}  " ;;
+          esac
+          shift
+        done ;;
+    esac
+    printf "%s\n" "%{l}$clock   $volume%{c}$wm_infos %{-o}%{F-}%{r}$cputemps   $mem   $rootfs   "
+  done
+}
+
+# prepare
+if [[ $(pgrep -cx bard) -gt 1 ]]; then
+  echo "bar-aint-recursive is already running" >&2
+  exit 1
+fi
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+[ -e "$BAR_FIFO" ] && rm "$BAR_FIFO"
+mkfifo "$BAR_FIFO"
+
+# run module commands
+modules &
+
+# pull it all together
+parse-module-output < "$BAR_FIFO" | lemonbar -p -u 2 -f "$fonts" -B "$color_bg" -F "$color_fg" -g "$geometry" | while read line; do eval "$line"; done &
+
+wait

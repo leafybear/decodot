@@ -1,0 +1,31 @@
+# AMY'S LEMONBAR SETTINGS
+# I'm breaking it into smaller pieces for more customisability
+
+source $HOME/.config/lemonbar/themes/greengray
+
+# FONTS: lemonbar will look for glyphs in these fonts and use the first font that contains the glyph it wants. so if you want to use something like FONTELLO for icons, put it first so it prioritizes over the second. unless you use a unicode version of lemonbar, you need to use an icon font.
+fonts="Fantasque Sans Mono-12"
+geometry="x30" # in the format "<width>x<height>+<xoffset>+<yoffset>"
+
+# labels for data being monitored. could be icons, symbols, text
+i_mpd="%{F$color_ic}music:%{F-}"
+i_vol="%{F$color_ic}vol:%{F-}"
+i_temp="%{F$color_ic}temp:%{F-}"
+i_mem="%{F$color_ic}mem:%{F-}"
+i_disk="%{F$color_ic}HD:%{F-}"
+i_pac="%{F$color_ic}updates:%{F-}"
+i_weather="%{F$color_ic}weather:%{F-}"
+i_date="%{F$color_ic}%{F-}"
+i_time="%{F$color_ic}%{F-}"
+
+st=""
+se=""
+ss=" %{F$color_sep}/%{F-} "
+
+# weather
+city="Sydney,AU"	  # city,country, country is the iso 3166 code
+units=c		  # weather temp units, f or c
+
+# mpd
+mpdport=6600            # port mpd is listening on
+  

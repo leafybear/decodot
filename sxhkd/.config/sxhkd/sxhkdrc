@@ -1,0 +1,104 @@
+# vim: set ft=sxhkdrc:
+#
+# bspwm hotkeys
+#
+
+# Quit BSPWM
+super + alt + Escape
+	bspc quit; pkill bar
+
+# Close a the window
+super + shift + q
+	bspc window -c
+
+# Toggle monocle
+super + t
+	bspc desktop -l next
+
+# Balance window tree
+super + b
+	bspc desktop -B
+
+# Float or fullscreen the window
+super + {s,f}
+	bspc window -t {floating,fullscreen}
+
+# Select last window (desktop)
+super + {grave,Tab}
+	bspc {window,desktop} -f last
+
+# Swap this window with last used
+super + apostrophe
+	bspc window -s last
+
+# ?
+super + y
+	bspc window -w last.manual
+
+# Move window to largest space
+super + m
+	bspc window -s biggest
+
+# Select (Move) window
+super + {_,shift + }{Left,Down,Up,Right}
+	bspc window -{f,s} {left,down,up,right}
+
+# Select next (prev) window
+super + {_,shift + }c
+	bspc window -f {next,prev}
+
+# Rotate windows anticlockwise (clockwise)
+super + {comma,period}
+	bspc desktop -C {backward,forward}
+
+# Shift to next, prev desktops
+super + bracket{left,right}
+	bspc desktop -f {prev,next}
+
+# Set window insertion space
+super + ctrl + {Left,Down,Up,Right}
+	bspc window -p {left,down,up,right}
+
+# ?
+super + ctrl + {_,shift + }space
+	bspc {window -p cancel,desktop -c}
+
+# Adjust ratio A
+super + alt + {Left,Down,Up,Right}
+	bspc window -e {left -10,down +10,up -10,right +10}
+
+# Adjust ratio B
+super + alt + shift + {Left,Down,Up,Right}
+	bspc window -e {right -10,up +10,down -10,left +10}
+
+# ?
+super + ctrl + {1-9}
+	bspc window -r 0.{1-9}
+
+# Select (move window to) desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} ^{1-9,10}
+
+ctrl + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+ctrl + !button{1-3}
+	bspc pointer -t %i %i
+
+ctrl + @button{1-3}
+	bspc pointer -u
+
+#
+# wm independent hotkeys
+#
+
+super + Return
+	urxvt
+
+super + space
+	dmenu_run -i -nb $DMENU_NB -nf $DMENU_NF -sb $DMENU_SB -sf $DMENU_SF -fn "$DMENU_FONT"
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+

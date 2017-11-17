@@ -1,0 +1,22 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ayu",
+		"Colorsublime",
+		"DA UI",
+		"Firewatch Color Scheme",
+		"Git",
+		"GitSyntaxes",
+		"Layout",
+		"Markdown Extended",
+		"MarkdownEditing",
+		"MarkdownLivePreview",
+		"Package Control",
+		"PlainTasks",
+		"Theme - Spacegray"
+	]
+}

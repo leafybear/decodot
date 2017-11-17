@@ -1,0 +1,196 @@
+## ------------------------
+# Customising Appearance
+## ------------------------
+
+# window class          border  backgr. text    indicator
+client.focused          #345e7e #345e7e #3c3836
+client.focused_inactive #242830 #242830 #3c3836
+client.unfocused        #242830 #242830 #3c3836
+client.urgent           #df6a64 #df6a64 #3c3836
+client.background		#121212
+
+font pango: Luculent 14
+new_window pixel 2
+new_float pixel 2
+#gaps inner 20
+#gaps outer 0
+
+# Alt=Mod1, Win=Mod4
+set $mod Mod4
+floating_modifier $mod
+
+workspace_layout default
+default_orientation auto
+
+set $WS1 "1"
+set $WS2 "2"
+set $WS3 "3"
+set $WS4 "4"
+set $WS5 "5"
+set $WS6 "6"
+set $WS7 "7"
+set $WS8 "8"
+set $WS9 "9"
+set $WS10 "10"
+
+## ------------------------
+# Bindings: CUSTOM
+## ------------------------
+
+# start a terminal
+bindsym $mod+Return exec urxvt
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run -i -nb $DMENU_NB -nf $DMENU_NF -sb $DMENU_SB -sf $DMENU_SF -fn "$DMENU_FONT"
+bindsym Menu exec dmenu_run -i -nb $DMENU_NB -nf $DMENU_NF -sb $DMENU_SB -sf $DMENU_SF -fn "$DMENU_FONT"
+# audio
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+# music
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpv prev
+# brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+
+# screenshot
+bindsym Print exec scrot ~/screenshots/%Y-%m-%d_%H%M%S.png
+
+## ------------------------
+# Bindings: i3
+## ------------------------
+
+# kill focused window
+bindsym $mod+Shift+q kill
+# change focus
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+# move focused window
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+# split in horizontal orientation
+bindsym $mod+h split h
+# split in vertical orientation
+bindsym $mod+v split v
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+# focus the parent container
+bindsym $mod+a focus parent
+
+## ------------------------
+# Workspaces
+## ------------------------
+# switch to workspace
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $ws10
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $WS1
+bindsym $mod+Shift+2 move container to workspace $WS2
+bindsym $mod+Shift+3 move container to workspace $WS3
+bindsym $mod+Shift+4 move container to workspace $WS4
+bindsym $mod+Shift+5 move container to workspace $WS5
+bindsym $mod+Shift+6 move container to workspace $WS6
+bindsym $mod+Shift+7 move container to workspace $WS7
+bindsym $mod+Shift+8 move container to workspace $WS8
+bindsym $mod+Shift+9 move container to workspace $WS9
+bindsym $mod+Shift+0 move container to workspace $WS10
+
+## ------------------------
+# System Mode
+## ------------------------
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+mode "? (L)ogout (R)eboot (P)oweroff" {
+    bindsym $mod+r exec systemctl reboot
+    bindsym $mod+l exit
+    bindsym $mod+p exec systemctl poweroff
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+e mode "? (L)ogout (R)eboot (P)oweroff"
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+
+## ------------------------
+# Resize Mode
+## ------------------------
+
+mode "resize" {
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+## ------------------------
+# i3 Status Bar
+## ------------------------
+
+### Comment out if using Polybar.
+# bar {
+#     status_command ~/.i3/conky.sh
+#     #separator_symbol ":"
+#     strip_workspace_numbers yes
+#     #binding_mode_indicator no
+#     tray_output none
+#     mode dock
+#     position top
+#     colors {
+#         background #282c34
+#         statusline #504945
+#         separator #373d45
+#                             # border    # bg    # text
+# 	focused_workspace   #528bff #528bff #282c34
+#         active_workspace    #528bff #528bff #282c34
+#         inactive_workspace  #282c34 #282c34 #98a5a5
+#         urgent_workspace    #af3a03 #c678dd #282c34
+# 	}
+# }
+
+
+## ------------------------
+# Window RULES
+## ------------------------
+
+for_window [window_role="pop-up"] floating enable
+for_window [class="mpv"] floating enable
+for_window [class="feh"] fullscreen enable
+assign [class="Midori"] → " 2 "
+assign [window_role="browser"] → " 2 "
+assign [class="Google-chrome"] → " 2 "
+
+## ------------------------
+# Startup
+## ------------------------
+# exec --no-startup-id dunst
+
+exec_always --no-startup-id $HOME/.bins/polybar.sh
+exec --no-startup-id xsetroot -cursor_name left_ptr

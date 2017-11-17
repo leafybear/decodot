@@ -1,0 +1,20 @@
+wintypes:
+{
+    dock = 
+    {
+        opacity = 0.85;
+    };
+};
+
+# blur radius of shadows
+shadow-radius = 16;
+
+# translucency of shadows
+shadow-opacity = 0.45;
+
+#shadow-exclude = [
+#	"class_g *= 'Conky'",
+#	"name *= 'VLC'"
+#];
+
+

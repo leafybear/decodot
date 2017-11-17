@@ -1,0 +1,12 @@
+wallpaper
+mkdir .bins
+rename alias
+
+rename bins
+rename linux
+shell feh --bg-fill %p
+rename sweetie-config
+rename sweetie
+rename compton-xero
+rename compton-amy-orig
+delete

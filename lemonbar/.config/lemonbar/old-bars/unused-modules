@@ -1,0 +1,37 @@
+
+  # update checking
+  #while true; do
+  #  echo "u${i_pac}  checking..."
+  #  updates="$({ checkupdates; } | wc -l)"
+  #  [[ $updates != 1 ]] && word="updates"
+  #  [[ $updates = 1 ]] && word="update"
+  #  [[ $updates = 0 ]] && updates="no"
+  #  echo "u${i_pac}  $updates $word"
+  #  sleep 180
+  #done > "$BAR_FIFO" &
+ 
+ # MUSIC PLAYING (MPD)
+  #while true; do
+  #  [[ -z "$(pidof mpd)" ]] && { echo "p ${i_mpd}  off"; sleep 1; continue; }
+  #  [[ "$(printf "status\nclose\n" | curl --connect-timeout 1 -fsm 3 telnet://localhost:$mpdport | grep state:)" = "state: pause" ]] && { echo "p ${i_mpd}  paused"; sleep 1; continue; }
+  #  [[ "$(printf "status\nclose\n" | curl --connect-timeout 1 -fsm 3 telnet://localhost:$mpdport | grep state:)" = "state: stop" ]] && { echo "p"; sleep 1; continue; }
+  #  echo "p ${i_mpd}  $(mpc current -f %artist%) > $(mpc current -f %title%)" | tr '[:upper:]' '[:lower:]'
+  #  sleep .5
+  #done > "$BAR_FIFO" &
+
+  # WEATHER FUNCTIONS (SHAMAN)
+  #while true; do
+  #  [[ "$units" = "f" ]] && shaman -l "$city" -f "w${i_weather//%/%%}  %c %t f"
+  #  [[ "$units" = "c" ]] && shaman -l "$city" -f "w${i_weather//%/%%}  %c %t c" -m
+  #  sleep 10
+  #done > "$BAR_FIFO" &
+  
+  # CPU TEMPS (SENSORS PKG)
+  #while true; do
+  #  core0=$(sensors coretemp-isa-0000 | grep "Core 0" | awk '{print $3}')
+  #  core1=$(sensors coretemp-isa-0000 | grep "Core 1" | awk '{print $3}')
+  #  core2=$(sensors coretemp-isa-0000 | grep "Core 2" | awk '{print $3}')
+  #  core3=$(sensors coretemp-isa-0000 | grep "Core 3" | awk '{print $3}')
+  #  echo "t${i_temp}  $core0 $core1 $core2 $core3" | tr -d 'C+'
+  #  sleep 1
+  #done > "$BAR_FIFO" &

@@ -1,0 +1,177 @@
+#!/bin/bash
+# Amy's lemonbar setup based on:
+# tb01110100's experimental bar setup
+
+if test ! -e $HOME/.config/lemonbar/settings; then
+    printf "$HOME/.config/lemonbar/settings does not exist, please create it\n" >&2
+    exit 1
+fi
+
+source $HOME/.config/lemonbar/settings
+
+# if you have a unicode bar
+# icon_gen() { printf "%b\n" "%{F$color_ic}\\u$1%{F-}"; }
+# i_vol="$( icon_gen e05f )"
+
+BAR_FIFO=/tmp/bar-fifo  # you should probably just leave this alone
+
+modules() {
+  # BSPWM STATS
+  bspc control --subscribe > "$BAR_FIFO" &
+
+  # DATE & TIME
+  while true; do
+    date +"c${i_date}  %d %b %y ${i_time} %I:%M %P"
+    sleep 1
+  done > "$BAR_FIFO" &
+
+  # DISK USAGE
+  while true; do
+    echo "d${i_disk}  $(df -h / | tail -n 1 | awk '{print $3}' | tr '[:upper:]' '[:lower:]') / $(df -h / | tail -n 1 | awk '{print $2}' | tr '[:upper:]' '[:lower:]')"
+    sleep 60
+  done > "$BAR_FIFO" &
+
+  # RAM USAGE
+  while true; do
+    echo "r${i_mem}  $(free -h | grep Mem | awk '{print $3}' | tr '[:upper:]' '[:lower:]') / $(free -h | grep Mem | awk '{print $2}' | tr '[:upper:]' '[:lower:]')"
+    sleep 5
+  done > "$BAR_FIFO" &
+
+  # VOLUME (AMIXER)
+ while true; do
+   if [[ -z "$(amixer get PCM | grep off)" ]]; then
+     echo "v${i_vol}  $(amixer get PCM | tail -n 1 | awk '{print $4}' | tr -d '[]%')"
+   else
+     echo "v${i_vol}  m"
+   fi
+   sleep .2
+ done > "$BAR_FIFO" &
+
+ # MUSIC PLAYING (MPD)
+  while true; do
+    [[ -z "$(pidof mpd)" ]] && { echo "p ${i_mpd}  off"; sleep 1; continue; }
+    [[ "$(printf "status\nclose\n" | curl --connect-timeout 1 -fsm 3 telnet://localhost:$mpdport | grep state:)" = "state: pause" ]] && { echo "p ${i_mpd}  paused"; sleep 1; continue; }
+    [[ "$(printf "status\nclose\n" | curl --connect-timeout 1 -fsm 3 telnet://localhost:$mpdport | grep state:)" = "state: stop" ]] && { echo "p"; sleep 1; continue; }
+    echo "p ${i_mpd}  $(mpc current -f %artist%) > $(mpc current -f %title%)" | tr '[:upper:]' '[:lower:]'
+    sleep .5
+  done > "$BAR_FIFO" &
+
+  # WEATHER FUNCTIONS (SHAMAN)
+  #while true; do
+  #  [[ "$units" = "f" ]] && shaman -l "$city" -f "w${i_weather//%/%%}  %c %t f"
+  #  [[ "$units" = "c" ]] && shaman -l "$city" -f "w${i_weather//%/%%}  %c %t c" -m
+  #  sleep 10
+  #done > "$BAR_FIFO" &
+  
+  # CPU TEMPS (SENSORS PKG)
+  #while true; do
+  #  core0=$(sensors coretemp-isa-0000 | grep "Core 0" | awk '{print $3}')
+  #  core1=$(sensors coretemp-isa-0000 | grep "Core 1" | awk '{print $3}')
+  #  core2=$(sensors coretemp-isa-0000 | grep "Core 2" | awk '{print $3}')
+  #  core3=$(sensors coretemp-isa-0000 | grep "Core 3" | awk '{print $3}')
+  #  echo "t${i_temp}  $core0 $core1 $core2 $core3" | tr -d 'C+'
+  #  sleep 1
+  #done > "$BAR_FIFO" &
+  
+  # CPU TEMPS (RASPBERRYPI FIRMWARE)
+  while true; do
+    core0=$(awk '{printf "%3.1f C\n", $1/1000}' /sys/class/thermal/thermal_zone0/temp)
+    echo "t${i_temp}  $core0"
+    sleep 1
+  done > "$BAR_FIFO" &
+
+  # update checking
+  while true; do
+    echo "u${i_pac}  checking..."
+    updates="$({ checkupdates; } | wc -l)"
+    [[ $updates != 1 ]] && word="updates"
+    [[ $updates = 1 ]] && word="update"
+    [[ $updates = 0 ]] && updates="no"
+    echo "u${i_pac}  $updates $word"
+    sleep 180
+  done > "$BAR_FIFO" &
+
+}
+
+parse-module-output() {
+  while read -r line ; do
+    case $line in
+      p*)
+        # set up mpd indicator
+        mpdinfo="${line#?}" ;;
+      t*)
+        # set up cpu temp indicator
+        cputemps="${line#?}" ;;
+      v*)
+        # set up volume indicator
+        volume="${line#?}" ;;
+      u*)
+        # set up update indicator
+        updates="${line#?}" ;;
+      r*)
+        # set up mem indicator
+        mem="${line#?}" ;;
+      d*)
+        # set up rootfs indicator
+        rootfs="${line#?}" ;;
+      #w*)
+      #  # set up weather
+      #  weather="${line#?}" ;;
+      c*)
+        # set up clock
+        clock="${line#?}" ;;
+      W*)
+        # set up tags
+        wm_infos=""
+        IFS=':'
+        set -- ${line#?}
+        while [ $# -gt 0 ] ; do
+          item=$1
+          name=${item#?}
+          desk=" $name "
+          case $item in
+            O*)
+              # focused occupied desktop
+              wm_infos="$wm_infos%{+u}%{U$color_01}%{F$color_01}%{A:bspc desktop -f $name:}$desk%{A}" ;;
+            F*)
+              # focused empty desktop
+              wm_infos="$wm_infos%{+u}%{U$color_02}%{F$color_02}%{A:bspc desktop -f $name:}$desk%{A}" ;;
+            U*)
+              # focused urgent desktop
+              wm_infos="$wm_infos%{+u}%{U$color_03}%{F$color_03}%{A:bspc desktop -f $name:}$desk%{A}" ;;
+            o*)
+              # occupied desktop
+              wm_infos="$wm_infos%{-u}%{F$color_04}%{A:bspc desktop -f $name:}$desk%{A}" ;;
+            f*)
+              # free desktop
+              wm_infos="$wm_infos%{-u}%{F$color_05}%{A:bspc desktop -f $name:}$desk%{A}" ;;
+            u*)
+              # urgent desktop
+              wm_infos="$wm_infos%{-u}%{F$color_06}%{A:bspc desktop -f $name:}$desk%{A}" ;;
+            m*|M*)
+              # monitor seperator
+              wm_infos="$wm_infos%{-u}%{F-}  " ;;
+          esac
+          shift
+        done ;;
+    esac
+    printf "%s\n" "%{l}$clock %{c}$wm_infos %{-u}%{F-}%{r}$cputemps   $mem   $rootfs   $updates   "
+  done
+}
+
+# prepare
+if [[ $(pgrep -cx bard) -gt 1 ]]; then
+  echo "bar-aint-recursive is already running" >&2
+  exit 1
+fi
+trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
+[ -e "$BAR_FIFO" ] && rm "$BAR_FIFO"
+mkfifo "$BAR_FIFO"
+
+# run module commands
+modules &
+
+# pull it all together
+parse-module-output < "$BAR_FIFO" | lemonbar -p -f "$fonts" -B "$color_bg" -F "$color_fg" -g "$geometry" | while read line; do eval "$line"; done &
+
+wait

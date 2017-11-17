@@ -1,0 +1,36 @@
+# bira theme oh my zsh
+# ====================
+
+setopt prompt_subst
+setopt promptsubst
+setopt promptpercent
+
+autoload colors; colors;
+
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+
+local user_host='%{$fg[green]%}%n@%m%{$reset_color%}'
+local current_dir='%{$fg[blue]%}%~%{$reset_color%}'
+
+local git_branch='$(git_prompt_info)%{$reset_color%}'
+
+RPROMPT="[%{$fg[green]%}%@%{$reset_color%}] ${return_code}%{$reset_color%}"
+PROMPT="┌─[${user_host}]—[${current_dir}]${git_branch}
+└─%B%b "
+
+ZSH_THEME_GIT_PROMPT_SUFFIX=""
+
+# Git Prompt
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "—[%{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
+}
+
+if [[ `uname` == 'Linux' ]]
+then
+    local user_host='%{$fg[yellow]%}%n@%m%{$reset_color%}'
+    local current_dir='%{$fg[green]%}%~%{$reset_color%}'
+    RPROMPT="[%{$fg[yellow]%}%@%{$reset_color%}] ${return_code}%{$reset_color%}"
+    PROMPT="┌─[${user_host}]—[${current_dir}]${git_branch}
+└─%B%b "
+fi

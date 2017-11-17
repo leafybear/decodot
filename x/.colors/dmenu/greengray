@@ -1,0 +1,4 @@
+export DMENU_SB=#404a40
+export DMENU_SF=#cef318
+export DMENU_NF=#b5b6b5
+export DMENU_NB=#181c18

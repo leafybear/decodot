@@ -1,0 +1,20 @@
+set imap_user = "leafybear"
+set from = "leafybear@icloud.com"
+set smtp_url = "smtp://leafybear@smtp.mail.me.com:587/"
+
+set folder = "imaps://leafybear@imap.mail.me.com/"
+set spoolfile = "imaps://leafybear@imap.mail.me.com/INBOX"
+set postponed = "+Drafts"
+set record = "+Sent Messages"
+
+set imap_pipeline_depth=0
+
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+
+# # Change the following line to a different editor you prefer.
+set editor = 'vim + -c "set textwidth=72" -c "set wrap"'
+
+set mail_check = 120
+set timeout = 300
