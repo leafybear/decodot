@@ -21,7 +21,7 @@ alias feh="feh -FZ"
 alias stowdots="stow -t ~/ -d ~/Dropbox/dots"
 alias musb="sudo mount /dev/sda1 /mnt/usb"
 alias uusb="sudo umount /dev/sda1"
-
+alias astow="stow -d $HOME/dots -t $HOME -S"
 alias clean="find . -regex '.*\(.AppleDouble\|.DS_Store\)$' -ls -exec rm -r {} \;"
 
 # Docker

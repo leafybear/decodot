@@ -13,10 +13,7 @@ compton --config $HOME/.config/compton.conf -cCb &
 ## set starting backlight and volume values
 xbacklight -set 50
 amixer -q set Master 60 unmute
-#~/.bins/dropbox start
-
-# MPD daemon start (if no other user instance exists)
-#[ ! -s ~/.config/mpd/pid ] && mpd
+/usr/bin/xcalib -d :0 $HOME/.icc/6000.icm
 
 #### window manager
 # I3 with logging of output

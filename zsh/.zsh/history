@@ -157,3 +157,133 @@ clear
 df
 dropbox status
 df
+mv bin/polybar.sh .i3/
+ls
+clear
+ls
+ranger
+clear
+vim .i3/config
+vim .i3/config
+sudo pacman -S xorg-xsetroot
+ranger
+clear
+ls
+ranger
+vim .xinitrc
+startx
+startx
+startx
+startx
+bin/aur polybar-git
+startx
+ls
+reboot
+ranger
+ranger
+musb
+mkdir /mnt/usb
+sudo mkdir /mnt/usb
+musb
+cd /mnt/usb
+ls
+cd
+uusb
+musb
+ranger
+stow -d dots -t ~/ -S icc
+ls .icc
+mpsyt
+mkdir dl
+ls
+mpsyt
+ncmpcpp
+mpsyt
+systemctl enable --user mpd
+systemctl start --user mpd
+ncmpcpp
+ncmpcpp
+clear
+clear
+pacman -Ss edid
+sudo pacman -S read-edid
+man read-edid
+sudo get-edid
+bin/aur edid-decode
+sudo pacman -Ss xcalib
+sudo pacman -Ss calibrate
+bin/aur xcalib
+bin/aur edid-decode-git
+sudo edid-decode < /sys/class/drm/card0-eDP-1/edid
+vim .xinitrc
+musb
+uusb
+musb
+cp /mnt/usb/20-touchpad.conf .
+ls
+sudo cp 20-touchpad.conf /etc/X11/xorg.conf.d
+sudo mv 20-touchpad.conf /root/
+clear
+ncmpcpp
+ranger
+clear
+bin/dl_sublimeText
+ls
+cd do
+cd dots
+gs
+gl
+ls -la
+vim .gitignore
+ls
+gs
+vim .gitignore
+gs
+cd i3
+cd .con
+cd .i3
+ls
+mkdir bars
+mv conk* polybar.sh bars
+ls
+vim config
+clear
+clear
+ls
+cd
+ls
+mv bin dots
+ln -s dots/bin .bins
+cd dots/bin
+ls
+..
+ls
+..
+ls
+cd dots
+gs
+cd bin
+ls
+mkdir .bins
+mv * .bins
+ls
+ls -a
+..
+ls
+..
+rm .bins
+stow -d dots -t ~/ -S bin
+ls -la
+clear
+ls
+vim ranger
+ranger
+vim .i3/config
+ranger
+uusb
+sudo lsblk
+sudo gdisk /dev/sda
+sudo mkfs.ntfs /dev/sda1
+vim dots/.gitignore
+musb
+vim .zsh/alias

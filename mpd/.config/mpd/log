@@ -1,0 +1,16 @@
+Nov 18 09:52 : exception: OutputThread could not get realtime scheduling, continuing anyway: sched_setscheduler failed: Operation not permitted
+Nov 18 09:52 : client: [0] opened from 127.0.0.1:46678
+Nov 18 09:52 : update: added /Relaxing Animal Crossing Music Compilation.m4a
+Nov 18 09:53 : client: [1] opened from [::1]:40832
+Nov 18 09:53 : client: [1] closed
+Nov 18 09:53 : client: [2] opened from [::1]:40834
+Nov 18 09:53 : player: played "Relaxing Animal Crossing Music Compilation.m4a"
+Nov 18 09:53 : client: [2] closed
+Nov 18 10:58 : client: [0] closed
+Nov 18 10:58 : client: [3] opened from 127.0.0.1:47128
+Nov 18 11:01 : client: [4] opened from [::1]:41294
+Nov 18 11:01 : client: [4] closed
+Nov 18 11:06 : client: [5] opened from [::1]:41308
+Nov 18 11:06 : client: [5] closed
+Nov 18 11:14 : client: [3] closed
+Nov 18 11:14 : client: [6] opened from 127.0.0.1:47210

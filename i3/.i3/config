@@ -12,8 +12,8 @@ client.background		#121212
 font pango: Luculent 14
 new_window pixel 2
 new_float pixel 2
-#gaps inner 20
-#gaps outer 0
+gaps inner 20
+gaps outer 0
 
 # Alt=Mod1, Win=Mod4
 set $mod Mod4
@@ -192,5 +192,5 @@ assign [class="Google-chrome"] → " 2 "
 ## ------------------------
 # exec --no-startup-id dunst
 
-exec_always --no-startup-id $HOME/.bins/polybar.sh
+exec_always --no-startup-id $HOME/.i3/bars/polybar.sh
 exec --no-startup-id xsetroot -cursor_name left_ptr

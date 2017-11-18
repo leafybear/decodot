@@ -4,9 +4,13 @@ rename alias
 
 rename bins
 rename linux
-shell feh --bg-fill %p
 rename sweetie-config
 rename sweetie
 rename compton-xero
 rename compton-amy-orig
+rename finishInstall.sh
+mkdir icc
+mkdir .icc
+shell feh --bg-fill %p
+mkdir screenshots
 delete

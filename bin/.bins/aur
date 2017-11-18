@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Clone a repository from AUR
+# make the package install
+# and cleanup afterward.
+
+git clone https://aur.archlinux.org/$1.git
+cd $1
+makepkg -si
+cd ..
+rm -rf $1
