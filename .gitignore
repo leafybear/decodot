@@ -1,4 +1,7 @@
 sublime-text/.config/sublime-text-3/Cache
 sublime-text/.config/sublime-text-3/Lib
 sublime-text/.config/sublime-text-3/Local
+mpd/.config/mpd/pid
+mpd/.config/mpd/log
 mpv/.config/mpv/watch_later
+zsh/.zsh/history
