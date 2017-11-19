@@ -1,2 +1,2 @@
 ZDOTDIR=$HOME/.zsh
-. $ZDOTDIR/.zshenv
+. $ZDOTDIR/zshenv

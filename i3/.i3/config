@@ -9,11 +9,12 @@ client.unfocused        #242830 #242830 #3c3836
 client.urgent           #df6a64 #df6a64 #3c3836
 client.background		#121212
 
-font pango: Luculent 14
-new_window pixel 2
-new_float pixel 2
+font pango: Hack 14
+new_window pixel 4
+new_float pixel 4
 gaps inner 20
 gaps outer 0
+
 
 # Alt=Mod1, Win=Mod4
 set $mod Mod4

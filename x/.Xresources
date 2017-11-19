@@ -1,7 +1,6 @@
 ! COLOR SETTINGS
 #ifdef COLOR
-# include "/home/amy/.colors/shell/miasma"
-! best: s3r0,
+# include "/home/amy/.colors/shell/Blite"
 #endif
 
 ! CURSOR THEME
@@ -17,7 +16,7 @@ Xft*antialias:      true
 !urxvt*letterSpacing:    1
 urxvt*transparent:      true
 ! Shading 0-100 dark, 100-200 light
-urxvt*shading:          15
+urxvt*shading:          55
 urxvt*internalBorder:	25
 urxvt*scrollBar:        false
 urxvt*geometry:         80x27

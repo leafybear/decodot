@@ -1,7 +1,6 @@
 wallpaper
 mkdir .bins
 rename alias
-
 rename bins
 rename linux
 rename sweetie-config
@@ -11,6 +10,13 @@ rename compton-amy-orig
 rename finishInstall.sh
 mkdir icc
 mkdir .icc
-shell feh --bg-fill %p
 mkdir screenshots
+
+shell  %s
+shell feh --bg-fill %p
+shell chmod -x %p
+rename bright.png
+rename miasma.png
+rename solarized.png
+rename zebra.png
 delete

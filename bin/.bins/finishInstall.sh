@@ -26,7 +26,7 @@ nano /etc/sudoers
 
 echo "------------------------------"
 echo "Setting timezone."
-ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime
+ln -sf /usr/share/zoneinfo/UTC /etc/localtime
 
 echo "------------------------------"
 echo "Setting sane network names."

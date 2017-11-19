@@ -1,6 +1,9 @@
 """"APPEARANCE
 syntax on               " syntax hightlightinh
+set t_Co=256
 colorscheme bubblegum-256-dark   " fav color scheme
+hi Normal guibg=NONE ctermbg=NONE
+hi NonText guibg=NONE ctermbg=NONE
 set tabstop=4     " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set number              " show line numbers
