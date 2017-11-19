@@ -5,3 +5,5 @@ mpd/.config/mpd/pid
 mpd/.config/mpd/log
 mpv/.config/mpv/watch_later
 zsh/.zsh/history
+.DS_Store
+*/.git
