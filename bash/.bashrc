@@ -10,7 +10,7 @@ shopt -s checkwinsize
 
 # my settings
 source $HOME/.bash/lscolors
-source $HOME/.bash/alias
+source $HOME/.alias
 source $HOME/.bash/prompt
 
 # tab completion menu
