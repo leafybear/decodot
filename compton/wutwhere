@@ -1,0 +1,12 @@
+##- - - - - - - - - - - - -
+##		COMPTON
+##- - - - - - - - - - - - -
+
+
+## LINK
+
+ln -s $DOTDIR/compton/compton $HOME/.config/compton
+
+## REMOVE
+
+rm $HOME/.config/compton

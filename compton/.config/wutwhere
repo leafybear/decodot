@@ -1,7 +1,0 @@
-##- - - - - - - - - - - - -
-##		COMPTON
-##- - - - - - - - - - - - -
-
-## case logic for LINK / UNLINK / RELINK
-
-ln -s $DOTDIR/compton/compton $HOME/.config/compton
