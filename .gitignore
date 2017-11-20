@@ -1,6 +1,7 @@
 .DS_Store
 */.git
 mpd/.config/mpd/pid
+mpd/.config/mpd/state
 mpd/.config/mpd/log
 mpv/.config/mpv/watch_later
 sublime-text/.config/sublime-text-3/Packages/User/Package Control.last-run
@@ -8,5 +9,7 @@ sublime-text/.config/sublime-text-3/Packages/User/Package Control.ca-list
 sublime-text/.config/sublime-text-3/Packages/User/Package Control.ca-bundle
 sublime-text/.config/sublime-text-3/Packages/User/Package Control.system-ca-bundle
 sublime-text/.config/sublime-text-3/Packages/User/Package Control.cache/
+sublime-text/.config/sublime-text-3/Packages/User/Package Control.cache/***
 sublime-text/.config/sublime-text-3/Packages/User/Package Control.ca-certs/
+sublime-text/.config/sublime-text-3/Packages/User/Package Control.ca-certs/***
 zsh/.zsh/history
