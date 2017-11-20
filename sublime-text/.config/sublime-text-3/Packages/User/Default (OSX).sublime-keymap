@@ -1,8 +1,0 @@
-[
-	{
-  "keys": ["f1"],
-  "command": "dired",
-  "args": { "immediate": true }
-},
-{ "keys": ["f3"], "command": "dired_jump_list" }
-]

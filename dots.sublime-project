@@ -1,0 +1,36 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.log",
+				"*.pid",
+				"*.swp",
+				"*.tmp"
+			],
+			"folder_exclude_patterns":
+			[
+				"tmp",
+				"log",
+				"solr"
+			],
+			"name": "dots",
+			"path": "."
+		}
+	],
+	"settings":
+	{
+		"draw_centered": false,
+		"ignored_packages":
+		[
+			"Markdown",
+			"Vintage"
+		],
+		"line_numbers": true,
+		"line_padding_bottom": 2,
+		"line_padding_top": 2,
+		"remember_full_screen": true,
+		"save_on_focus_lost": true
+	}
+}
