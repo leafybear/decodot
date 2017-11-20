@@ -12,13 +12,3 @@ shopt -s checkwinsize
 source $HOME/.bash/lscolors
 source $HOME/.bash/alias
 source $HOME/.bash/prompt
-
-# tab completion menu
-#bind 'set show-all-if-ambiguous on'
-#bind 'TAB:menu-complete'
-
-# TMUX
-# if not inside a tmux session, and if no session is started, start a new session
-#if which tmux >/dev/null 2>&1; then
-#    test -z "$TMUX" && (tmux attach || tmux new-session)
-#fi
