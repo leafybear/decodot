@@ -16,7 +16,7 @@ Xft*antialias:      true
 !urxvt*letterSpacing:    1
 urxvt*transparent:      true
 ! Shading 0-100 dark, 100-200 light
-urxvt*shading:          55
+urxvt*shading:          35
 urxvt*internalBorder:	25
 urxvt*scrollBar:        false
 urxvt*geometry:         80x27

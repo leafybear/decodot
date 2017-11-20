@@ -1,0 +1,57 @@
+## BACKEND
+#backend = "glx";
+#glx-no-stencil = true;
+#glx-copy-from-front = false;
+#glx-swap-method = -1;
+#vsync = "opengl-swc";
+#paint-on-overlay = true;
+#detect-transient = true;
+#detect-client-leader = true;
+
+## SHADOWS
+shadow = true;
+shadow-radius = 16;
+shadow-opacity = 0.45;
+shadow-offset-x = -15;
+shadow-offset-y = -15;
+no-dock-shadow = true;
+no-dnd-shadow = true;
+clear-shadow = true;
+shadow-exclude = [ ];
+
+## OPACITY
+#menu-opacity = 1;
+#inactive-opacity = 1;
+#active-opacity = 1;
+#frame-opacity = 1;
+#inactive-opacity-override = false;
+#detect-client-opacity = true;
+#alpha-step = 0.06;
+
+## BLUR
+#blur-background = true;
+#blur-background-frame = true;
+#blur-background-fixed = false;
+#blur-kern = "7x7gaussian";
+#blur-background-exclude = [ ];
+
+## DIMMING
+#inactive-dim = 0.2;
+#inactive-dim-fixed = true;
+
+## FADE
+fading = true;
+fade-delta = 4;
+fade-in-step = 0.03;
+fade-out-step = 0.03;
+no-fading-openclose = false;
+fade-exclude = [ ];
+
+## PER WINDOW TYPE SETTINGS
+wintypes:
+{
+  tooltip = { fade = true; shadow = false; };
+  menu = { shadow = false; };
+  dropdown_menu = { shadow = false; };
+  popup_menu =  { shadow = false; };
+};
