@@ -1,0 +1,11 @@
+##- - - - - - - - - - - - -
+##	   SCRIPTS & BINS
+##- - - - - - - - - - - - -
+
+## LINK
+
+ln -s $DOTDIR/bin $HOME/.bin
+
+## REMOVE
+
+rm $HOME/..bin

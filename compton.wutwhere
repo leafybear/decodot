@@ -2,10 +2,9 @@
 ##		COMPTON
 ##- - - - - - - - - - - - -
 
-
 ## LINK
 
-ln -s $DOTDIR/compton/compton $HOME/.config/compton
+ln -sf $DOTDIR/compton/compton $HOME/.config/compton
 
 ## REMOVE
 

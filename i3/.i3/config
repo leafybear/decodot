@@ -32,8 +32,8 @@ client.background		#121212
 font pango: Hack 14
 new_window pixel 1
 new_float pixel 1
-gaps inner 10
-gaps outer 10
+gaps inner 20
+gaps outer 0
 
 
 # Alt=Mod1, Win=Mod4
