@@ -1,0 +1,3 @@
+rc	$HOME/.bashrc
+profile	$HOME/.bash_profile
+bash	$HOME/.bash
