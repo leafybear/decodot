@@ -1,0 +1,5 @@
+docker run --detach -it --rm \
+		-p 80:80 \
+		--name=\"http\" \
+		-v /mnt/mixed:/var/www \
+		clue/h5ai
