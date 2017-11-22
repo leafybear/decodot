@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export DOTDIR=$HOME/dots
 export EDITOR="vim"
 export PATH=$PATH
 export PATH=$HOME/Dropbox/scripts:$HOME/.local/bin:$HOME/.bins:$HOME/Downloads/bin:$PATH

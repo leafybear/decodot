@@ -1,10 +1,15 @@
 HISTFILE=~/.zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
+export DOTDIR=$HOME/dots
 setopt appendhistory autocd nomatch notify
 unsetopt beep
 bindkey -e
 . $HOME/.alias
+
+typeset -U path
+path+=$HOME/.bin
+path+=$HOME/.local/bin
 
 zstyle :compinstall filename '/home/amy/.zshrc'
 
@@ -12,4 +17,4 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
-prompt adam2
+prompt off
