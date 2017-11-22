@@ -10,7 +10,7 @@ Xcursor.size:		38
 ! FONT SETTINGS
 Xft*dpi:            96
 Xft*antialias:      true
-*font:        xft:Luculent:size=16
+*font:        xft:Iosevka:size=16
 
 ! URXVT SETTINGS
 !urxvt*letterSpacing:    1
