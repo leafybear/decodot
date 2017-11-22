@@ -1,0 +1,88 @@
+ip addr
+ls
+cd bootstrap
+ls
+cd do
+cd dots
+ls
+gs
+git pull
+gs
+git status
+gl
+cd
+ls
+cd bootstrap
+ls
+ls dots/bin
+ls dots/bin/.bins
+ls bin
+rm -rf bin
+ls
+ls
+ls
+ls dots/bin/.bins
+rm dropbox
+ls
+rm -rf walls
+sudo mount /dev/nvme0n1p5 /mnt
+cp -r /mnt/home/amy/wallpaper .
+ls
+cd
+ls
+ls -la
+cat sysctl.conf c
+ls
+ls -la
+ranger
+clear
+ls
+ln -s bootstrap/dots/alias .alias
+stow -d bootstrap/dots -t ~/ -S bash
+ls bootstrap/dots
+stow -d bootstrap/dots -t ~/ -S bin
+stow -d bootstrap/dots -t ~/ -S compton
+stow -d bootstrap/dots -t ~/ -S git
+stow -d bootstrap/dots -t ~/ -S i3
+stow -d bootstrap/dots -t ~/ -S mpd
+stow -d bootstrap/dots -t ~/ -S mpv
+stow -d bootstrap/dots -t ~/ -S polybar
+stow -d bootstrap/dots -t ~/ -S ranger
+stow -d bootstrap/dots -t ~/ -S sublime-text
+stow -d bootstrap/dots -t ~/ -S tmux
+stow -d bootstrap/dots -t ~/ -S vim
+stow -d bootstrap/dots -t ~/ -S x
+stow -d bootstrap/dots -t ~/ -S zsh
+ls -a
+exit
+startx
+ranger
+ls
+cd bootstrap
+ls
+ranger
+sudo systemctl start netctl-ifplugd@eth0.service
+ip addr
+ip addr
+ip addr
+sudo systemctl start netctl-ifplugd@eth0.service
+sudo systemctl enable netctl-ifplugd@eth0.service
+sudo ip link set eth0 up
+ip addr
+ip addr
+ip addr
+ip addr
+ip addr
+ip addr
+ip addr
+ip addr
+sudo reboot
+ls
+dfff
+lsblk -f
+sudo systemctl start ifplugd
+sudo systemctl start ifplugd@eth0.service
+ip linkkk
+ip link
+ip addr
+startx

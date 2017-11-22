@@ -23,18 +23,12 @@ alias lsd="ls -la | grep '^d'"
 alias feh="feh -FZ"
 
 ## My commands
+alias aliases="vim ~/.alias"
 alias musb="sudo mount /dev/sda1 /mnt/usb"
 alias uusb="sudo umount /dev/sda1"
-alias astow="stow -d $HOME/dots -t $HOME -S"
 alias clean="find . -regex '.*\(.AppleDouble\|.DS_Store\)$' -ls -exec rm -r {} \;"
 alias sweetie="djmount $HOME/sweetie"
 
-# Docker
-# sweetie containers for serving files
-
-alias docker-http="docker run --detach -it --rm -p 80:80 --name=\"http\" -v /mnt/mixed:/var/www clue/h5ai"
-alias docker-afp="docker run -d -v /mnt/mixed:/media/mixed -v /mnt/tv:/media/tv -v /mnt/movies:/media/movies -v /mnt/extra_a:/media/empty_a -v /mnt/extra_b:/media/empty_b  -e AVAHI=1 --net \"host\" --name=\"afp\" -e AFP_USER=\"collector\" -e AFP_PASSWORD=pur3w0nd3r leafybear/afp"
-alias docker-upnp="docker run -d --net=host -p 8200:8200 --name=\"upnp\" -v /mnt/upnp:/media -e MINIDLNA_MEDIA_DIR=V,/media -e MINIDLNA_ROOT_CONTAINER=V -e MINIDLNA_FRIENDLY_NAME=\"Hello Sweetie\" vladgh/minidlna"
 
 # Capture XORG keys
 alias xkeycap="xev | grep -A2 --line-buffered '^KeyRelease' | sed -n '/keycode /s/^.*keycode \([0-9]*\).* (.*, \(.*\)).*$/\1 \2/p'"
