@@ -30,7 +30,6 @@ if not os.path.isdir(dotdir):
 ## check / get args
 if len(sys.argv) != 3:
 	usage("Too few arguments.")
-
 if sys.argv[1] != "r" and sys.argv[1] != "l":
 	usage("Bad arguments.")
 
@@ -48,7 +47,10 @@ with open(wutwhere) as fp:
 		original = dotdir + "/" + folder + "/" + original
 
 		if do == "l":
-			# mkdir -p some/long/path
+			parent, target = os.path.split(link)
+			if not os.path.exists(parent):
+				os.system("mkdir -p "+parent)
+				print("Making target directories...")
 			os.system("ln -sf "+original+" "+link)
 			print(link + "  ---->  " + original)
 		else:

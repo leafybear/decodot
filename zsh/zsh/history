@@ -512,3 +512,6 @@ ls
 ./decodot l zsh
 vim x/.wutwhere
 ./decodot l x
+ranger
+clear
+ranger
