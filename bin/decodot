@@ -50,7 +50,6 @@ with open(wutwhere) as fp:
 			parent, target = os.path.split(link)
 			if not os.path.exists(parent):
 				os.system("mkdir -p "+parent)
-				print("Making target directories...")
 			os.system("ln -sf "+original+" "+link)
 			print(link + "  ---->  " + original)
 		else:
