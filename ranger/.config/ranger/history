@@ -20,3 +20,4 @@ rename miasma.png
 rename solarized.png
 rename zebra.png
 delete
+mkdir examples

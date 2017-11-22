@@ -8,11 +8,11 @@
 
 
 usage() {
-   echo "$(basename "$0") [-r/-l] dotsName moreDots"
+   echo "$(basename "$0") [r/l] dotsName moreDots"
    echo "Dot file symlink farmer."
-   echo "   -h    show this help"
-   echo "   -l    link dot files"
-   echo "   -r    remove links to dot files"
+   echo "   h    show this help"
+   echo "   l    link dot files"
+   echo "   r    remove links to dot files"
    exit
 }
 
@@ -22,41 +22,20 @@ usage() {
 if [ "$#" -ne 2 ]; then
    usage
 fi
-if [ -z "$DOTDIR" ]; then
+if ! [ -v DOTDIR ]; then
    echo "\$DOTDIR is unset."
    exit
 fi
-if ! [ -d "$DOTDIR" ]; then
-   echo "$DOTDIR doesn't exist."
+thedotsdir=${DOTDIR}
+if ! [ -d "$thedotsdir" ]; then
+   echo "$thedotsdir doesn't exist."
    exit
 fi
-# if [ "$1" = "-r" ] && [ "$1" = "-l" ]; then
-#    echo "$1 is not an operation. Choose -l or -r."
-#    usage
-# fi
+if [ "$1" = "r" ] && [ "$1" = "l" ]; then
+   echo "$1 is not an operation. Choose -l
+   or -r."
+   usage
+fi
 
 
-
-op=""
-
-## MAIN
-while :
-do
-   case $1 in
-      -r) # remove symlinks
-         echo "Removing symlinks in: "
-         op=$1
-         shift
-         ;;
-      -l) # create symlinks
-         echo "Linking dots in: "
-         op=$1
-         shift
-         ;;
-      * )
-         echo "   $1."
-         $DOTDIR/$1.wutwhere $op
-         break
-         ;;
-   esac
-done
+$thedotsdir/$2.wutwhere $1
