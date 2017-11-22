@@ -1,0 +1,3 @@
+config	$HOME/.gitconfig
+ignore_global	$HOME/.gitignore_global
+message	$HOME/.gitmessage

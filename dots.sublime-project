@@ -14,7 +14,7 @@
 				"tmp",
 				"log",
 				"solr",
-				"x/.icons"
+				"icons"
 			],
 			"name": "dots",
 			"path": "."

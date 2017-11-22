@@ -1,0 +1,47 @@
+wallpaper
+mkdir .bins
+rename alias
+rename bins
+rename linux
+rename sweetie-config
+rename sweetie
+rename compton-xero
+rename compton-amy-orig
+rename finishInstall.sh
+mkdir icc
+mkdir .icc
+mkdir screenshots
+shell  %s
+shell feh --bg-fill %p
+shell chmod -x %p
+rename bright.png
+rename miasma.png
+rename solarized.png
+rename zebra.png
+shell chmod +x %p
+rename .wutwhere
+rename profile
+rename rc
+mkdir prompt
+mkdir bash
+rename config
+rename message
+rename ignore_global
+rename muttrc
+rename tmux.conf
+rename vim
+rename vimrc
+rename colors
+rename fonts
+rename icons
+open_with ename
+rename xinitrf
+rename xinitrc
+rename Xresources
+rename zprofile
+
+rename .zprofile
+rename zsh
+rename zshenv
+cd 
+delete

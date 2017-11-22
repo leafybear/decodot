@@ -1,0 +1,18 @@
+sw_volume: 98
+audio_device_state:1:default detected output
+state: pause
+current: 0
+time: 1911.060000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Relaxing Animal Crossing Music Compilation.m4a
+1:Nintendo Wii - Mii Channel - Plaza Music (Extended) HD.m4a
+2:Relaxing Nintendo Piano Music (30 Minutes) [FREE DOWNLOAD] || DS Music.m4a
+3:Relaxing Pokémon Music Compilation.m4a
+playlist_end
