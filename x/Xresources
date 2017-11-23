@@ -1,6 +1,6 @@
 ! COLOR SETTINGS
 #ifdef COLOR
-# include "/home/amy/.colors/shell/Blite"
+# include "/home/amy/.colors/shell/dogdragon"
 #endif
 
 ! CURSOR THEME
@@ -10,18 +10,18 @@ Xcursor.size:		38
 ! FONT SETTINGS
 Xft*dpi:            96
 Xft*antialias:      true
-*font:        xft:mononoki:size=14
+*font:        xft:Iosevka:size=14:antialias=true
 
 ! URXVT SETTINGS
 !urxvt*letterSpacing:    1
-urxvt*transparent:      true
+urxvt*transparent:      false
 ! Shading 0-100 dark, 100-200 light
 urxvt*shading:          45
-urxvt*internalBorder:	25
+urxvt*internalBorder:	20
 urxvt*scrollBar:        false
 urxvt*geometry:         80x27
 urxvt*urgentOnBell:     true
 urxvt*urlLauncher:      links
 urxvt*perl-eXT-common:  selection-autotransform,matcher
 urxvt*matcher.button:   2
-urxvt.imLocale:         en_AU.UTF-8
+urxvt.imLocale:         en_GB.UTF-8
