@@ -1,0 +1,39 @@
+#!/usr/bin/python
+##- - - - - - - - - - - - -
+##    GET-MEDIA
+##	collect all the locations of
+##  media in m3u files and download
+##  using wget.
+##
+##    (leafybear) 2017
+##		Amy Bentley
+##- - - - - - - - - - - - -
+import os, sys
+
+directory = os.getcwd()
+
+for file in os.listdir(directory):
+	filename = os.fsdecode(file)
+
+	if filename.endswith(".m3u"):
+
+		with open(filename) as fp:
+			lines = fp.read().splitlines()
+			videoName = lines[1]
+			dlLink = lines[2]
+			# get name of video file
+			output = videoName.split(",")[-1]
+			# add extension for video name from download link
+			output = output + "." + dlLink.split(".")[-1]
+			# try to get the file
+			result = os.system('wget -c -N -q --show-progress -O "'+output+'" '+dlLink)
+			print(result)
+
+			# decide what to do based on how wget exited.
+			if result == "C2":
+				print("Stopping.")
+				sys.exit()
+			else:
+				# remove the m3u if it was successful
+				if sys.argv[1] != "-k" and (result == 2048 or result == 0):
+					os.remove(filename)
