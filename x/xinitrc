@@ -8,7 +8,7 @@ xsetroot -cursor_name left_ptr
 xsetroot -name $HOSTNAME
 sh ~/.fehbg &
 compton --config $HOME/.config/compton -cCb &
-#xscreensaver -no-splash &
+xscreensaver -no-splash &
 
 ## set starting backlight and volume values
 xbacklight -set 50
