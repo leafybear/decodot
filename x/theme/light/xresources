@@ -71,18 +71,26 @@ dmenu.font:	                "Miso-14"
 *.i3_focus_border:	#3E999F
 *.i3_focus_bg:		#3E999F
 *.i3_focus_text:	#EDEDED
+*.i3_focus_indicator: #3E999F
+*.i3_focus_child:	#3E999F
 
 *.i3_inact_border:	#EDEDED
 *.i3_inact_bg:		#EDEDED
 *.i3_inact_text:	#EDEDED
+*.i3_inact_indicator: #EDEDED
+*.i3_inact_child:	#EDEDED
 
 *.i3_unfocus_border:	#EDEDED
 *.i3_unfocus_bg:		#EDEDED
 *.i3_unfocus_text:		#EDEDED
+*.i3_unfocus_indicator: #EDEDED
+*.i3_iunfocus_child:	#EDEDED
 
 *.i3_urgent_border:		#D75F00
 *.i3_urgent_bg:			#D75F00
 *.i3_urgent_text:		#EDEDED
+*.i3_urgent_indicator: #D75F00
+*.i3_urgent_child:	#D75F00
 
 *.i3_bg:				#EDEDED
 

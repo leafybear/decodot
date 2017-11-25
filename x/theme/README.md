@@ -2,9 +2,9 @@
 
 FONTS
     * polybar: Miso, Baloo
-    * term: Iosevka
+    * term: Luculent
     * sublime: Luculent
-    * symbol: font-awesome, siji
+    * symbol: font-awesome, siji, unifont
 LIGHT: PAPER, 150 shading
 DARK: Blite color, 45 shading
     or MIKADO, NYQUIL, PASTEL-NEON

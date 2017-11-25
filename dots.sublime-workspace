@@ -5,15 +5,39 @@
 		[
 			[
 				"mo",
+				"module-b-bg"
+			],
+			[
+				"mod",
+				"module-b-fg"
+			],
+			[
+				"format",
+				"format-connected"
+			],
+			[
+				"form",
+				"format-connected"
+			],
+			[
+				"module-b",
+				"module-b-bg"
+			],
+			[
+				"labe",
+				"label-mounted"
+			],
+			[
+				"label",
+				"label-mode"
+			],
+			[
+				"module",
 				"module-ramp-fg-a"
 			],
 			[
 				"modu",
 				"module-fg-b"
-			],
-			[
-				"mod",
-				"module-underline-a"
 			],
 			[
 				"module-ra",
@@ -52,24 +76,6 @@
 	"buffers":
 	[
 		{
-			"file": "x/Xresources",
-			"settings":
-			{
-				"buffer_size": 893,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "x/xinitrc",
-			"settings":
-			{
-				"buffer_size": 448,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "i3/config",
 			"settings":
 			{
@@ -82,16 +88,7 @@
 			"file": "polybar/config",
 			"settings":
 			{
-				"buffer_size": 5445,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "x/theme/light/polybar",
-			"settings":
-			{
-				"buffer_size": 546,
+				"buffer_size": 5941,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -100,7 +97,7 @@
 			"file": "x/theme/light/xresources",
 			"settings":
 			{
-				"buffer_size": 2628,
+				"buffer_size": 2796,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -109,7 +106,7 @@
 			"file": "x/theme/README.md",
 			"settings":
 			{
-				"buffer_size": 1139,
+				"buffer_size": 807,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -122,10 +119,22 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 354.0,
-		"last_filter": "color",
+		"height": 375.0,
+		"last_filter": "comm",
 		"selected_items":
 		[
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"ui",
+				"UI: Select Theme"
+			],
 			[
 				"color",
 				"Colorsublime: Install Theme"
@@ -137,10 +146,6 @@
 			[
 				"syntax",
 				"Set Syntax: INI"
-			],
-			[
-				"ui",
-				"UI: Select Theme"
 			],
 			[
 				"syntax ini",
@@ -161,10 +166,6 @@
 			[
 				"synta",
 				"Set Syntax: C"
-			],
-			[
-				"comm",
-				"Toggle Comment"
 			],
 			[
 				"syntax sh",
@@ -249,10 +250,6 @@
 			[
 				"remove",
 				"Package Control: Remove Package"
-			],
-			[
-				"colo",
-				"Colorsublime: Install Theme"
 			],
 			[
 				"marked",
@@ -367,7 +364,7 @@
 				"Markdown Preview: Preview in Browser"
 			]
 		],
-		"width": 592.0
+		"width": 538.0
 	},
 	"console":
 	{
@@ -392,6 +389,13 @@
 	],
 	"file_history":
 	[
+		"/home/amy/dots/x/theme/light/polybar",
+		"/home/amy/dots/x/xinitrc",
+		"/home/amy/dots/x/Xresources",
+		"/home/amy/dots/font-awesome.md",
+		"/home/amy/dots/other peoples dots/jaager/.config/polybar/testing/config",
+		"/home/amy/dots/other peoples dots/mofiqul/.config/polybar/config1",
+		"/home/amy/dots/other peoples dots/kojjoow/polybar/.config/polybar/config",
 		"/home/amy/dots/x/theme/old_color_files/dmenu/rebel",
 		"/home/amy/dots/dots-dev.md",
 		"/home/amy/dots/theme/light/xresources",
@@ -405,7 +409,6 @@
 		"/home/amy/.config/sublime-text-3/Packages/User/ColorHighlighter.sublime-settings",
 		"/home/amy/.config/sublime-text-3/Packages/User/GutterColor.sublime-settings",
 		"/home/amy/dots/x/colors/shell/paper",
-		"/home/amy/dots/x/Xresources",
 		"/home/amy/dots/x/colors/shell/blue",
 		"/home/amy/dots/x/colors/shell/yousai",
 		"/home/amy/dots/compton/compton",
@@ -513,17 +516,11 @@
 		"/Users/amy/Documents/notebook/wishlist switch.md",
 		"/Users/amy/Documents/notebook/linux software for notebook.md",
 		"/Users/amy/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/amy/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/amy/Documents/notebook/recipes low sugar fruit.md",
-		"/Users/amy/Documents/notebooks/apache setup for sierra, multi-user/modules to enable.txt",
-		"/Users/amy/Documents/notebooks/snippets/colour palettes.md",
-		"/Users/amy/Documents/notebooks/snippets/Sublime Text 3.md",
-		"/Users/amy/Documents/notebooks/snippets/recipe gelatine.md",
-		"/Users/amy/Documents/notebooks/snippets/fiction untitled_a outline.md"
+		"/Users/amy/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 48.0
 	},
 	"find_in_files":
 	{
@@ -537,6 +534,18 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"wifi",
+			"module-underline-b",
+			"module-underline-a",
+			"module-ramp-bg-b",
+			"module-ramp-bg-a",
+			"module-ramp-fg-a",
+			"module-ramp-fg-b",
+			"module-ramp-fg-a",
+			"module-bg-a",
+			"module-bg-b",
+			"module-fg-b",
+			"module-fg-a",
 			"colors.background",
 			"modules",
 			"DMENU_SF",
@@ -554,6 +563,17 @@
 		"regex": false,
 		"replace_history":
 		[
+			"module-b-underline",
+			"module-a-underline",
+			"module-b-ramp-bg",
+			"module-a-ramp-bg",
+			"module-a-ramp-fg",
+			"module-b-ramp-fg",
+			"module-a-ramp-fg",
+			"module-a-bg",
+			"module-b-bg",
+			"module-b-fg",
+			"module-a-fg",
 			"colors.bg",
 			"dmenu_sf",
 			"dmenu_sb",
@@ -571,366 +591,11 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "x/Xresources",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 893,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								130,
-								130
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"git_gutter_is_enabled": true,
-							"history_list_is_closing": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "x/xinitrc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 448,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								122,
-								122
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "i3/config",
 					"semi_transient": false,
 					"settings":
@@ -1040,21 +705,11 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -1065,21 +720,31 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -1102,210 +767,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "polybar/config",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5445,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2233,
-								2233
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.clone_locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.clone_regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/INI/INI.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2551.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
+				},
 				{
-					"buffer": 4,
-					"file": "x/theme/light/polybar",
+					"buffer": 1,
+					"file": "polybar/config",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 546,
+						"buffer_size": 5941,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								50,
-								50
+								284,
+								284
 							]
 						],
 						"settings":
@@ -1465,16 +947,22 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
 				{
-					"buffer": 5,
+					"buffer": 2,
 					"file": "x/theme/light/xresources",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2628,
+						"buffer_size": 2796,
 						"regions":
 						{
 							"gutter_color_1110":
@@ -1484,8 +972,8 @@
 								"regions":
 								[
 									[
-										935,
-										967
+										1062,
+										1094
 									]
 								],
 								"scope": "gutter_color"
@@ -1497,8 +985,8 @@
 								"regions":
 								[
 									[
-										1210,
-										1236
+										1337,
+										1363
 									]
 								],
 								"scope": "gutter_color"
@@ -1510,8 +998,8 @@
 								"regions":
 								[
 									[
-										1237,
-										1260
+										1364,
+										1387
 									]
 								],
 								"scope": "gutter_color"
@@ -1523,8 +1011,8 @@
 								"regions":
 								[
 									[
-										115,
-										136
+										242,
+										263
 									]
 								],
 								"scope": "gutter_color"
@@ -1536,8 +1024,8 @@
 								"regions":
 								[
 									[
-										1210,
-										1236
+										1337,
+										1363
 									]
 								],
 								"scope": "gutter_color"
@@ -1549,8 +1037,8 @@
 								"regions":
 								[
 									[
-										1261,
-										1285
+										1388,
+										1412
 									]
 								],
 								"scope": "gutter_color"
@@ -1562,8 +1050,8 @@
 								"regions":
 								[
 									[
-										1002,
-										1034
+										1129,
+										1161
 									]
 								],
 								"scope": "gutter_color"
@@ -1575,8 +1063,8 @@
 								"regions":
 								[
 									[
-										1237,
-										1260
+										1364,
+										1387
 									]
 								],
 								"scope": "gutter_color"
@@ -1588,8 +1076,8 @@
 								"regions":
 								[
 									[
-										1287,
-										1313
+										1414,
+										1440
 									]
 								],
 								"scope": "gutter_color"
@@ -1601,8 +1089,8 @@
 								"regions":
 								[
 									[
-										1261,
-										1285
+										1388,
+										1412
 									]
 								],
 								"scope": "gutter_color"
@@ -1614,8 +1102,8 @@
 								"regions":
 								[
 									[
-										1035,
-										1068
+										1162,
+										1195
 									]
 								],
 								"scope": "gutter_color"
@@ -1627,8 +1115,8 @@
 								"regions":
 								[
 									[
-										1314,
-										1337
+										1441,
+										1464
 									]
 								],
 								"scope": "gutter_color"
@@ -1640,8 +1128,8 @@
 								"regions":
 								[
 									[
-										1287,
-										1313
+										1414,
+										1440
 									]
 								],
 								"scope": "gutter_color"
@@ -1653,8 +1141,8 @@
 								"regions":
 								[
 									[
-										1338,
-										1362
+										1465,
+										1489
 									]
 								],
 								"scope": "gutter_color"
@@ -1666,8 +1154,8 @@
 								"regions":
 								[
 									[
-										1314,
-										1337
+										1441,
+										1464
 									]
 								],
 								"scope": "gutter_color"
@@ -1679,8 +1167,8 @@
 								"regions":
 								[
 									[
-										1364,
-										1392
+										1491,
+										1519
 									]
 								],
 								"scope": "gutter_color"
@@ -1692,8 +1180,8 @@
 								"regions":
 								[
 									[
-										1338,
-										1362
+										1465,
+										1489
 									]
 								],
 								"scope": "gutter_color"
@@ -1705,8 +1193,8 @@
 								"regions":
 								[
 									[
-										1393,
-										1418
+										1520,
+										1545
 									]
 								],
 								"scope": "gutter_color"
@@ -1718,8 +1206,8 @@
 								"regions":
 								[
 									[
-										1364,
-										1392
+										1491,
+										1519
 									]
 								],
 								"scope": "gutter_color"
@@ -1731,8 +1219,8 @@
 								"regions":
 								[
 									[
-										1419,
-										1446
+										1546,
+										1573
 									]
 								],
 								"scope": "gutter_color"
@@ -1744,8 +1232,8 @@
 								"regions":
 								[
 									[
-										1393,
-										1418
+										1520,
+										1545
 									]
 								],
 								"scope": "gutter_color"
@@ -1757,8 +1245,8 @@
 								"regions":
 								[
 									[
-										1448,
-										1476
+										1575,
+										1603
 									]
 								],
 								"scope": "gutter_color"
@@ -1770,8 +1258,8 @@
 								"regions":
 								[
 									[
-										1419,
-										1446
+										1546,
+										1573
 									]
 								],
 								"scope": "gutter_color"
@@ -1783,8 +1271,8 @@
 								"regions":
 								[
 									[
-										1477,
-										1502
+										1604,
+										1629
 									]
 								],
 								"scope": "gutter_color"
@@ -1796,8 +1284,8 @@
 								"regions":
 								[
 									[
-										1210,
-										1236
+										1337,
+										1363
 									]
 								],
 								"scope": "gutter_color"
@@ -1809,8 +1297,8 @@
 								"regions":
 								[
 									[
-										1448,
-										1476
+										1575,
+										1603
 									]
 								],
 								"scope": "gutter_color"
@@ -1822,8 +1310,8 @@
 								"regions":
 								[
 									[
-										1503,
-										1529
+										1630,
+										1656
 									]
 								],
 								"scope": "gutter_color"
@@ -1835,8 +1323,8 @@
 								"regions":
 								[
 									[
-										1237,
-										1260
+										1364,
+										1387
 									]
 								],
 								"scope": "gutter_color"
@@ -1848,8 +1336,8 @@
 								"regions":
 								[
 									[
-										1477,
-										1502
+										1604,
+										1629
 									]
 								],
 								"scope": "gutter_color"
@@ -1861,8 +1349,8 @@
 								"regions":
 								[
 									[
-										1261,
-										1285
+										1388,
+										1412
 									]
 								],
 								"scope": "gutter_color"
@@ -1874,8 +1362,8 @@
 								"regions":
 								[
 									[
-										1531,
-										1550
+										1658,
+										1677
 									]
 								],
 								"scope": "gutter_color"
@@ -1887,8 +1375,8 @@
 								"regions":
 								[
 									[
-										1503,
-										1529
+										1630,
+										1656
 									]
 								],
 								"scope": "gutter_color"
@@ -1900,8 +1388,8 @@
 								"regions":
 								[
 									[
-										1605,
-										1648
+										1773,
+										1816
 									]
 								],
 								"scope": "gutter_color"
@@ -1913,8 +1401,8 @@
 								"regions":
 								[
 									[
-										146,
-										163
+										273,
+										290
 									]
 								],
 								"scope": "gutter_color"
@@ -1926,8 +1414,8 @@
 								"regions":
 								[
 									[
-										1287,
-										1313
+										1414,
+										1440
 									]
 								],
 								"scope": "gutter_color"
@@ -1939,8 +1427,8 @@
 								"regions":
 								[
 									[
-										1531,
-										1550
+										1658,
+										1677
 									]
 								],
 								"scope": "gutter_color"
@@ -1952,8 +1440,8 @@
 								"regions":
 								[
 									[
-										1314,
-										1337
+										1441,
+										1464
 									]
 								],
 								"scope": "gutter_color"
@@ -1965,8 +1453,8 @@
 								"regions":
 								[
 									[
-										1649,
-										1716
+										1817,
+										1884
 									]
 								],
 								"scope": "gutter_color"
@@ -1978,8 +1466,8 @@
 								"regions":
 								[
 									[
-										1338,
-										1362
+										1465,
+										1489
 									]
 								],
 								"scope": "gutter_color"
@@ -1991,8 +1479,8 @@
 								"regions":
 								[
 									[
-										2628,
-										2628
+										2796,
+										2796
 									]
 								],
 								"scope": "gutter_color"
@@ -2004,8 +1492,8 @@
 								"regions":
 								[
 									[
-										1364,
-										1392
+										1491,
+										1519
 									]
 								],
 								"scope": "gutter_color"
@@ -2017,8 +1505,8 @@
 								"regions":
 								[
 									[
-										2628,
-										2628
+										2796,
+										2796
 									]
 								],
 								"scope": "gutter_color"
@@ -2030,8 +1518,8 @@
 								"regions":
 								[
 									[
-										2628,
-										2628
+										2796,
+										2796
 									]
 								],
 								"scope": "gutter_color"
@@ -2043,8 +1531,8 @@
 								"regions":
 								[
 									[
-										1393,
-										1418
+										1520,
+										1545
 									]
 								],
 								"scope": "gutter_color"
@@ -2056,8 +1544,8 @@
 								"regions":
 								[
 									[
-										1717,
-										1784
+										1885,
+										1952
 									]
 								],
 								"scope": "gutter_color"
@@ -2069,8 +1557,8 @@
 								"regions":
 								[
 									[
-										1419,
-										1446
+										1546,
+										1573
 									]
 								],
 								"scope": "gutter_color"
@@ -2082,8 +1570,8 @@
 								"regions":
 								[
 									[
-										1448,
-										1476
+										1575,
+										1603
 									]
 								],
 								"scope": "gutter_color"
@@ -2095,8 +1583,8 @@
 								"regions":
 								[
 									[
-										1785,
-										1852
+										1953,
+										2020
 									]
 								],
 								"scope": "gutter_color"
@@ -2108,8 +1596,8 @@
 								"regions":
 								[
 									[
-										164,
-										181
+										291,
+										308
 									]
 								],
 								"scope": "gutter_color"
@@ -2121,8 +1609,8 @@
 								"regions":
 								[
 									[
-										1477,
-										1502
+										1604,
+										1629
 									]
 								],
 								"scope": "gutter_color"
@@ -2134,8 +1622,8 @@
 								"regions":
 								[
 									[
-										1503,
-										1529
+										1630,
+										1656
 									]
 								],
 								"scope": "gutter_color"
@@ -2147,8 +1635,8 @@
 								"regions":
 								[
 									[
-										1531,
-										1550
+										1658,
+										1677
 									]
 								],
 								"scope": "gutter_color"
@@ -2160,8 +1648,8 @@
 								"regions":
 								[
 									[
-										189,
-										206
+										316,
+										333
 									]
 								],
 								"scope": "gutter_color"
@@ -2173,8 +1661,8 @@
 								"regions":
 								[
 									[
-										207,
-										224
+										334,
+										351
 									]
 								],
 								"scope": "gutter_color"
@@ -2186,8 +1674,8 @@
 								"regions":
 								[
 									[
-										2223,
-										2258
+										2391,
+										2426
 									]
 								],
 								"scope": "gutter_color"
@@ -2199,8 +1687,8 @@
 								"regions":
 								[
 									[
-										234,
-										251
+										361,
+										378
 									]
 								],
 								"scope": "gutter_color"
@@ -2212,8 +1700,8 @@
 								"regions":
 								[
 									[
-										252,
-										270
+										379,
+										397
 									]
 								],
 								"scope": "gutter_color"
@@ -2225,8 +1713,8 @@
 								"regions":
 								[
 									[
-										290,
-										307
+										417,
+										434
 									]
 								],
 								"scope": "gutter_color"
@@ -2238,8 +1726,8 @@
 								"regions":
 								[
 									[
-										308,
-										326
+										435,
+										453
 									]
 								],
 								"scope": "gutter_color"
@@ -2251,8 +1739,8 @@
 								"regions":
 								[
 									[
-										335,
-										352
+										462,
+										479
 									]
 								],
 								"scope": "gutter_color"
@@ -2264,8 +1752,8 @@
 								"regions":
 								[
 									[
-										353,
-										371
+										480,
+										498
 									]
 								],
 								"scope": "gutter_color"
@@ -2277,8 +1765,8 @@
 								"regions":
 								[
 									[
-										383,
-										400
+										510,
+										527
 									]
 								],
 								"scope": "gutter_color"
@@ -2290,8 +1778,8 @@
 								"regions":
 								[
 									[
-										401,
-										419
+										528,
+										546
 									]
 								],
 								"scope": "gutter_color"
@@ -2303,8 +1791,8 @@
 								"regions":
 								[
 									[
-										428,
-										445
+										555,
+										572
 									]
 								],
 								"scope": "gutter_color"
@@ -2316,8 +1804,8 @@
 								"regions":
 								[
 									[
-										446,
-										464
+										573,
+										591
 									]
 								],
 								"scope": "gutter_color"
@@ -2329,8 +1817,8 @@
 								"regions":
 								[
 									[
-										474,
-										491
+										601,
+										618
 									]
 								],
 								"scope": "gutter_color"
@@ -2342,8 +1830,8 @@
 								"regions":
 								[
 									[
-										492,
-										510
+										619,
+										637
 									]
 								],
 								"scope": "gutter_color"
@@ -2355,8 +1843,8 @@
 								"regions":
 								[
 									[
-										660,
-										703
+										787,
+										830
 									]
 								],
 								"scope": "gutter_color"
@@ -2368,8 +1856,8 @@
 								"regions":
 								[
 									[
-										704,
-										747
+										831,
+										874
 									]
 								],
 								"scope": "gutter_color"
@@ -2381,8 +1869,8 @@
 								"regions":
 								[
 									[
-										748,
-										791
+										875,
+										918
 									]
 								],
 								"scope": "gutter_color"
@@ -2394,8 +1882,8 @@
 								"regions":
 								[
 									[
-										794,
-										835
+										921,
+										962
 									]
 								],
 								"scope": "gutter_color"
@@ -2407,8 +1895,8 @@
 								"regions":
 								[
 									[
-										838,
-										879
+										965,
+										1006
 									]
 								],
 								"scope": "gutter_color"
@@ -2420,8 +1908,8 @@
 								"regions":
 								[
 									[
-										935,
-										967
+										1062,
+										1094
 									]
 								],
 								"scope": "gutter_color"
@@ -2433,8 +1921,8 @@
 								"regions":
 								[
 									[
-										968,
-										1001
+										1095,
+										1128
 									]
 								],
 								"scope": "gutter_color"
@@ -2446,8 +1934,8 @@
 								"regions":
 								[
 									[
-										879,
-										879
+										1006,
+										1006
 									]
 								],
 								"scope": "gutter_color"
@@ -2459,8 +1947,8 @@
 								"regions":
 								[
 									[
-										1002,
-										1034
+										1129,
+										1161
 									]
 								],
 								"scope": "gutter_color"
@@ -2472,8 +1960,8 @@
 								"regions":
 								[
 									[
-										93,
-										114
+										220,
+										241
 									]
 								],
 								"scope": "gutter_color"
@@ -2485,8 +1973,8 @@
 								"regions":
 								[
 									[
-										1035,
-										1068
+										1162,
+										1195
 									]
 								],
 								"scope": "gutter_color"
@@ -2498,8 +1986,8 @@
 								"regions":
 								[
 									[
-										879,
-										879
+										1006,
+										1006
 									]
 								],
 								"scope": "gutter_color"
@@ -2508,8 +1996,8 @@
 						"selection":
 						[
 							[
-								934,
-								934
+								95,
+								95
 							]
 						],
 						"settings":
@@ -2529,25 +2017,20 @@
 								},
 								"unmatched":
 								{
+									"1":
+									[
+										104,
+										105
+									]
 								}
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
@@ -2558,21 +2041,31 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
 								"bh_regex_close",
 								"bh_regex_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
 								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -2666,27 +2159,27 @@
 							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 720.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 3,
 					"file": "x/theme/README.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1139,
+						"buffer_size": 807,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								752,
-								752
+								205,
+								205
 							]
 						],
 						"settings":
@@ -2772,10 +2265,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1204.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -2783,7 +2276,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 38.0
+		"height": 35.0
 	},
 	"input":
 	{
@@ -2831,7 +2324,7 @@
 	"project": "dots.sublime-project",
 	"replace":
 	{
-		"height": 72.0
+		"height": 88.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2840,6 +2333,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"polybarconfig",
+				"other peoples dots/jaager/.config/polybar/testing/config"
+			],
+			[
+				"kojjopolybar",
+				"other peoples dots/kojjoow/polybar/.config/polybar/config"
+			],
+			[
+				"font",
+				"font-awesome.md"
+			],
 			[
 				"rebe",
 				"x/theme/old_color_files/dmenu/rebel"

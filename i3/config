@@ -5,28 +5,36 @@
 # Colors set from ~/.Xresources
 set_from_resource   $focus_border    i3_focus_border
 set_from_resource   $focus_bg        i3_focus_bg
+set_from_resource   $focus_indic      i3_focus_indicator
+set_from_resource   $focus_child      i3_focus_child
 set_from_resource   $focus_text      i3_focus_text
 set_from_resource   $inact_border    i3_inact_border
 set_from_resource   $inact_bg        i3_inact_bg
+set_from_resource   $inact_indic     i3_inact_indicator
+set_from_resource   $inact_child      i3_inact_child
 set_from_resource   $inact_text      i3_inact_text
 set_from_resource   $unfocus_border  i3_unfocus_border
 set_from_resource   $unfocus_bg      i3_unfocus_bg
+set_from_resource   $unfocus_indic   i3_unfocus_indicator
+set_from_resource   $unfocus_child    i3_unfocus_child
 set_from_resource   $unfocus_text    i3_unfocus_text
 set_from_resource   $urgent_border   i3_urgent_border
 set_from_resource   $urgent_bg       i3_urgent_bg
+set_from_resource   $urgent_indic     i3_urgent_indicator
+set_from_resource   $urgent_child     i3_urgent_child
 set_from_resource   $urgent_text     i3_urgent_text
 set_from_resource   $bg              i3_bg
 
-client.focused          $focus_border   $focus_bg   $focus_text
-client.focused_inactive $inact_border   $inact_bg   $inact_text
-client.unfocused        $unfocus_border $unfocus_bg $unfocus_text
-client.urgent           $urgent_border  $urgent_bg  $urgent_text
+client.focused          $focus_border $focus_bg $focus_text $focus_indic $focus_child
+client.focused_inactive $inact_border   $inact_bg   $inact_text $inact_indic $inact_child
+client.unfocused        $unfocus_border $unfocus_bg $unfocus_text $unfocus_indic $unfocus_child
+client.urgent           $urgent_border  $urgent_bg  $urgent_text $urgent_indic $urgent_child
 client.background		$bg
 
 font pango: Miso 15
 
-new_window pixel 3
-new_float pixel 3
+new_window pixel 4
+new_float pixel 4
 gaps inner 20
 gaps outer 0
 
