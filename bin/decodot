@@ -52,15 +52,19 @@ for folder in folders:
 		with open(wutwhere) as fp:
 			for line in fp:
 				original, link = line.split("\t")
-				original = dotdir + "/" + folder + "/" + original
+				if original == ".":
+					original = dotdir + "/" + folder
+				else:
+					original = dotdir + "/" + folder + "/" + original
+				link =link.rstrip() # remove newline from link
 
 				if do == "l":
 					parent, target = os.path.split(link)
 					if not os.path.exists(parent):
 						os.system("mkdir -p "+parent)
 					os.system("ln -sf "+original+" "+link)
-					log = link.rstrip() + "  ---->  " + original.rstrip()
+					log = "Linking  "+link+"  --to-->  "+original
 					print(log)
 				else:
 					os.system("rm "+link)
-					print("rm  " + link)
+					print("Removed  "+link)

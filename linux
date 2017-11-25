@@ -1,0 +1,22 @@
+bin/decodot l alias \
+bash \
+bin \
+bspwm \
+color \
+compton \
+git \
+i3 \
+irssi \
+mpd \
+mps \
+mpv \
+ncmpcpp \
+polybar \
+ranger \
+sublime-text \
+sxhkd \
+tmux \
+vim \
+weechat \
+x \
+zsh \

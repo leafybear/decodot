@@ -2,3 +2,5 @@ fonts	$HOME/.fonts
 icons	$HOME/.icons
 xinitrc	$HOME/.xinitrc
 Xresources	$HOME/.Xresources
+xscreensaver	$HOME/.xscreensaver
+icc	$HOME/.icc
