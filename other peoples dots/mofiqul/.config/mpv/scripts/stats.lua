@@ -1,0 +1,5 @@
+XSym
+0052
+6cc6c6f061e9cc9a37c7921f8e2e6ce4
+/Users/Julian/Documents/Code/Lua/mpv-stats/stats.lua
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

@@ -3,35 +3,30 @@
 ## ------------------------
 
 # Colors set from ~/.Xresources
-set_from_resource   $background background
-set_from_resource   $foreground foreground
-set_from_resource   $color0     color0
-set_from_resource   $color1     color1
-set_from_resource   $color2     color2
-set_from_resource   $color3     color3
-set_from_resource   $color4     color4
-set_from_resource   $color5     color5
-set_from_resource   $color6     color6
-set_from_resource   $color7     color7
-set_from_resource   $color8     color8
-set_from_resource   $color9     color9
-set_from_resource   $color10    color10
-set_from_resource   $color11    color11
-set_from_resource   $color12    color12
-set_from_resource   $color13    color13
-set_from_resource   $color14    color14
-set_from_resource   $color15    color15
+set_from_resource   $focus_border    i3_focus_border
+set_from_resource   $focus_bg        i3_focus_bg
+set_from_resource   $focus_text      i3_focus_text
+set_from_resource   $inact_border    i3_inact_border
+set_from_resource   $inact_bg        i3_inact_bg
+set_from_resource   $inact_text      i3_inact_text
+set_from_resource   $unfocus_border  i3_unfocus_border
+set_from_resource   $unfocus_bg      i3_unfocus_bg
+set_from_resource   $unfocus_text    i3_unfocus_text
+set_from_resource   $urgent_border   i3_urgent_border
+set_from_resource   $urgent_bg       i3_urgent_bg
+set_from_resource   $urgent_text     i3_urgent_text
+set_from_resource   $bg              i3_bg
 
-# window class          border  backgr. text    indicator
-client.focused          #93c9ad #93c9ad #3c3836
-client.focused_inactive #685f56 #685f56 #3c3836
-client.unfocused        #685f56 #685f56 #3c3836
-client.urgent           #df6a64 #df6a64 #3c3836
-client.background		#121212
+client.focused          $focus_border   $focus_bg   $focus_text
+client.focused_inactive $inact_border   $inact_bg   $inact_text
+client.unfocused        $unfocus_border $unfocus_bg $unfocus_text
+client.urgent           $urgent_border  $urgent_bg  $urgent_text
+client.background		$bg
 
-font pango: Hack 14
-new_window pixel 1
-new_float pixel 1
+font pango: Miso 15
+
+new_window pixel 3
+new_float pixel 3
 gaps inner 20
 gaps outer 0
 
@@ -60,17 +55,21 @@ set $WS10 "10"
 
 # start a terminal
 bindsym $mod+Return exec urxvt
+
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -i -nb $DMENU_NB -nf $DMENU_NF -sb $DMENU_SB -sf $DMENU_SF -fn "$DMENU_FONT"
-bindsym Menu exec dmenu_run -i -nb $DMENU_NB -nf $DMENU_NF -sb $DMENU_SB -sf $DMENU_SF -fn "$DMENU_FONT"
+bindsym $mod+d exec dmenu_run -i
+bindsym Menu exec dmenu_run -i
+
 # audio
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+
 # music
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioPrev exec mpv prev
+
 # brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
@@ -142,12 +141,12 @@ bindsym $mod+Shift+0 move container to workspace $WS10
 ## ------------------------
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 mode "? (L)ogout (R)eboot (P)oweroff" {
-    bindsym $mod+r exec systemctl reboot
-    bindsym $mod+l exit
-    bindsym $mod+p exec systemctl poweroff
+	bindsym $mod+r exec systemctl reboot
+	bindsym $mod+l exit
+	bindsym $mod+p exec systemctl poweroff
 
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
 }
 bindsym $mod+Shift+e mode "? (L)ogout (R)eboot (P)oweroff"
 
@@ -161,13 +160,13 @@ bindsym $mod+Shift+r restart
 ## ------------------------
 
 mode "resize" {
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+		bindsym Left resize shrink width 10 px or 10 ppt
+		bindsym Down resize grow height 10 px or 10 ppt
+		bindsym Up resize shrink height 10 px or 10 ppt
+		bindsym Right resize grow width 10 px or 10 ppt
+		# back to normal: Enter or Escape
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
@@ -201,7 +200,7 @@ bindsym $mod+r mode "resize"
 # Window RULES
 ## ------------------------
 for_window [window_role="pop-up"] floating enable
-for_window [class="mpv"] floating enable
+#for_window [class="mpv"] floating enable
 for_window [class="feh"] fullscreen enable
 assign [class="sublime-text"] → " 2 "
 assign [class="surf"] → " 3 "
@@ -211,5 +210,6 @@ assign [window_role="browser"] → " 3 "
 # Startup
 ## ------------------------
 
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id xsetroot -cursor_name left_ptr
+exec --no-startup-id feh --bg-scale $HOME/.fehbg
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh

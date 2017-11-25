@@ -1,0 +1,11 @@
+--- tmp/nickcolor.pl    2012-06-28 18:08:25.000000000 +0800
++++ etc/irssi/scripts/nickcolor.pl  2012-06-28 18:10:36.000000000 +0800
+@@ -105,7 +105,7 @@
+   }
+
+   $color = "0".$color if ($color < 10);
+-  $server->command('/^format pubmsg {pubmsgnick $2 {pubnick '.chr(3).$color.'$0}}$1');
++  $server->command('/^format pubmsg {pubmsgnick $2 {pubnick '.chr(3).$color.'$[-11]0}}$1');
+ }
+
+ sub cmd_color {

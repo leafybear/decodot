@@ -1,5 +1,5 @@
-colors	$HOME/.colors
 fonts	$HOME/.fonts
 icons	$HOME/.icons
 xinitrc	$HOME/.xinitrc
+theme/current	$HOME/.theme
 Xresources	$HOME/.Xresources

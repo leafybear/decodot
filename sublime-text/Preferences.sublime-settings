@@ -7,7 +7,7 @@
 	"caret_extra_top": 5,
 	"caret_extra_width": 1,
 	"caret_style": "blink",
-	"color_scheme": "Packages/Colorsublime - Themes/LightBlue.tmTheme",
+	"color_scheme": "Packages/Theme - Piatto/Piatto Light.tmTheme",
 	"create_window_at_startup": false,
 	"enable_tab_scrolling": false,
 	"folder_exclude_patterns":
@@ -18,7 +18,7 @@
 	],
 	"font_face": "Luculent",
 	"font_options": "subpixel_antialias",
-	"font_size": 14,
+	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
@@ -36,7 +36,7 @@
 	"match_brackets_square": true,
 	"scroll_past_end": true,
 	"shift_tab_unindent": true,
-	"theme": "Spacegray Light.sublime-theme",
+	"theme": "Piatto Light.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"typewriter_mode_scrolling": true,
 	"word_wrap": true

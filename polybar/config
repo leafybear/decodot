@@ -1,11 +1,4 @@
-[colors]
-background = #222
-background-alt = #444
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+include-file = ~/.theme/polybar
 
 [bar/top]
 width = 100%
@@ -14,24 +7,23 @@ offset-x = 0
 offset-y = -1
 ;bottom = true
 
-fixed-center = false
+fixed-center = true
 
-background = #a6000000
-foreground = #eee
+background = ${colors.bg}
+foreground = ${colors.fg}
 
-underline-size = 2
-underline-color = #eee
+underline-size = 3
+underline-color = ${colors.underline}
 
-spacing = 1
-padding-left = 0
-padding-right = 0
-module-margin-left = 0
-module-margin-right = 0
+spacing = 0
+padding = 0
+module-margin = 0
 
 ;Baloo, Miso:style=regular
-font-0 = Miso:style=regular:size=14:antialias=true;3
-font-1 = Wuncon Siji:size=14;3
-font-2 = FontAwesome:size=16;3
+font-0 = Miso:style=regular:size=15:antialias=true;5
+font-1 = FontAwesome:size=16;5
+font-2 = Wuncon Siji:size=14;3
+font-3 = unifont:fontformat=truetype:size=14;3
 
 
 modules-left = i3
@@ -46,94 +38,99 @@ type = internal/xwindow
 label = %title:0:30:...%
 label-padding = 4
 
-[module/hdIcon]
-type = custom/text
-content = 
-content-foreground = #44ffffff
-
 [module/filesystem]
 type = internal/fs
 interval = 25
 
 mount-0 = /
 label-mounted = %mountpoint% %percentage_used%%
-label-mounted-padding = 2
-;label-mounted = %{F#0a81f5}%mountpoint%%{F-} %percentage_used%%
+label-mounted-padding = 5
 label-unmounted = %mountpoint%  ?
-label-unmounted-padding = 2
-label-unmounted-foreground = ${colors.foreground-alt}
-label-mounted-background = #8c000000
-label-unmounted-background = #8c000000
+label-unmounted-padding = 5
+label-mounted-background = ${colors.module-b-bg}
+label-unmounted-background = ${colors.module-b-bg}
 
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
+; pin-workspaces = true
+; strip-wsnumbers = true
+; enable-click = true
+; enable-scroll = false
+; reverse-scroll = false
 
-;ws-icon-0 = 1;
-;ws-icon-1 = 2;
-;ws-icon-2 = 3;
-;ws-icon-3 = 4;
-;ws-icon-4 = 5;
-;ws-icon-default = 
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-default = 
 
-label-mode-padding = 1
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-padding = 5
+label-mode-foreground = ${colors.workspace-mode-fg}
+label-mode-background = ${colors.workspace-mode-bg}
 
 ; %icon% %index%
 ; focused = Active workspace on focused monitor
 label-focused = %index%
-label-focused-background = #88000000
-label-focused-underline= #ddd
-label-focused-padding = 2
+label-focused-background = ${colors.workspace-f-bg}
+label-focused-underline= ${colors.workspace-f-underline}
+label-focused-padding = 5
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-foreground = #44ffffff
-label-unfocused-padding = 2
+label-unfocused-foreground = ${colors.workspace-uf-fg}
+label-unfocused-padding = 5
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %index%
-label-visible-padding = 2
+label-visible-padding = 5
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %index%
-label-urgent-padding = 2
+label-urgent-padding = 5
 
 [module/mpd]
 type = internal/mpd
 label-song = %title%
-format-online = <label-song>  <icon-prev> <toggle> <icon-next>
+format-online = <label-song>         <icon-prev>   <toggle>   <icon-next>
 
 icon-prev = 
+icon-prev-foreground = ${colors.module-a-ramp-fg}
 icon-stop = 
+icon-stop-foreground = ${colors.module-a-ramp-fg}
 icon-play = 
+icon-play-foreground = ${colors.module-a-ramp-fg}
 icon-pause = 
+icon-pause-foreground = ${colors.module-a-ramp-fg}
 icon-next = 
+icon-next-foreground = ${colors.module-a-ramp-fg}
 
 host = 127.0.0.1
 port = 6600
 password =
 
-label-song-maxlen = 40
+label-song-maxlen = 60
 label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/backlight
 card = intel_backlight
 
-format = <ramp> <label>
+format = <ramp>   <label>
+format-foreground = ${colors.module-b-fg}
+format-background = ${colors.module-b-bg}
+format-padding = 5
 label = %percentage%
-ramp-0 = 🌕
-ramp-1 = 🌔
-ramp-2 = 🌓
-ramp-3 = 🌒
-ramp-4 = 🌑
-ramp-foreground = #44ffffff
-label-background = #8c000000
-ramp-background = #8c000000
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+ramp-foreground = ${colors.module-b-ramp-fg}
 
 [module/wlan]
 type = internal/network
@@ -142,39 +139,40 @@ interval = 3.0
 
 ;format-connected = <ramp-signal> <label-connected>
 format-connected = <label-connected>
-;format-connected-underline = #9f78e1
+format-connected-foreground = ${colors.module-b-fg}
+format-connected-background = ${colors.module-b-bg}
+format-connected-padding = 5
 label-connected = %essid%
-label-connected-padding = 2
 
 ;label-connected = %essid% - %local_ip%
 format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
+format-disconnected-foreground = ${colors.module-b-fg}
+format-disconnected-background = ${colors.module-b-bg}
+format-disconnected-padding = 5
 label-disconnected = %ifname% offline
-label-disconnected-padding = 2
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = 0
 ramp-signal-1 = 1
 ramp-signal-2 = 2
 ramp-signal-3 = 3
-ramp-signal-4 = 4
-ramp-signal-foreground = #44ffffff
+ramp-signal-4 = 
+ramp-signal-foreground = ${colors.module-b-ramp-fg}
 
 [module/eth]
 type = internal/network
 interface = net0
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-underline = ${colors.module-b-underline}
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.module-b-fg}
 label-connected = %local_ip%
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+;label-disconnected-foreground = ${colors.module-b-fg}
 
 [module/date]
 type = internal/date
@@ -187,58 +185,64 @@ time = %l:%M %p
 time-alt=
 
 format-prefix =
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-foreground = ${colors.module-a-fg}
 ;format-underline = #0a6cf5
 
 label = %date% %time%
 label-padding = 2
-label-foreground = #44ffffff
+label-foreground = ${colors.module-a-fg}
 
 [module/volume]
 type = internal/volume
 
 format-volume = <ramp-volume>  <label-volume>
+format-volume-foreground = ${colors.module-b-fg}
+format-volume-background = ${colors.module-b-bg}
+format-volume-padding = 5
+
 format-muted = <label-muted>
+format-muted-foreground = ${colors.module-b-fg}
+format-muted-background = ${colors.module-b-bg}
+format-muted-padding = 5
+
 label-volume = %percentage%
-label-volume-background = #8c000000
 label-muted =   muted
-label-muted-foreground = #aaa
-label-muted-background = #8c000000
-format-volume-padding = 2
-format-muted-padding = 2
 
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-headphones-0 = 
-ramp-volume-foreground = #44ffffff
+ramp-volume-foreground = ${colors.module-b-ramp-fg}
+ramp-muted-foreground = ${colors.module-b-ramp-fg}
 
 [module/battery]
 type = internal/battery
 
 full-at = 99
-
 battery = BAT0
 adapter = ADP1
-
 poll-interval = 5
 
-format-charging = <animation-charging>  <label-charging>
+; <label-full> <label-charging>
+format-charging = <animation-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
-format-full = <ramp-capacity>  <label-full>
+format-full = <ramp-capacity>
 label-charging = %percentage%
 label-discharging = %percentage%
 label-full = %percentage%
-format-charging-padding = 2
-format-discharging-padding = 2
-format-full-padding = 2
+format-charging-padding = 5
+format-discharging-padding = 5
+format-full-padding = 5
+format-full-background = ${colors.module-b-bg}
+format-charging-background = ${colors.module-b-bg}
+format-discharging-background = ${colors.module-b-bg}
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
-ramp-capacity-foreground = #44ffffff
+ramp-capacity-foreground = ${colors.module-b-ramp-fg}
 
 animation-charging-0 = 
 animation-charging-1 = 
@@ -246,4 +250,4 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-framerate = 750
-;animation-charging-foreground = #44ffffff
+animation-charging-foreground = ${colors.module-b-ramp-fg}

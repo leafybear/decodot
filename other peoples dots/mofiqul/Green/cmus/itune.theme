@@ -1,0 +1,27 @@
+## 'Night' theme for CMus (for 255 color terms)
+### (C) 2013 Mladen Pejaković <pejakm@autistici.org>
+### {{{
+set color_cmdline_bg=default
+set color_cmdline_fg=041
+set color_error=196
+set color_info=blue
+set color_separator=002
+set color_statusline_bg=234
+set color_statusline_fg=042
+set color_titleline_bg=default
+set color_titleline_fg=036
+set color_win_bg=default
+set color_win_cur=077
+set color_win_cur_sel_bg=041
+set color_win_cur_sel_fg=234
+set color_win_dir=250
+set color_win_fg=035
+set color_win_inactive_cur_sel_bg=234
+set color_win_inactive_cur_sel_fg=083
+set color_win_inactive_sel_bg=234
+set color_win_inactive_sel_fg=041
+set color_win_sel_bg=234
+set color_win_sel_fg=042
+set color_win_title_bg=234
+set color_win_title_fg=035
+### }}}

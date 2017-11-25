@@ -1,4 +1,5 @@
 {
+  "convert_path" : "/usr/local/bin/convert",
 	"search_colors_in":
 	{
 		"all_content":
@@ -12,7 +13,7 @@
 				},
 				"gutter_icons":
 				{
-					"enabled": true,
+					"enabled": false,
 					"icon_style": "circle"
 				},
 				"phantoms":
@@ -30,7 +31,7 @@
 			{
 				"color_scheme":
 				{
-					"enabled": false,
+					"enabled": true,
 					"highlight_style": "filled"
 				},
 				"gutter_icons":
@@ -53,8 +54,8 @@
 			{
 				"color_scheme":
 				{
-					"enabled": false,
-					"highlight_style": "filled"
+					"enabled": true,
+					"highlight_style": "text"
 				},
 				"gutter_icons":
 				{
@@ -63,7 +64,7 @@
 				},
 				"phantoms":
 				{
-					"enabled": true,
+					"enabled": false,
 					"length": 2,
 					"style": "right"
 				}

@@ -1,0 +1,5 @@
+XSym
+0021
+38225e1904c9e07455e5d90f6fbbe427
+mpv-scripts/mines.lua
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
