@@ -1,5 +1,0 @@
-XSym
-0037
-ba5cfbfd28c461ea73f8e59e13936a18
-AdaptiveSharpen/adaptive-sharpen.glsl
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

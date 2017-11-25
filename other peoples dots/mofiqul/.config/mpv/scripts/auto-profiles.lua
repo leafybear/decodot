@@ -1,5 +1,0 @@
-XSym
-0029
-a325eb64ed12a0049d59948317fc50a8
-mpv-scripts/auto-profiles.lua
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

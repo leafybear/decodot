@@ -1,8 +1,0 @@
-#command
-\e\e    quit
-^C      quit
-h       noaction 5\e(
-l       noaction 5\e)
-
-#line-edit
-\e\e    abort
