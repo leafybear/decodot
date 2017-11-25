@@ -17,9 +17,14 @@ def usage(error):
 	print(error)
 	print("------------------------------------")
 	print("DECODOT - the dotfile symlink farmer")
-	print("	usage: decodot [l/r] nameOfApp ..")
-	print("	r	remove links")
-	print("	l 	create symlinks")
+	print("examples:")
+	print("   $ decodot l bash     :create dotfile links for bash config files")
+	print("   $ decodot r ALL      :rm all dotfile symlinks")
+	print("usage: decodot [l/r] nameOfApp ..")
+	print("flags:")
+	print("	  r     remove links")
+	print("	  l     create symlinks")
+	print("	  ALL   perform on every folder in dots")
 	print()
 	sys.exit()
 
@@ -41,7 +46,7 @@ if do != "r" and do != "l":
 	usage("Bad arguments.")
 
 if args[0] == "ALL":
-	folders = [f.path for f in os.scandir(dotdir) if f.is_dir() ]
+	folders = [f.name for f in os.scandir(dotdir) if f.is_dir() ]
 else:
 	folders = args
 
@@ -66,7 +71,7 @@ for folder in folders:
 					parent, target = os.path.split(link)
 					if not os.path.exists(parent):
 						os.system("mkdir -p "+parent)
-					os.system("ln -sfT "+original+" "+link)
+					os.system("ln -sfn "+original+" "+link)
 					log = "Linking  "+link+"  --to-->  "+original
 					print(log)
 				else:
