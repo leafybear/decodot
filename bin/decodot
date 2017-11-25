@@ -40,8 +40,12 @@ do = args.pop(0)
 if do != "r" and do != "l":
 	usage("Bad arguments.")
 
-folders = args
+if args[0] == "ALL":
+	folders = [f.path for f in os.scandir(dotdir) if f.is_dir() ]
+else:
+	folders = args
 
+### DO SOMETHING
 for folder in folders:
 
 	wutwhere = dotdir + "/" + folder + "/.wutwhere"
@@ -62,7 +66,7 @@ for folder in folders:
 					parent, target = os.path.split(link)
 					if not os.path.exists(parent):
 						os.system("mkdir -p "+parent)
-					os.system("ln -sf "+original+" "+link)
+					os.system("ln -sfT "+original+" "+link)
 					log = "Linking  "+link+"  --to-->  "+original
 					print(log)
 				else:

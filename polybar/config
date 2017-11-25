@@ -201,12 +201,12 @@ format-volume-background = ${colors.module-b-bg}
 format-volume-padding = 5
 
 format-muted = <label-muted>
-format-muted-foreground = ${colors.module-b-fg}
+format-muted-foreground = ${colors.module-b-ramp-fg}
 format-muted-background = ${colors.module-b-bg}
 format-muted-padding = 5
 
 label-volume = %percentage%
-label-muted =   muted
+label-muted = 
 
 ramp-volume-0 = 
 ramp-volume-1 = 

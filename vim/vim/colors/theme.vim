@@ -1,1 +1,1 @@
-/home/amy/dots/x/theme/light/color.vim
+../../../color/light/color.vim

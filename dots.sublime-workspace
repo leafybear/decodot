@@ -76,19 +76,20 @@
 	"buffers":
 	[
 		{
-			"file": "i3/config",
+			"file": "bspwm/bspwmrc",
 			"settings":
 			{
-				"buffer_size": 6940,
+				"buffer_size": 1068,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "bspwm/bspwmrc",
+			"file": "bspwm/.wutwhere",
 			"settings":
 			{
-				"buffer_size": 1086,
+				"buffer_size": 21,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -101,37 +102,28 @@
 			}
 		},
 		{
-			"file": "polybar/config",
+			"file": "bin/decodot",
 			"settings":
 			{
-				"buffer_size": 5941,
+				"buffer_size": 1597,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "x/xinitrc",
+			"file": "bin/ln-exit-codes.py",
 			"settings":
 			{
-				"buffer_size": 472,
+				"buffer_size": 134,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "x/theme/light/xresources",
+			"file": "bin/getMedia",
 			"settings":
 			{
-				"buffer_size": 3027,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "x/theme/README.md",
-			"settings":
-			{
-				"buffer_size": 807,
+				"buffer_size": 1004,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -144,33 +136,41 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 375.0,
-		"last_filter": "comm",
+		"height": 400.0,
+		"last_filter": "colo",
 		"selected_items":
 		[
 			[
-				"comm",
-				"Toggle Comment"
-			],
-			[
 				"colo",
 				"UI: Select Color Scheme"
-			],
-			[
-				"ui",
-				"UI: Select Theme"
 			],
 			[
 				"color",
 				"Colorsublime: Install Theme"
 			],
 			[
-				"syntax mak",
-				"Set Syntax: Makefile"
+				"ui",
+				"UI: Select Theme"
 			],
 			[
 				"syntax",
 				"Set Syntax: INI"
+			],
+			[
+				"syntax css",
+				"Set Syntax: CSS"
+			],
+			[
+				"synt",
+				"Set Syntax: INI"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"syntax mak",
+				"Set Syntax: Makefile"
 			],
 			[
 				"syntax ini",
@@ -179,10 +179,6 @@
 			[
 				"install",
 				"Package Control: Install Package"
-			],
-			[
-				"syntax css",
-				"Set Syntax: CSS"
 			],
 			[
 				"tabs",
@@ -389,7 +385,7 @@
 				"Markdown Preview: Preview in Browser"
 			]
 		],
-		"width": 538.0
+		"width": 544.0
 	},
 	"console":
 	{
@@ -414,8 +410,18 @@
 	],
 	"file_history":
 	[
-		"/home/amy/dots/x/theme/light/polybar",
+		"/home/amy/dots/which",
+		"/home/amy/dots/x/theme/color_list.txt",
+		"/home/amy/dots/bin/wget-exit-codes.py",
+		"/home/amy/dots/alias/alias",
+		"/home/amy/dots/x/theme/light/xresources",
+		"/home/amy/dots/x/theme/README.md",
+		"/home/amy/dots/x/theme/current/polybar",
+		"/home/amy/dots/x/theme/current/polybar-v2",
+		"/home/amy/dots/i3/config",
+		"/home/amy/dots/polybar/config",
 		"/home/amy/dots/x/xinitrc",
+		"/home/amy/dots/x/theme/light/polybar",
 		"/home/amy/dots/x/Xresources",
 		"/home/amy/dots/font-awesome.md",
 		"/home/amy/dots/other peoples dots/jaager/.config/polybar/testing/config",
@@ -439,15 +445,12 @@
 		"/home/amy/dots/compton/compton",
 		"/home/amy/dots/compton/compton-amy_",
 		"/home/amy/dots/compton/lucafox compton.txt",
-		"/home/amy/dots/i3/config",
-		"/home/amy/dots/polybar/config",
 		"/home/amy/dots/bin/getMedia",
 		"/home/amy/dots/.gitignore",
 		"/home/amy/dots/zsh/zshrc",
 		"/home/amy/dots/bin/exits",
 		"/home/amy/dots/bin/except.py",
 		"/home/amy/dots/bin/decodot",
-		"/home/amy/dots/bin/wget-exit-codes.py",
 		"/home/amy/dots/alias/.wutwhere",
 		"/home/amy/dots/bash/rc",
 		"/home/amy/dots/zsh/zsh/.zshrc",
@@ -468,7 +471,6 @@
 		"/home/amy/dots/bin/wutwhere",
 		"/home/amy/dots/bash/.bashrc",
 		"/home/amy/dots/x/.xinitrc",
-		"/home/amy/dots/alias/alias",
 		"/home/amy/dots/x/.Xresources",
 		"/home/amy/dots/compton/.config/wutwhere",
 		"/home/amy/dots/compton/.config/compton-alternative",
@@ -535,17 +537,11 @@
 		"/Users/amy/Documents/notebook/add a boot script.md",
 		"/Users/amy/Documents/notebook/recipe beet kvass.md",
 		"/Users/amy/Documents/notebook/sublime text 3.md",
-		"/Users/amy/Documents/notebook/set mac os hostname.md",
-		"/Users/amy/Documents/notebook/ozgameshop voucher.md",
-		"/Users/amy/Documents/notebook/wishlist audiobooks.md",
-		"/Users/amy/Documents/notebook/wishlist switch.md",
-		"/Users/amy/Documents/notebook/linux software for notebook.md",
-		"/Users/amy/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/amy/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+		"/Users/amy/Documents/notebook/set mac os hostname.md"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -621,19 +617,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "i3/config",
+					"file": "bspwm/bspwmrc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6940,
+						"buffer_size": 1068,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1178,
-								1178
+								207,
+								207
 							]
 						],
 						"settings":
@@ -657,26 +653,21 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -687,31 +678,36 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -730,26 +726,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -760,137 +751,36 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "bspwm/bspwmrc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1086,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								254,
-								254
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"git_gutter_is_enabled": true,
 							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
@@ -899,16 +789,16 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "sxhkd/sxhkdrc",
+					"buffer": 1,
+					"file": "bspwm/.wutwhere",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1927,
+						"buffer_size": 21,
 						"regions":
 						{
 						},
@@ -940,26 +830,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -970,58 +855,62 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 375.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "polybar/config",
+					"buffer": 2,
+					"file": "sxhkd/sxhkdrc",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5941,
+						"buffer_size": 1927,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								42,
-								42
+								40,
+								40
 							]
 						],
 						"settings":
@@ -1032,27 +921,12 @@
 							{
 								"close":
 								{
-									"1":
-									[
-										41,
-										42
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/square_bracket.png",
-										"region.bluish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										33,
-										34
-									]
 								},
 								"unmatched":
 								{
@@ -1060,26 +934,21 @@
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1090,57 +959,47 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"bracket_highlighter.locations":
 							{
 								"close":
 								{
-									"1":
-									[
-										41,
-										42
-									]
 								},
 								"icon":
 								{
-									"1":
-									[
-										"Packages/BracketHighlighter/icons/square_bracket.png",
-										"region.bluish"
-									]
 								},
 								"open":
 								{
-									"1":
-									[
-										33,
-										34
-									]
 								},
 								"unmatched":
 								{
@@ -1148,26 +1007,21 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -1178,144 +1032,46 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/INI/INI.tmLanguage"
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "x/xinitrc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 472,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								419,
-								419
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.clone": -1,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content"
-							],
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 75.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -1325,1047 +1081,20 @@
 			"sheets":
 			[
 				{
-					"buffer": 5,
-					"file": "x/theme/light/xresources",
+					"buffer": 3,
+					"file": "bin/decodot",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3027,
+						"buffer_size": 1597,
 						"regions":
 						{
-							"gutter_color_1110":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#ececec.png",
-								"regions":
-								[
-									[
-										1062,
-										1094
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1116":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1337,
-										1363
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1143":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1364,
-										1387
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_115":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										242,
-										263
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1157":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1337,
-										1363
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1167":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1388,
-										1412
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1177":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#943852.png",
-								"regions":
-								[
-									[
-										1129,
-										1161
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1184":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1364,
-										1387
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1193":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1470,
-										1496
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1208":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1388,
-										1412
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1210":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#ececec.png",
-								"regions":
-								[
-									[
-										1162,
-										1195
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1220":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1497,
-										1520
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1234":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1470,
-										1496
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1244":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1521,
-										1545
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1261":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1497,
-										1520
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1270":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1603,
-										1631
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1285":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1521,
-										1545
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1299":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1632,
-										1657
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1311":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1603,
-										1631
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1325":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1658,
-										1685
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1340":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1632,
-										1657
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1354":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1748,
-										1776
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1366":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1658,
-										1685
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1383":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1777,
-										1802
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1384":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1337,
-										1363
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1395":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1748,
-										1776
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1409":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1803,
-										1829
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1411":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1364,
-										1387
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1424":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1777,
-										1802
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1435":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1388,
-										1412
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1437":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1889,
-										1908
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1450":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1803,
-										1829
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1459":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#000000.png",
-								"regions":
-								[
-									[
-										2004,
-										2047
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_146":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EDEDED.png",
-								"regions":
-								[
-									[
-										273,
-										290
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1461":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1470,
-										1496
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1478":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1889,
-										1908
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1488":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1497,
-										1520
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1503":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#000000.png",
-								"regions":
-								[
-									[
-										2048,
-										2115
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1512":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1521,
-										1545
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1521":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										3027,
-										3027
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1538":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1603,
-										1631
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1543":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										3027,
-										3027
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1565":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										3027,
-										3027
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1567":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1632,
-										1657
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1571":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#000000.png",
-								"regions":
-								[
-									[
-										2116,
-										2183
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1593":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1658,
-										1685
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1622":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1748,
-										1776
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1639":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#000000.png",
-								"regions":
-								[
-									[
-										2184,
-										2251
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_164":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#969694.png",
-								"regions":
-								[
-									[
-										291,
-										308
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1651":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1777,
-										1802
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1677":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1803,
-										1829
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_1705":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#EEEEEE.png",
-								"regions":
-								[
-									[
-										1889,
-										1908
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_189":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#D7005F.png",
-								"regions":
-								[
-									[
-										316,
-										333
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_207":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#D7005F.png",
-								"regions":
-								[
-									[
-										334,
-										351
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_2077":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#FF22FF.png",
-								"regions":
-								[
-									[
-										2622,
-										2657
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_234":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#718C00.png",
-								"regions":
-								[
-									[
-										361,
-										378
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_252":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#718C00.png",
-								"regions":
-								[
-									[
-										379,
-										397
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_290":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#D75F00.png",
-								"regions":
-								[
-									[
-										417,
-										434
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_308":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#D75F00.png",
-								"regions":
-								[
-									[
-										435,
-										453
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_335":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#4271AE.png",
-								"regions":
-								[
-									[
-										462,
-										479
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_353":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#4271AE.png",
-								"regions":
-								[
-									[
-										480,
-										498
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_383":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#8959A8.png",
-								"regions":
-								[
-									[
-										510,
-										527
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_401":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#8959A8.png",
-								"regions":
-								[
-									[
-										528,
-										546
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_428":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#3E999F.png",
-								"regions":
-								[
-									[
-										555,
-										572
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_446":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#3E999F.png",
-								"regions":
-								[
-									[
-										573,
-										591
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_474":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#4D4D4C.png",
-								"regions":
-								[
-									[
-										601,
-										618
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_492":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#F5F5F5.png",
-								"regions":
-								[
-									[
-										619,
-										637
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_567":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#87af5f.png",
-								"regions":
-								[
-									[
-										787,
-										830
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_611":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#d7d7d7.png",
-								"regions":
-								[
-									[
-										831,
-										874
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_655":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#BF1E2D.png",
-								"regions":
-								[
-									[
-										875,
-										918
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_699":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#4D4D4C.png",
-								"regions":
-								[
-									[
-										921,
-										962
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_743":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#4D4D4C.png",
-								"regions":
-								[
-									[
-										965,
-										1006
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_842":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#ececec.png",
-								"regions":
-								[
-									[
-										1062,
-										1094
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_875":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#211c18.png",
-								"regions":
-								[
-									[
-										1095,
-										1128
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_888":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/red.png",
-								"regions":
-								[
-									[
-										1006,
-										1006
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_909":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#943852.png",
-								"regions":
-								[
-									[
-										1129,
-										1161
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_93":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#4D4D4C.png",
-								"regions":
-								[
-									[
-										220,
-										241
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_942":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/#ececec.png",
-								"regions":
-								[
-									[
-										1162,
-										1195
-									]
-								],
-								"scope": "gutter_color"
-							},
-							"gutter_color_971":
-							{
-								"flags": 144,
-								"icon": "Cache/GutterColor/magenta.png",
-								"regions":
-								[
-									[
-										1006,
-										1006
-									]
-								],
-								"scope": "gutter_color"
-							}
 						},
 						"selection":
 						[
 							[
-								1802,
-								1802
+								1286,
+								1286
 							]
 						],
 						"settings":
@@ -2385,35 +1114,25 @@
 								},
 								"unmatched":
 								{
-									"1":
-									[
-										104,
-										105
-									]
 								}
 							},
 							"bracket_highlighter.clone_regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -2424,31 +1143,36 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"bracket_highlighter.locations":
 							{
@@ -2463,35 +1187,25 @@
 								},
 								"unmatched":
 								{
-									"1":
-									[
-										104,
-										105
-									]
 								}
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
@@ -2502,57 +1216,270 @@
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
 								"bh_unmatched_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
 								"bh_round",
 								"bh_round_center",
 								"bh_round_open",
 								"bh_round_close",
-								"bh_round_content"
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1838.0,
+						"translation.y": 885.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "x/theme/README.md",
+					"buffer": 4,
+					"file": "bin/ln-exit-codes.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 807,
+						"buffer_size": 134,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								205,
-								205
+								118,
+								118
+							]
+						],
+						"settings":
+						{
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										134,
+										135
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										127,
+										128
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										118,
+										119
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										66,
+										67
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
+							],
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "bin/getMedia",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1004,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								463
 							]
 						],
 						"settings":
@@ -2576,36 +1503,11 @@
 							},
 							"bracket_highlighter.regions":
 							[
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
 								"bh_c_define",
 								"bh_c_define_center",
 								"bh_c_define_open",
 								"bh_c_define_close",
 								"bh_c_define_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
@@ -2616,6 +1518,26 @@
 								"bh_angle_open",
 								"bh_angle_close",
 								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
 								"bh_unmatched",
 								"bh_unmatched_center",
 								"bh_unmatched_open",
@@ -2626,22 +1548,26 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close",
 								"bh_single_quote_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content"
 							],
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/MarkdownEditing/Markdown.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 153.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -2649,7 +1575,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 35.0
+		"height": 38.0
 	},
 	"input":
 	{
@@ -2675,7 +1601,7 @@
 		"cols":
 		[
 			0.0,
-			0.598767052759,
+			0.394173035665,
 			1.0
 		],
 		"rows":
@@ -2697,7 +1623,7 @@
 	"project": "dots.sublime-project",
 	"replace":
 	{
-		"height": 66.0
+		"height": 72.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -2706,6 +1632,42 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"which",
+				"which"
+			],
+			[
+				"bspwm",
+				"bspwm/.wutwhere"
+			],
+			[
+				"ali",
+				"alias/alias"
+			],
+			[
+				"ex",
+				"bin/wget-exit-codes.py"
+			],
+			[
+				"getm",
+				"bin/getMedia"
+			],
+			[
+				"deco",
+				"bin/decodot"
+			],
+			[
+				"polyb",
+				"x/theme/current/polybar"
+			],
+			[
+				"colo",
+				"x/theme/color_list.txt"
+			],
+			[
+				"polbar",
+				"x/theme/current/polybar"
+			],
 			[
 				"sx",
 				"sxhkd/sxhkdrc"
@@ -2744,10 +1706,6 @@
 			],
 			[
 				"theme/light",
-				"x/theme/light/polybar"
-			],
-			[
-				"polyb",
 				"x/theme/light/polybar"
 			],
 			[
@@ -2837,10 +1795,6 @@
 			[
 				"rea",
 				"README.md"
-			],
-			[
-				"deco",
-				"decodot"
 			],
 			[
 				"bin",
