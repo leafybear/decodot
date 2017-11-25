@@ -18,7 +18,7 @@ def usage(error):
 	sys.exit()
 
 ## check environment variable
-if "DOTDIR" in os.environ:
+if "DOTDIR" in os.environ:P
 	dotdir = os.environ["DOTDIR"]
 else:
 	usage("DOTDIR environment variable not defined.")
