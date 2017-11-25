@@ -8,17 +8,23 @@
 
 import os, sys
 
+# handle arguments my way
+args = sys.argv
+del args[0]
+
 def usage(error):
+	print()
 	print(error)
 	print("------------------------------------")
 	print("DECODOT - the dotfile symlink farmer")
-	print("	usage: decodot [l/r] nameOfApp")
+	print("	usage: decodot [l/r] nameOfApp ..")
 	print("	r	remove links")
 	print("	l 	create symlinks")
+	print()
 	sys.exit()
 
 ## check environment variable
-if "DOTDIR" in os.environ:P
+if "DOTDIR" in os.environ:
 	dotdir = os.environ["DOTDIR"]
 else:
 	usage("DOTDIR environment variable not defined.")
@@ -28,30 +34,33 @@ if not os.path.isdir(dotdir):
 	usage(dotdir+" doesn't exist.")
 
 ## check / get args
-if len(sys.argv) != 3:
+if len(args) < 2:
 	usage("Too few arguments.")
-if sys.argv[1] != "r" and sys.argv[1] != "l":
+do = args.pop(0)
+if do != "r" and do != "l":
 	usage("Bad arguments.")
 
-do = sys.argv[1]
-folder = sys.argv[2]
-wutwhere = dotdir + "/" + folder + "/.wutwhere"
-if not os.path.exists(wutwhere):
-	usage(wutwhere+" doesn't exist.")
+folders = args
 
-## PROCEED
-#os.chdir(dotdir)
-with open(wutwhere) as fp:
-	for line in fp:
-		original, link = line.split("\t")
-		original = dotdir + "/" + folder + "/" + original
+for folder in folders:
 
-		if do == "l":
-			parent, target = os.path.split(link)
-			if not os.path.exists(parent):
-				os.system("mkdir -p "+parent)
-			os.system("ln -sf "+original+" "+link)
-			print(link + "  ---->  " + original)
-		else:
-			os.system("rm "+link)
-			print("rm  " + link)
+	wutwhere = dotdir + "/" + folder + "/.wutwhere"
+	if not os.path.exists(wutwhere):
+		print(wutwhere+" doesn't exist.")
+	else:
+		## PROCEED
+		with open(wutwhere) as fp:
+			for line in fp:
+				original, link = line.split("\t")
+				original = dotdir + "/" + folder + "/" + original
+
+				if do == "l":
+					parent, target = os.path.split(link)
+					if not os.path.exists(parent):
+						os.system("mkdir -p "+parent)
+					os.system("ln -sf "+original+" "+link)
+					log = link.rstrip() + "  ---->  " + original.rstrip()
+					print(log)
+				else:
+					os.system("rm "+link)
+					print("rm  " + link)

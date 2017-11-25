@@ -72,3 +72,6 @@ alias updateFontCache="fc-cache -f -v"
 
 # Memory status
 alias meminfo="echo -e '/proc/meminfo:\n';grep --color=auto '^[Mem|Swap]*[Free|Total]*:' /proc/meminfo && echo -e '\nfree -m:'; free -m"
+
+# Remove ._ files
+alias removeDot_="find . -iname '._*' -exec rm -rf {} \;"
