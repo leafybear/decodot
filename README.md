@@ -1,7 +1,35 @@
 # README.md
 
+v1.1 2017.11.26
+Decodot and Decotheme scripts added. First two themes added.
+
 v1 2017.11.18
 Created Readme and first version of dots repo. It works with STOW for now, but I'm planning something better. You'll see.
+
+## Who it's for
+I aim to make it easy to use this folder as a command-line bootstrap. So, its for cli fiends and beginners alike. Linux and mac are the most compatible at the moment.
+
+## How to use
+
+### DECODOT
+Put this project's folder wherever you want. Export an environment variable for the location.
+
+	export DOTDIR=/home/amy/dots
+
+Then run `decodot` from the bin directory. You can create links to any, some, or ALL of the included app configs.
+
+### DECOTHEME
+Some of the config files in this project are linked to the colors/ directory for color values. The current theme in colors is linked to `current`.
+
+* i3 / bspwm
+* vim
+* xresources
+* wallpaper
+
+Run decotheme to switch theme to one of the themes in the folder.
+Current themes included:
+* day
+* night
 
 ## What's Included
 Configuration files for:
@@ -10,7 +38,7 @@ Configuration files for:
     - bash
     - zsh
 * x
-    - xresources
+    - xresources and colors theming
     - urxvt
     - i3wm
     - bspwm
@@ -28,12 +56,3 @@ Configuration files for:
     - tmux
     - vim
 
-You can use one, some, or all of these config files.
-
-## Who it's for
-I aim to make it easy to use this folder as a command-line bootstrap. So, its for cli fiends and beginners alike. Linux and mac are the most compatible at the moment.
-
-## How to use
-For now, use STOW to make symlink to the folder. More on this coming soon.
-
-## Links, Credits

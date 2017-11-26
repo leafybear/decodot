@@ -7,7 +7,7 @@
 
 hi clear
 syntax reset
-let g:colors_name = "PaperColor"
+let g:colors_name = "decodot"
 
 " Helper Functions: {{{
 " Returns an approximate grey index for the given grey level

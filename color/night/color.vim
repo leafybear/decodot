@@ -84,7 +84,7 @@ augroup NightsenseThemeSet
    autocmd CursorMoved * execute 'if !exists("colors_name") |
          \ colorscheme forgotten-dark | endif'
 augroup END
-let colors_name = 'forgotten-dark'
+let colors_name = 'decodot'
 
 " highlighting function
 fun! <sid>h(x, gf, gb, cf, cb, a, s)
