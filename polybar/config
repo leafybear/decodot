@@ -2,7 +2,7 @@ include-file = ~/.theme/polybar
 
 [bar/top]
 width = 100%
-height = 30
+height = 34
 offset-x = 0
 offset-y = -1
 ;bottom = true

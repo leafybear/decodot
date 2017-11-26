@@ -2,32 +2,32 @@
 ;. . . . . . . . . . .
 
 [colors]
-fg = #242424
-bg = #59ffffff
-underline = #59242424
+fg = #d9bdbbbb
+bg = #b3000000
+underline = #34ffffff
 
-module-a-fg = #66000000
-module-a-bg =
-module-a-ramp-fg = #66000000
+module-a-fg = #B2B2B2
+module-a-bg = #b3252525
+module-a-ramp-fg = #599778C3
 module-a-ramp-bg =
-module-a-underline = #eee
+module-a-underline = #bf956DAB
 
-module-b-fg = #242424
-module-b-bg = #8cffffff
-module-b-ramp-fg = #66000000
+module-b-fg = #46bdbdbd
+module-b-bg = #99000000
+module-b-ramp-fg = #666EBDE3
 module-b-ramp-bg =
-module-underline-b = #55aa55
+module-underline-b = #4d7A91C7
 
 ; mode
-workspace-mode-fg = #EDEDED
-workspace-mode-bg = #D75F00
+workspace-mode-fg = #262626
+workspace-mode-bg = #A6426F
 ; focused
 workspace-f-fg = #fff
-workspace-f-bg = #33ffffff
-workspace-f-underline = #59242424
+workspace-f-bg = #66000000
+workspace-f-underline = #73ffffff
 ; unfocused
-workspace-uf-fg = #242424
-workspace-uf-bg = #59ffffff
+workspace-uf-fg = #d9bdbbbb
+workspace-uf-bg = #b3000000
 workspace-uf-underline- =
 
 ; ARGB Alpha
