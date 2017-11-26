@@ -5,7 +5,7 @@
 
 # Quit BSPWM
 super + alt + Escape
-	bspc quit; pkill bar
+	bspc quit
 
 # Close a the window
 super + shift + q
@@ -96,9 +96,8 @@ super + Return
 	urxvt
 
 super + space
-	dmenu_run -i -nb $DMENU_NB -nf $DMENU_NF -sb $DMENU_SB -sf $DMENU_SF -fn "$DMENU_FONT"
+	rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
-

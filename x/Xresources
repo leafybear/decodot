@@ -36,3 +36,14 @@ urxvt.underlineURLs:		false
 urxvt.url-select.launcher:	/usr/bin/surf
 urxvt.url-select.underline:	true
 urxvt*urlLauncher:      	surf
+
+! ROFI
+!rofi.line-margin: 5
+!rofi.eh:	2
+!rofi.padding:	300
+!rofi.fullscreen:	true
+!rofi.bw:	0
+rofi.font:	Miso 20
+rofi.separator-style: solid
+rofi.hide-scrollbar: true
+rofi.lines:	5

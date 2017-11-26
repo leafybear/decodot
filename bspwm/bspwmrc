@@ -1,5 +1,10 @@
 #! /bin/sh
 
+if [ -e "$BSPWM_STATE" ] ; then
+	bspc wm -l "$BSPWM_STATE"
+	rm "$BSPWM_STATE"
+fi
+
 # colors in separate file
 source $HOME/.theme/bspwm
 
@@ -37,5 +42,4 @@ bspc rule -a Kodi desktop=^4
 bspc config external_rules_command "$(which external_rules)"
 
 # start up apps
-$HOME/.config/lemonbar/bar &
-urxvt &
+$HOME/.config/polybar/launch.sh &

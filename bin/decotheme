@@ -1,0 +1,55 @@
+#!/usr/bin/python
+##- - - - - - - - - - - - -
+##    DECO THEME
+##
+##    (leafybear) 2017
+##		Amy Bentley
+##- - - - - - - - - - - - -
+import sys, os, random
+
+args = sys.argv
+del args[0]
+
+def usage(error):
+	print()
+	print(error)
+	print("------------------------------------")
+	print("DECOTHEME - dotfile theme chooser")
+	print("examples:")
+	print("   $ decotheme light     :choose LIGHT theme")
+	print("   $ decotheme dark     :choose DARK theme")
+	print("usage: decotheme nameOfTheme")
+	print()
+	sys.exit()
+
+## check environment variable
+if "DOTDIR" in os.environ:
+	dotdir = os.environ["DOTDIR"]
+else:
+	usage("DOTDIR environment variable not defined.")
+
+## check folder and wutwhere exist
+if not os.path.isdir(dotdir):
+	usage(dotdir+" doesn't exist.")
+
+## check / get args
+if len(args) != 1:
+	usage("Wrong number of arguments.")
+theme = args.pop(0)
+theme = dotdir + "/color/" + theme
+current = dotdir + "/color/current"
+if not os.path.exists(theme):
+		usage("Theme '"+theme+"' doesn't exist.")
+else:
+	os.system("ln -sfn "+theme+" "+current)
+	## set a new wallpaper
+	walldir=theme+"/wallpaper"
+	if os.path.isdir(walldir):
+		walls = [f.path for f in os.scandir(walldir)]
+		index = random.randint(0,len(walls))
+		os.system("feh --bg-fill "+walls[index])
+	## run xrdb
+	os.system("xrdb ~/.Xresources")
+	## reload bspwm, i3, etc.
+	os.system("i3-msg restart")
+	os.system("bspc wm -d > \"$BSPWM_STATE\" && bspc quit")

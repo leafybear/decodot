@@ -1,11 +1,10 @@
 #### x settings and niceties
 xrdb $HOME/.Xresources
 xsetroot -name $HOSTNAME
-compton --config $HOME/.config/compton -cCb &
-sh ~/.fehbg &
+xsetroot -cursor_name left_ptr
 
-#### unused
-#xsetroot -cursor_name left_ptr
+sh ~/.fehbg &
+compton --config $HOME/.config/compton -cCb &
 #xscreensaver -no-splash &
 
 ## set starting backlight and volume values
