@@ -2,10 +2,10 @@ docker run -d \
 		-v /mnt/mixed:/media/mixed \
 		-v /mnt/tv:/media/tv \
 		-v /mnt/movies:/media/movies \
-		-v /mnt/extra_a:/media/empty_a \
-		-v /mnt/extra_b:/media/empty_b  \
-		-e AVAHI=1 --net \"host\" \
-		--name=\"afp\" \
-		-e AFP_USER=\"collector\" \
+		-v /mnt/extra_a:/media/extra_a \
+		-v /mnt/extra_b:/media/extra_b  \
+		-e AVAHI=1 --net "host" \
+		--name="afp" \
+		-e AFP_USER="collector" \
 		-e AFP_PASSWORD=pur3w0nd3r \
 		leafybear/afp
