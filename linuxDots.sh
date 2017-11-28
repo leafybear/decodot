@@ -1,4 +1,4 @@
-bin/decodot l alias \
+bin/decodot $1 alias \
 bin \
 bspwm \
 color \
