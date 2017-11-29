@@ -36,7 +36,7 @@ setopt PROMPT_SUBST
 
 user_info () { [[ $USER != "amy" ]] && echo $USER || echo "" }
 
-PROMPT='%{$fg[$magenta]%}$(user_info)%{$fg[$host_color]%}%m %{$fg[magenta]%}%~%u $(git_info)
+PROMPT='%{$fg[$host_color]%}%m %{$fg[magenta]%}%~%u $(git_info)
 %(?.%{$fg[blue]%}.%{$fg[red]%}%? )%(!.#.$)%{$reset_color%} '
 
 # PROMPT='%{$fg[$host_color]%}%n@%m%{$reset_color%} %~
