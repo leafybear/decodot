@@ -1,5 +1,20 @@
 # ~/.zshrc
 source "$HOME/.shellrc"
+source "$HOME/.zsh_git"
+
+# When connecting via ssh, always [re]attach to a terminal manager
+# Adapted from code found at <http://involution.com/2004/11/17/1-32/> (now offline)
+if command_exists tmux && [ -z $TMUX ]; then
+  if [ "$SSH_TTY" != "" -a "$TERM" -a "$TERM" != "screen" -a "$TERM" != "dumb" ]; then
+    pgrep tmux
+    # $? is the exit code of pgrep; 0 means there was a result (tmux is already running)
+    if [ $? -eq 0 ]; then
+      tmux -u attach -d
+    else
+      tmux -u
+    fi
+  fi
+fi
 
 # Import modules/stuff
 autoload -U  compinit   && compinit
@@ -21,36 +36,6 @@ function set_title {
   echo -n "$Title"
 }
 
-# Pretty-printed backgrounded jobs count for the RPROMPT
-function rprompt_jobs {
-}
-
-# Pretty-printed exit code for the RPROMPT
-function rprompt_exitcode {
-  if [ $proc_save != 0 ]; then
-    echo -n "%{$fg[yellow] %}%?%{$fg[red]%} ✖%{$reset_color%}"
-  else
-    echo -n "%{$fg[green] %}✔%{$reset_color%}"
-  fi
-}
-
-function rprompt {
-  local exit_code=$?            # exit code of command
-  local count=$(jobs | wc -l)   # no. of background jobs
-
-  # Report no. of background jobs if >0
-  if [ $count -gt 0 ]; then
-    echo -n " %{$fg[cyan]%}⎇ %j "
-  fi
-
-  # Report exit code
-  if [ $exit_code -ne 0 ]; then
-    echo -n "%{$fg[yellow] %}%?%{$fg[red]%} ✖%{$reset_color%}"
-  else
-    echo -n "%{$fg[green] %}✔%{$reset_color%}"
-  fi
-}
-
 if [ $TERM != 'linux' ]; then
   function chpwd {
     pwd="$(pwd | sed s:$HOME:~:)"
@@ -62,10 +47,20 @@ fi
 ### Setup prompt
 setopt PROMPT_SUBST
 
-PROMPT='%{$fg[$prompt_color]%}%n@%m%{$reset_color%} %~
-%{${fg[yellow]}%}%# '
-RPROMPT='%{$up%}$(rprompt)%{$down%}'
-PS2="%{${fg[yellow]}%}» "
+# PROMPT='%{$fg[$host_color]%}%n@%m%{$reset_color%} %~
+# %{${fg[yellow]}%}%# '
+# RPROMPT='$(git_info)'
+# PS2="%{${fg[yellow]}%}» "
+
+ssh_info() {
+  [[ "$SSH_CONNECTION" != '' ]] && echo "%(!.%{$fg[red]%}.%{$fg[yellow]%})%n%{$reset_color%}@%{$fg[green]%}%m%{$reset_color%}:" || echo ""
+}
+
+# Use ❯ as the non-root prompt character; # for root
+# Change the prompt character color if the last command had a nonzero exit code
+PS1='
+%{$fg[magenta]%}%~%u $(git_info)
+%(?.%{$fg[blue]%}.%{$fg[red]%}%? )%(!.#.$)%{$reset_color%} '
 
 # see also: `precmd` above (for pseudo-RPROMPT)
 
@@ -78,8 +73,8 @@ setopt hist_ignore_all_dups
 
 #### Aliases ########################################################
 # (zsh specific--also see .shellrc)
-alias -g G='| grep -P'
-alias -g L='| less'
+#alias -g G='| grep -P'
+#alias -g L='| less'
 
 
 #### Fix key bindings ###############################################

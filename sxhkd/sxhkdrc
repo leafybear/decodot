@@ -4,8 +4,9 @@
 #
 
 # Quit BSPWM
-super + alt + Escape
-	bspc quit
+super + alt + {_,shift + }Escape
+	{bspc wm -d > "$BSPWM_STATE" && bspc quit, \
+	 bspc quit 1}
 
 # Close a the window
 super + shift + q

@@ -1,0 +1,5 @@
+zshrc	$HOME/.zshrc
+shellrc	$HOME/.shellrc
+bashrc	$HOME/.bashrc
+bash_profile	$HOME/.bash_profile
+zsh_git	$HOME/.zsh_git

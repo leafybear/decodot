@@ -1,5 +1,3 @@
-# some variables for building a bash prompt
-
 # VARIABLES
 Date="\d"
 DateCustom="\D{}"
@@ -88,3 +86,38 @@ On_IPurple="\[\033[10;95m\]"  # Purple
 On_ICyan="\[\033[0;106m\]"    # Cyan
 On_IWhite="\[\033[0;107m\]"   # White
 
+
+source $HOME/.shell/prompt-git
+
+
+# Set host specific coloring
+HostColor=$Red
+case $HOSTNAME in
+		(Amethyst) HostColor=$Purple;;
+		(Sweetie) HostColor=$Yellow;;
+		(bearbook) HostColor=$Cyan;;
+		(ariel) HostColor=$Green;;
+esac
+
+## GIT prompt values
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_SHOWCOLORHINTS=true
+export GIT_PS1_DESCRIBE_STYLE='contains'
+export GIT_PS1_SHOWUPSTREAM='auto'
+# Find out more at http://blog.backslasher.net/git-prompt-variables.html
+# * unstaged changes
+# + staged changes
+# % untracked changes
+# < behind upstream
+# > ahead of upstream
+# <> diverged from upstream
+# = identical
+
+#### PROMPTS. uncomment one
+# amy > Amethyst > ~ $
+#PS1="$Cyan$User > $HostColor$Host > $Cyan$PathShort $PromptChar$Color_Off "
+# amy Amethyst:~ (gitbranch)
+PS1="$Cyan$User $HostColor$Host$White:$HostColor$PathShort$Cyan$(__git_ps1) $Color_Off"
+# amy Amethyst:~
+#PS1="$Cyan$User $HostColor$Host$White:$HostColor$PathShort $Color_Off"

@@ -1,5 +1,4 @@
 bin/decodot l alias \
-bash \
 bin \
 bspwm \
 color \
@@ -13,10 +12,10 @@ mpv \
 ncmpcpp \
 polybar \
 ranger \
+shell \
 sublime-text \
 sxhkd \
 tmux \
 vim \
 weechat \
-x \
-zsh \
+x
