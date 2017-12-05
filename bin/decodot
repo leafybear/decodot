@@ -71,7 +71,7 @@ for folder in folders:
 					parent, target = os.path.split(link)
 					if not os.path.exists(parent):
 						os.system("mkdir -p "+parent)
-					os.system("ln -sfn "+original+" "+link)
+					os.system("ln -sfn \""+original+"\" "+link)
 					log = "Linking  "+link+"  --to-->  "+original
 					print(log)
 				else:
