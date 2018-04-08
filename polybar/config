@@ -26,7 +26,7 @@ font-2 = Wuncon Siji:size=14;3
 font-3 = unifont:fontformat=truetype:size=14;3
 
 
-modules-left = i3
+modules-left = i3 bspwm
 modules-center = mpd
 modules-right = filesystem xbacklight volume battery wlan eth  date
 
@@ -49,6 +49,70 @@ label-unmounted = %mountpoint%  ?
 label-unmounted-padding = 5
 label-mounted-background = ${colors.module-b-bg}
 label-unmounted-background = ${colors.module-b-bg}
+
+[module/bspwm]
+type = internal/bspwm
+pin-workspaces = true
+inline-mode = false
+enable-click = false
+enable-scroll = false
+reverse-scroll = false
+fuzzy-match = true
+
+; ws-icon-[0-9]+ = label;icon
+; Note that the label needs to correspond with the bspwm workspace name
+ws-icon-0 = a;♚
+ws-icon-1 = b;♛
+ws-icon-2 = c;♜
+ws-icon-3 = d;♝
+ws-icon-4 = e;♞
+ws-icon-default = ♟
+
+; Available tags:
+;   <label-monitor>
+;   <label-state> - gets replaced with <label-(focused|urgent|occupied|empty)>
+;   <label-mode> - gets replaced with <label-(monocle|tiled|fullscreen|floating|locked|sticky|private)>
+; Default: <label-state>
+format = <label-state> <label-mode>
+
+label-monitor = %name%
+
+; If any values for label-dimmed-N are defined, the workspace/mode
+; colors will get overridden with those values if the monitor is out of focus
+; To only override workspaces in a specific state, use:
+;   label-dimmed-focused
+;   label-dimmed-occupied
+;   label-dimmed-urgent
+;   label-dimmed-empty
+label-dimmed-foreground = #555
+label-dimmed-underline = ${bar/top.background}
+label-dimmed-focused-background = #f00
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-focused = %name%
+label-focused-foreground = #ffffff
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+
+label-occupied = %name%
+label-occupied-underline = #555555
+
+label-urgent = %name%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+
+label-empty = %name%
+label-empty-foreground = #55
+
+; Separator in between workspaces
+label-separator = |
+label-separator-padding = 2
+label-separator-foreground = #ffb52a
 
 [module/i3]
 type = internal/i3

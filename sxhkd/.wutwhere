@@ -1,1 +1,2 @@
-.	$HOME/.config/sxhkd
+sxhkdrc	$HOME/.config/sxhkd/sxhkdrc
+sxhkd.service	$HOME/.config/systemd/user/sxhkd.service

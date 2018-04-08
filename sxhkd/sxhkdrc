@@ -1,97 +1,4 @@
-# vim: set ft=sxhkdrc:
-#
-# bspwm hotkeys
-#
-
-# Quit BSPWM
-super + alt + {_,shift + }Escape
-	{bspc wm -d > "$BSPWM_STATE" && bspc quit, \
-	 bspc quit 1}
-
-# Close a the window
-super + shift + q
-	bspc window -c
-
-# Toggle monocle
-super + t
-	bspc desktop -l next
-
-# Balance window tree
-super + b
-	bspc desktop -B
-
-# Float or fullscreen the window
-super + {s,f}
-	bspc window -t {floating,fullscreen}
-
-# Select last window (desktop)
-super + {grave,Tab}
-	bspc {window,desktop} -f last
-
-# Swap this window with last used
-super + apostrophe
-	bspc window -s last
-
-# ?
-super + y
-	bspc window -w last.manual
-
-# Move window to largest space
-super + m
-	bspc window -s biggest
-
-# Select (Move) window
-super + {_,shift + }{Left,Down,Up,Right}
-	bspc window -{f,s} {left,down,up,right}
-
-# Select next (prev) window
-super + {_,shift + }c
-	bspc window -f {next,prev}
-
-# Rotate windows anticlockwise (clockwise)
-super + {comma,period}
-	bspc desktop -C {backward,forward}
-
-# Shift to next, prev desktops
-super + bracket{left,right}
-	bspc desktop -f {prev,next}
-
-# Set window insertion space
-super + ctrl + {Left,Down,Up,Right}
-	bspc window -p {left,down,up,right}
-
-# ?
-super + ctrl + {_,shift + }space
-	bspc {window -p cancel,desktop -c}
-
-# Adjust ratio A
-super + alt + {Left,Down,Up,Right}
-	bspc window -e {left -10,down +10,up -10,right +10}
-
-# Adjust ratio B
-super + alt + shift + {Left,Down,Up,Right}
-	bspc window -e {right -10,up +10,down -10,left +10}
-
-# ?
-super + ctrl + {1-9}
-	bspc window -r 0.{1-9}
-
-# Select (move window to) desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} ^{1-9,10}
-
-ctrl + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
-
-ctrl + !button{1-3}
-	bspc pointer -t %i %i
-
-ctrl + @button{1-3}
-	bspc pointer -u
-
-#
-# wm independent hotkeys
-#
+##-------------- Launch apps
 
 super + Return
 	urxvt
@@ -99,6 +6,71 @@ super + Return
 super + space
 	rofi -show run
 
-# make sxhkd reload its configuration files:
+##--------------- Nodes and Desktops
+
+# Focus (Swap) a node
+super + {_,shift + } {Left,Down,Up,Right}
+  bspc node -{f,s} {west,south,north,east}
+
+# Focus (move) a desktop
+super + {_,shift + } {1-9}
+	bspc {desktop -f,node -d} {1-9}
+
+# Float or fullscreen the window
+super + {s,f}
+	bspc node -t {floating,fullscreen}
+
+# Close node
+super + w
+	bspc node -k
+
+# Toggle monocle mode
+super + m
+	bspc desktop -l next
+
+# Swap node in largest space
+super + b
+	bspc node -s biggest
+
+# Select last node (desktop)
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# Reload SXHKD config
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# Quit BSPWM normally
+super + alt + Escape
+	bspc quit
+
+## -------------- Resizing nodes
+
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + alt + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+## -------------- Function keys
+
+XF86Audio{RaiseVolume,LowerVolume}
+	exec amixer -q set Master 5%{+,-} unmute
+
+XF86AudioMute
+	exec amixer -q set Master toggle
+
+XF86Audio{Play,Next,Prev}
+	exec mpc {toggle,next,prev}
+
+XF86MonBrightness{Down,Up}
+	exec xbacklight {-dec,-inc} 10
+
+Print
+	exec scrot ~/screenshots/%Y-%m-%d_%H%M%S.png

@@ -209,7 +209,7 @@ bindsym $mod+r mode "resize"
 # Window RULES
 ## ------------------------
 for_window [window_role="pop-up"] floating enable
-#for_window [class="mpv"] floating enable
+for_window [class="mpv"] floating enable
 for_window [class="feh"] fullscreen enable
 assign [class="sublime-text"] → " 2 "
 assign [class="surf"] → " 3 "

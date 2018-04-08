@@ -1,4 +1,5 @@
 #### x settings and niceties
+export $XDG_CONFIG_HOME=$HOME/.config
 xrdb $HOME/.Xresources
 xsetroot -name $HOSTNAME
 xsetroot -cursor_name left_ptr
@@ -13,9 +14,7 @@ amixer -q set Master 60 unmute
 /usr/bin/xcalib -d :0 $HOME/.icc/6000.icm
 
 #### window manager
-
-#sxhkd &
+exec bspwm
 #exec wm.sh
-
 # I3 with logging of output
-exec i3 -V >> ~/.i3-log-$(date + '%F-%k-%M-%S') 2>&1
+#exec i3 -V >> ~/.i3-log-$(date + '%F-%k-%M-%S') 2>&1
