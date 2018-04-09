@@ -61,21 +61,19 @@ fuzzy-match = true
 
 ; ws-icon-[0-9]+ = label;icon
 ; Note that the label needs to correspond with the bspwm workspace name
-ws-icon-0 = a;♚
-ws-icon-1 = b;♛
-ws-icon-2 = c;♜
-ws-icon-3 = d;♝
-ws-icon-4 = e;♞
+ws-icon-0 = 1;♚
+ws-icon-1 = 2;♛
+ws-icon-2 = 3;♜
+ws-icon-3 = 4;♝
+ws-icon-4 = 5;♞
 ws-icon-default = ♟
 
-; Available tags:
-;   <label-monitor>
-;   <label-state> - gets replaced with <label-(focused|urgent|occupied|empty)>
-;   <label-mode> - gets replaced with <label-(monocle|tiled|fullscreen|floating|locked|sticky|private)>
-; Default: <label-state>
 format = <label-state> <label-mode>
 
 label-monitor = %name%
+label-monitor-padding = 5
+label-monitor-foreground = ${colors.workspace-mode-fg}
+label-monitor-background = ${colors.workspace-mode-bg}
 
 ; If any values for label-dimmed-N are defined, the workspace/mode
 ; colors will get overridden with those values if the monitor is out of focus
@@ -87,31 +85,27 @@ label-monitor = %name%
 label-dimmed-foreground = #555
 label-dimmed-underline = ${bar/top.background}
 label-dimmed-focused-background = #f00
+label-dimmed-padding = 5
 
-; Available tokens:
-;   %name%
-;   %icon%
-;   %index%
-; Default: %icon%  %name%
 label-focused = %name%
-label-focused-foreground = #ffffff
-label-focused-background = #3f3f3f
-label-focused-underline = #fba922
+label-focused-background = ${colors.workspace-f-bg}
+label-focused-underline= ${colors.workspace-f-underline}
+label-focused-padding = 5
 
 label-occupied = %name%
-label-occupied-underline = #555555
+label-occupied-foreground = ${colors.workspace-uf-fg}
+label-occupied-padding = 5
 
 label-urgent = %name%
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
-label-urgent-underline = #9b0a20
+label-urgent-padding = 5
 
 label-empty = %name%
 label-empty-foreground = #55
+label-empty-padding = 5
 
 ; Separator in between workspaces
-label-separator = |
-label-separator-padding = 2
+label-separator =
+label-separator-padding = 0
 label-separator-foreground = #ffb52a
 
 [module/i3]
