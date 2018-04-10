@@ -20,9 +20,10 @@ super + {_,shift + } {1-9}
 super + {f,e,t}
 	bspc node -t {floating,fullscreen,tiled}
 
-# Rotate nodes
-super + q
-	bspc node @/ -R 90
+
+# Rotate (all) nodes
+super + {_, shift +} q
+	bspc node {@parent,@/} -R 90
 
 # Swap to biggest on active desktop
 super + b
@@ -45,7 +46,7 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # Toggle sticky node
-super + ctrl + period
+super + period
   bspc node -g sticky
 
 # Reload SXHKD config
@@ -59,13 +60,19 @@ super + alt + Escape
 ## -------------- Resizing nodes
 
 # expand a window by moving one of its side outward
-super + alt + {Left,Down,Up,Right}
-	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
-
+super + alt + ctl + {Left,Down,Up,Right}
+#	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 # contract a window by moving one of its side inward
 super + alt + shift + {Left,Down,Up,Right}
-	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+#	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
+# adjust ratios
+super + alt + {Left,Down,Up,Right}
+	bspc node @parent -r {-0.1,+0.1,-0.1,+0.1}
+# set ratio
+# bspc node @parent -r 0.5
+# adjust ratio
+# bspc node @parent -r +0.1
 
 ## -------------- Function keys
 
