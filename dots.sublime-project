@@ -22,6 +22,7 @@
 	],
 	"settings":
 	{
+		"color_scheme": "Packages/Colorsublime - Themes/Bittersweet.tmTheme",
 		"draw_centered": false,
 		"ignored_packages":
 		[
