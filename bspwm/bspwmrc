@@ -12,10 +12,11 @@ source $HOME/.theme/bspwm
 
 # workspaces
 bspc monitor -d cmd edit www remote etc
+bspc monitor HDMI2 -d cmd edit www remote etc
 
 # visual options
-bspc config border_width    2
-bspc config window_gap      10
+bspc config border_width    1.5
+bspc config window_gap      8
 bspc config top_padding		34
 bspc config right_padding	0
 bspc config left_padding	0
@@ -30,15 +31,14 @@ bspc config focus_follows_pointer	true
 bspc config super mod4
 
 # app rules
-bspc rule -a feh state=floating
+bspc rule -a feh state=fullscreen
 bspc rule -a mpv state=floating sticky=on rectangle=400x250+40+40
-bspc rule -a Sublime_text desktop=^2 state=fullscreen
-bspc rule -a Surf state=floating sticky=on rectangle=600x900+60+40
-bspc rule -a Vivaldi-stable desktop=^3 state=fullscreen
-
+bspc rule -a Surf state=floating sticky=on rectangle=500x900+40+40
+bspc rule -a Sublime_text desktop=^2
+bspc rule -a Vivaldi-stable desktop=^3
 
 # "use tabs consistently" external rules
-bspc config external_rules_command "$(which external_rules)"
+#bspc config external_rules_command "$(which external_rules)"
 
 # start up apps
 $HOME/.config/polybar/launch.sh &
