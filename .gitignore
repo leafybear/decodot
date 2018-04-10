@@ -3,11 +3,16 @@
 mpd/pid
 mpd/state
 mpd/log
+mps/mps-youtube/input_history
+mps/mps-youtube/play_history.m3u
+mps/mps-youtube/cache*
 mpv/watch_later
 ranger/history
 ranger/bookmarks
+sublime-text/SBS*
 sublime-text/Package\ Control.last-run
 sublime-text/Package\ Control.ca-list
+sublime-text/Package\ Control.merged-ca-bundle
 sublime-text/Package\ Control.ca-bundle
 sublime-text/Package\ Control.system-ca-bundle
 sublime-text/Package\ Control.cache/
