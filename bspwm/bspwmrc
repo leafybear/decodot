@@ -36,7 +36,7 @@ bspc config super mod4
 # app rules
 bspc rule -a feh state=fullscreen
 bspc rule -a mpv state=floating sticky=on rectangle=400x250+40+40
-bspc rule -a Surf state=floating sticky=on rectangle=500x900+40+40
+bspc rule -a Surf state=floating rectangle=500x900+40+40
 bspc rule -a Sublime_text desktop=^2
 bspc rule -a Vivaldi-stable desktop=^3
 bspc rule -a Anki desktop=^5
