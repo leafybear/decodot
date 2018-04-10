@@ -6,6 +6,6 @@ docker run -d \
 		-v /mnt/extra_b:/media/extra_b  \
 		-e AVAHI=1 --net "host" \
 		--name="afp" \
-		-e AFP_USER="collector" \
-		-e AFP_PASSWORD=pur3w0nd3r \
+		-e AFP_USER="$(cat ~/afp_user.txt)" \
+		-e AFP_PASSWORD=$(cat ~/afp_password.txt) \
 		leafybear/afp
