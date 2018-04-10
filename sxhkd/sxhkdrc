@@ -8,6 +8,10 @@ super + space
 
 ##--------------- Nodes and Desktops
 
+# Focus the next/prev window on the desktop
+super + {a,s}
+	bspc node -f {prev.active,next.active}
+
 # Focus (Swap) a node
 super + {_,shift + } {Left,Down,Up,Right}
   bspc node -{f,s} {west,south,north,east}
