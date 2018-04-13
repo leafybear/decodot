@@ -1,5 +1,8 @@
 # README.md
 
+v1.2 2018.4.10
+Added configs for BSPWM and SXHKD. Both are up to date with changes in bspwm 0.90 and on.
+
 v1.1 2017.11.26
 Decodot and Decotheme scripts added. First two themes added.
 
