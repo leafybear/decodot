@@ -1,9 +1,9 @@
-bspc config normal_border_color "#211c18" # Bokara grey
-bspc config focused_border_color "#735539" # Pickled bean
-bspc config active_border_color "#943852" # Disco ~
+bspc config normal_border_color "#EDEDED"
+bspc config focused_border_color "#3E999F"
+bspc config active_border_color "#D75F00"
 
 # presel feedback message
-bspc config presel_border_color "#7ba69c"
+bspc config presel_border_color "#D75F00"
 
 # focused locked window, focused monitor
 # focused_locked_border_color
