@@ -1,9 +1,10 @@
 #! /bin/sh
 
-#if [ -e "$BSPWM_STATE" ] ; then
-#	bspc wm -l "$BSPWM_STATE"
-#	rm "$BSPWM_STATE"
-#fi
+if [ -e "$BSPWM_STATE" ] ; then
+	bspc wm --load-state "$BSPWM_STATE"
+	bspc wm --adopt-orphans
+	rm "$BSPWM_STATE"
+fi
 
 sxhkd &
 
@@ -12,14 +13,14 @@ source $HOME/.theme/bspwm
 
 # workspaces
 bspc monitor -d cmd edit www remote etc
-bspc monitor HDMI2 -d cmd edit www remote etc
+#bspc monitor HDMI2 -d cmd edit www remote etc
 bspc desktop ^2 -l monocle
 bspc desktop ^3 -l monocle
 
 # visual options
 bspc config border_width    1.5
 bspc config window_gap      8
-bspc config top_padding		34
+bspc config top_padding		33
 bspc config right_padding	0
 bspc config left_padding	0
 bspc config bottom_padding	0
