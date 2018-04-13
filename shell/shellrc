@@ -165,6 +165,7 @@ alias listsoundcards="aplay -l | awk -F \: '/,/{print $2}' | awk '{print $1}' | 
 alias listsounddevices="aplay -L | grep :CARD"
 alias ff_colours='for i in `seq 30 37`; do echo -e "\e[0;${i}m $i \e[1;${i}m $i \e[m"; done'
 
+
 function thumb {
   convert -resize 250x250 "$1" "${1/\./_thumb.}"
 }
