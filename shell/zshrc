@@ -98,3 +98,6 @@ bindkey "^K"       kill-whole-line
 bindkey "^U"       undo
 bindkey "^['"      quote-line
 bindkey "^[[39;5u" quote-line
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
