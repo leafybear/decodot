@@ -126,6 +126,11 @@ alias lsd="ls -la | grep '^d'"
 alias feh="feh -FZ"
 
 #alias dockerCleanUp="docker rm $(docker ps -a -f STATUS=exited | awk '{print }')"
+alias dl="docker ps -a"
+alias ds="docker stop"
+alias dr="docker rm"
+alias dsa="docker stop $(docker ps -a -q)"
+alias dra="docker rm $(docker ps -a -q)"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "

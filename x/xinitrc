@@ -7,13 +7,13 @@ xsetroot -name $HOSTNAME
 xsetroot -cursor_name left_ptr
 
 sh ~/.fehbg &
-compton --config $HOME/.config/compton -cCb &
+#compton --config $HOME/.config/compton -cCb &
 #xscreensaver -no-splash &
 
 ## set starting backlight and volume values
-xbacklight -set 50
+#xbacklight -set 50
 amixer -q set Master 60 unmute
-/usr/bin/xcalib -d :0 $HOME/.icc/6000.icm
+#/usr/bin/xcalib -d :0 $HOME/.icc/6000.icm
 
 #### window manager
 exec bspwm

@@ -1,11 +1,11 @@
 docker run -d \
 		-v /mnt/mixed:/media/mixed \
-		-v /mnt/tv:/media/tv \
-		-v /mnt/movies:/media/movies \
-		-v /mnt/extra_a:/media/extra_a \
-		-v /mnt/extra_b:/media/extra_b  \
+		-v /mnt/a:/media/a \
+		-v /mnt/b:/media/b \
+		-v /mnt/c:/media/c \
+		-v /mnt/d:/media/d \
 		-e AVAHI=1 --net "host" \
 		--name="afp" \
-		-e AFP_USER="$(cat ~/afp_user.txt)" \
-		-e AFP_PASSWORD=$(cat ~/afp_password.txt) \
+		-e AFP_USER="$(cat ~/sweetie-docker/user.txt)" \
+		-e AFP_PASSWORD=$(cat ~/sweetie-docker/passwd.txt) \
 		leafybear/afp
