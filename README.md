@@ -1,5 +1,8 @@
 # README.md
 
+v1.3 2020.03.01
+Shell config changes.
+
 v1.2 2018.4.10
 Added configs for BSPWM and SXHKD. Both are up to date with changes in bspwm 0.90 and on.
 
@@ -58,4 +61,3 @@ Configuration files for:
     - mpd
     - tmux
     - vim
-

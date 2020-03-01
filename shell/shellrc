@@ -7,10 +7,9 @@ function getHostColour {
   #  31     32      33    34       35    36
   # red  green  yellow  blue  magenta  cyan
   case "$1" in
-    sweetie  ) echo "yellow"  ;;
-    Amethyst.local ) echo "magenta" ;;
-    bearbook ) echo "cyan"    ;;
-    ariel    ) echo "green"   ;;
+    bear-book.local ) echo "magenta" ;;
+    sweetie ) echo "cyan"    ;;
+    natsu    ) echo "green"   ;;
     *        ) echo "red"     ;;
   esac
 }
@@ -101,9 +100,9 @@ fi
  # \__,_|_|_\__,_/__/\___/__/
  # aliases
 
-try_alias  ls    ls -G
-try_alias  ls    ls --color=auto
-try_alias  grepall  grep --color=always -C9999
+#try_alias  ls    ls -G
+#try_alias  ls    ls --color=auto
+#try_alias  grepall  grep --color=always -C9999
 
 # `less` is in my muscle memory...
 #alias less=$PAGER
@@ -114,6 +113,7 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
+alias ls="ls -G"
 alias t="tmux attach"
 alias grep="grep -i"
 alias df="df -h"
@@ -124,6 +124,9 @@ alias sl="ls"
 alias ll="ls -lah"
 alias lsd="ls -la | grep '^d'"
 alias feh="feh -FZ"
+alias iina="/Applications/IINA.app/Contents/MacOS/iina-cli"
+alias atom="/Applications/Atom.app/Contents/Resources/app/atom.sh"
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 #alias dockerCleanUp="docker rm $(docker ps -a -f STATUS=exited | awk '{print }')"
 alias dl="docker ps -a"
@@ -136,12 +139,9 @@ alias dra="docker rm $(docker ps -a -q)"
 alias sudo="sudo "
 
 ## Filesystems
-alias musb="sudo mount /dev/sda1 /mnt/usb"
-alias uusb="sudo umount /dev/sda1"
-alias sweetie="djmount $HOME/sweetie"
 alias bf="du -x | sort -nr | head -10"
 alias removeDot_="find . -iname '._*' -exec rm -rf {} \;"
-alias clean="find . -regex '.*\(.AppleDouble\|.DS_Store\)$' -ls -exec rm -r {} \;"
+alias cleandots="find . -regex '.*\(.AppleDouble\|.DS_Store\)$' -ls -exec rm -r {} \;"
 
 # Git shortcuts
 alias g="git"
@@ -170,7 +170,6 @@ alias listsoundcards="aplay -l | awk -F \: '/,/{print $2}' | awk '{print $1}' | 
 alias listsounddevices="aplay -L | grep :CARD"
 alias ff_colours='for i in `seq 30 37`; do echo -e "\e[0;${i}m $i \e[1;${i}m $i \e[m"; done'
 
-
 function thumb {
   convert -resize 250x250 "$1" "${1/\./_thumb.}"
 }
@@ -178,9 +177,4 @@ function thumb {
 function mkdircd {
   mkdir "$@"
   cd "${@[$#]}"  # (last parameter)
-}
-
-# allow vim's :h to work in the shell, and make it behave like less
-function :h {
-  vim +":h $1" +'wincmd o' +'nnoremap q :q!<CR>'
 }
