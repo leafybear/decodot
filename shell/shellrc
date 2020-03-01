@@ -7,7 +7,7 @@ function getHostColour {
   #  31     32      33    34       35    36
   # red  green  yellow  blue  magenta  cyan
   case "$1" in
-    bear-book.local ) echo "magenta" ;;
+    Bear-Book.local ) echo "magenta" ;;
     sweetie ) echo "cyan"    ;;
     natsu    ) echo "green"   ;;
     *        ) echo "red"     ;;
