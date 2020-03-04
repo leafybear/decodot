@@ -4,7 +4,7 @@ source "$HOME/.zsh_git"
 
 
 # Import modules/stuff
-autoload -U  compinit   && compinit
+autoload -U  compinit -i   && compinit
 autoload -U  promptinit && promptinit
 autoload -U  colors     && colors
 
