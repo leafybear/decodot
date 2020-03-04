@@ -9,7 +9,8 @@ function getHostColour {
   case "$1" in
     Bear-Book.local ) echo "magenta" ;;
     sweetie ) echo "cyan"    ;;
-    natsu    ) echo "green"   ;;
+    luna    ) echo "green"   ;;
+    nook    ) echo "yellow"   ;;
     *        ) echo "red"     ;;
   esac
 }
@@ -70,9 +71,10 @@ fi
 # environment variables
 
 export DOTDIR=$HOME/dots
+export GOPATH=$HOME/go
 export EDITOR="vim"
 export PATH=$PATH
-export PATH=$HOME/.local/bin:$HOME/.bin:$PATH
+export PATH=$GOPATH/bin:$HOME/.local/bin:$HOME/.bin:$DOTDIR/bin:$PATH
 export HISTCONTROL=ignoredups
 export PAGER=less
 export BROWSER=surf
