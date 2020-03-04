@@ -47,3 +47,4 @@ bspc rule -a Anki desktop=^5
 
 # start up apps
 $HOME/.config/polybar/launch.sh &
+urxvt &

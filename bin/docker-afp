@@ -4,6 +4,7 @@ docker run -d \
 		-v /mnt/b:/media/b \
 		-v /mnt/c:/media/c \
 		-v /mnt/d:/media/d \
+		-v /mnt/e:/media/e \
 		-e AVAHI=1 --net "host" \
 		--name="afp" \
 		-e AFP_USER="$(cat ~/sweetie-docker/user.txt)" \
