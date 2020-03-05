@@ -4,7 +4,7 @@ source "$HOME/.zsh_git"
 
 
 # Import modules/stuff
-autoload -U  compinit -i   && compinit
+autoload -U  compinit   && compinit -i
 autoload -U  promptinit && promptinit
 autoload -U  colors     && colors
 
@@ -98,6 +98,3 @@ bindkey "^K"       kill-whole-line
 bindkey "^U"       undo
 bindkey "^['"      quote-line
 bindkey "^[[39;5u" quote-line
-
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
