@@ -36,20 +36,8 @@ setopt PROMPT_SUBST
 
 user_info () { [[ $USER != "amy" ]] && echo $USER || echo "" }
 
-PROMPT='%{$fg[$host_color]%}%m %{$fg[magenta]%}%~%u $(git_info)
+PROMPT='%{$fg[$host_color]%}%n %{$reset_color%}: %{$fg[$host_color]%}%m %{$fg[magenta]%}%~%u $(git_info)
 %(?.%{$fg[blue]%}.%{$fg[red]%}%? )%(!.#.$)%{$reset_color%} '
-
-# PROMPT='%{$fg[$host_color]%}%n@%m%{$reset_color%} %~
-# %{${fg[yellow]}%}%# '
-# RPROMPT='$(git_info)'
-# PS2="%{${fg[yellow]}%}» "
-
-#RPROMPT='%{$fg[$host_color]%}%n @ %m%'
-# PS1='
-# %{$fg[$host_color]%}%~%u $(git_info)
-# %(?.%{$fg[blue]%}.%{$fg[red]%}%? )%(!.#.$)%{$reset_color%} '
-
-# see also: `precmd` above (for pseudo-RPROMPT)
 
 # History
 export HISTSIZE=2000

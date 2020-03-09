@@ -23,3 +23,5 @@ sublime-text/Package\ Control.ca-certs/***
 sublime-text/oscrypto-ca-bundle.crt
 vim/vim/.netrwhist
 zsh/zsh/history
+*.sublime-workspace
+*.sublime-project

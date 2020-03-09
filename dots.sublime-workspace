@@ -20,16 +20,36 @@
 		"selected_items":
 		[
 			[
+				"theme",
+				"UI: Select Theme"
+			],
+			[
+				"colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"the",
+				"UI: Select Theme"
+			],
+			[
+				"ui",
+				"UI: Select Theme"
+			],
+			[
+				"col",
+				"UI: Select Color Scheme"
+			],
+			[
+				"git",
+				"Git: Fetch"
+			],
+			[
 				"packa",
 				"Package Control: Install Package"
 			],
 			[
 				"in",
 				"Package Control: Install Package"
-			],
-			[
-				"colo",
-				"UI: Select Color Scheme"
 			],
 			[
 				"settings",
@@ -50,14 +70,6 @@
 			[
 				"inst",
 				"Package Control: Install Package"
-			],
-			[
-				"theme",
-				"UI: Select Theme"
-			],
-			[
-				"the",
-				"UI: Select Theme"
 			]
 		],
 		"width": 0.0
@@ -81,14 +93,21 @@
 	"expanded_folders":
 	[
 		"/Users/amy/dots",
-		"/Users/amy/dots/shell",
-		"/Users/amy/dots/tmux",
-		"/Users/amy/dots/vim",
-		"/Users/amy/dots/weechat",
-		"/Users/amy/dots/x"
+		"/Users/amy/dots/bin"
 	],
 	"file_history":
 	[
+		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-080351/exports.txt",
+		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-_0kosb/docker-nfs",
+		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-oq63l3/docker-plex",
+		"/Users/amy/dots/bin/rmate",
+		"/Users/amy/dots/tmux/tmux.conf",
+		"/Users/amy/dots/.gitignore",
+		"/Users/amy/dots/shell/zshrc",
+		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-j3vsix/.shellrc",
+		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-o9qkev/afp.conf",
+		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-k2811f/ssh_config",
+		"/Users/amy/dots/dots.sublime-project",
 		"/Users/amy/dots/shell/shellrc",
 		"/Users/amy/.ssh/config",
 		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-rwxp8h/webdav-test",
@@ -98,7 +117,7 @@
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 58.0
 	},
 	"find_in_files":
 	{
@@ -136,7 +155,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 36.0
 	},
 	"input":
 	{
@@ -169,11 +188,15 @@
 	{
 		"height": 0.0
 	},
+	"output.git":
+	{
+		"height": 186.0
+	},
 	"pinned_build_system": "",
 	"project": "dots.sublime-project",
 	"replace":
 	{
-		"height": 0.0
+		"height": 68.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -211,7 +234,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 148.0,
+	"side_bar_width": 212.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

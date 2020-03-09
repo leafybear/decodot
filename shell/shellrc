@@ -19,6 +19,7 @@ unamen="`uname -n`"
 host_color="`getHostColour $unamen`"
 
 
+
 #### Vars & aliases #################################################
 
 # Make sure that a command exists and allows the given flags, by attempting to
@@ -102,20 +103,14 @@ fi
  # \__,_|_|_\__,_/__/\___/__/
  # aliases
 
-#try_alias  ls    ls -G
-#try_alias  ls    ls --color=auto
-#try_alias  grepall  grep --color=always -C9999
-
-# `less` is in my muscle memory...
-#alias less=$PAGER
-
 # Rewrites
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
-alias ls="ls -G"
+#alias ls="ls --color"
+#alias ls="ls -G"
 alias t="tmux attach"
 alias grep="grep -i"
 alias df="df -h"
@@ -126,6 +121,7 @@ alias sl="ls"
 alias ll="ls -lah"
 alias lsd="ls -la | grep '^d'"
 alias feh="feh -FZ"
+alias wallpaperme="feh --bg-fill"
 alias iina="/Applications/IINA.app/Contents/MacOS/iina-cli"
 alias atom="/Applications/Atom.app/Contents/Resources/app/atom.sh"
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
@@ -174,9 +170,4 @@ alias ff_colours='for i in `seq 30 37`; do echo -e "\e[0;${i}m $i \e[1;${i}m $i 
 
 function thumb {
   convert -resize 250x250 "$1" "${1/\./_thumb.}"
-}
-
-function mkdircd {
-  mkdir "$@"
-  cd "${@[$#]}"  # (last parameter)
 }
