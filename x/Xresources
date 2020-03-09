@@ -24,7 +24,7 @@ urxvt*internalBorder:	20
 urxvt*scrollBar:        false
 urxvt*geometry:         80x27
 
-URxvt*cursorBlink:		false
+URxvt*cursorBlink:		true
 URxvt*cursorUnderline:  false
 urxvt*urgentOnBell:     true
 
