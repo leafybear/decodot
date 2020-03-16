@@ -1,9 +1,0 @@
-docker run -d --net=host -p 8200:8200 \
-		--name="upnp" \
-		-v /mnt:/media \
-		-e MINIDLNA_MEDIA_DIR=V,/media \
-		-e MINIDLNA_ROOT_CONTAINER=V \
-		-e MINIDLNA_FRIENDLY_NAME="Sweetie UPnP" \
-		-e MINIDLNA_INOTIFY=yes \
-		-e MINIDLNA_WIDE_LINKS=yes \
-		vladgh/minidlna

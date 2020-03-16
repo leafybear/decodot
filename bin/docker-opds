@@ -1,5 +1,0 @@
-docker create --name=opds \
-		-v /mnt/mixed/books/books:/books \
-		-v /mnt/mixed/books/config:/config \
-		-p 8080:80 \
-		linuxserver/cops
