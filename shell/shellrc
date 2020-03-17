@@ -8,9 +8,11 @@ function getHostColour {
   # red  green  yellow  blue  magenta  cyan
   case "$1" in
     Bear-Book.local ) echo "magenta" ;;
+    Kat-Book.local ) echo "magenta" ;;
     Sweetie ) echo "cyan"    ;;
     Luna    ) echo "green"   ;;
     Nook    ) echo "yellow"   ;;
+    Kat-Tower ) echo "yellow"   ;;
     *        ) echo "red"     ;;
   esac
 }
@@ -117,7 +119,7 @@ alias df="df -h"
 alias du="du -hc"
 alias ping="ping -c 5"
 alias vi="vim"
-alialsls="ls --color"
+alias ls="ls --color"
 alias sl="ls"
 alias ll="ls -lah"
 alias lsd="ls -la | grep '^d'"
