@@ -32,11 +32,12 @@ bind -n S-Up resize-pane -U 1
 # Make pane splitting more intuitive
 bind | split-window -h -c "#{pane_current_path}"
 bind - split-window -v -c "#{pane_current_path}"
-
-# unbind some default keys I don't use
 unbind '"'
 unbind %
+
+# Equalize pane splits
 unbind space
+bind x select-layout even-horizontal
 
 # Make Prefix + 0 go to window number 10
 bind 0 select-window -t :10
@@ -58,7 +59,7 @@ set -g default-terminal 'screen-256color'
 
 # Highlight window activity in status line
 # Don't display "Activity in window" messages
-setw -g monitor-activity off
+setw -g monitor-activity on
 set -g visual-activity off
 
 # Use ascii chars for borders
@@ -89,33 +90,48 @@ bind '$' command-prompt -p "(rename-session '#S')" "rename-session '%%'"
 
 ###### THEMING  ############
 ##+ panes:
-set -g pane-border-style bg=default,fg=colour239
-set -g pane-active-border-style bg=default,fg=colour199
+set-option -g pane-border-style fg=black,bg=default
+set-option -g pane-active-border-style fg=white,bg=default
 
 set -g status-interval 1
-set -g status-style bg=colour235,fg=colour250
+set -g status-style bg=black,fg=cyan
 
 # Left side of status bar
-#set -g status-left-style bg=black,fg=green
+set -g status-left-style bg=black,fg=green
 set -g status-left-length 40
-set -g status-left "#[fg=colour173,bg=default] #(whoami) @ #H : #S"
+set -g status-left "#S #[fg=white]» #[fg=yellow]#I #[fg=cyan]#P"
 
 # Right side of status bar
-#set -g status-right-style bg=black,fg=cyan
+set -g status-right-style bg=black,fg=cyan
 set -g status-right-length 40
-set -g status-right '#[fg=colour132] %d %b #[fg=default] #[fg=colour132] %H:%M '
+set -g status-right "#H #[fg=white]« #[fg=yellow]%H:%M:%S #[fg=green]%d-%b-%y"
 
 # Window status
-### #F shows some kind of status of the window
-set -g window-status-format "#[fg=colour250,bg=colour236] #I #[fg=colour246,bg=colour236] #W "
-set -g window-status-current-format "#[fg=colour234,bg=colour204] #I #[fg=colour204,bg=colour238] #W "
+set -g window-status-format " #I:#W#F "
+set -g window-status-current-format " #I:#W#F "
+
+# Current window status
+set -g window-status-current-style bg=red,fg=black
+
+# Window with activity status
+set -g window-status-activity-style bg=black,fg=yellow 
 
 # Window separator
-set -g window-status-separator " "
+set -g window-status-separator ""
+
 # Window status alignment
 set -g status-justify centre
 
+# Pane number indicator
+set -g display-panes-colour default
+set -g display-panes-active-colour default
+
+# Clock mode
+set -g clock-mode-colour red
+set -g clock-mode-style 24
+
 # Message
 set -g message-style bg=default,fg=default
+
 # Command message
 set -g message-command-style bg=default,fg=default
