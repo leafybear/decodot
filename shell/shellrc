@@ -20,41 +20,11 @@ function getHostColour {
 unamen="`uname -n`"
 host_color="`getHostColour $unamen`"
 
-
-
-#### Vars & aliases #################################################
-
-# Make sure that a command exists and allows the given flags, by attempting to
-# run it with said flags + "--version" (to prevent default operation).
-#   Makes the assumption that the program complains about unrecognized flags,
-# and that it has a "--version" flag that returns zero on success.
-function try_alias {
-  to_be_bound="$1" # $to_be_bound is the command that is to be bound,
-  shift            # $* is the target of the aliasing.
-
-  # Attempt to run the command...
-  $@ --version >/dev/null 2>&1 \
-  && alias $to_be_bound="$*"
-  # ...and make sure that it exited with an exit code of 0.
-}
-
-# Like try_alias, but for environment variables
-function try_export {
-  # see `try_alias` above
-  to_be_bound="$1"  # the variable to assign & export
-  shift
-
-  # Attempt to run..
-  $@ --version >/dev/null 2>&1 \
-  && export $to_be_bound="$*"
-}
-
 function command_exists {
   hash "$1" &> /dev/null
 }
 
 # When connecting via ssh, always [re]attach to a terminal manager
-# Adapted from code found at <http://involution.com/2004/11/17/1-32/> (now offline)
 if command_exists tmux && [ -z $TMUX ]; then
   if [ "$SSH_TTY" != "" -a "$TERM" -a "$TERM" != "screen" -a "$TERM" != "dumb" ]; then
     pgrep tmux
@@ -97,22 +67,16 @@ if [ "$TERM" = "xterm" ]; then
   TERM="${TERM}-256color"
 fi
 
-
-
  #       _ _
  #  __ _| (_)__ _ ___ ___ ___
  # / _` | | / _` (_-</ -_|_-<
  # \__,_|_|_\__,_/__/\___/__/
- # aliases
 
-# Rewrites
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias -- -="cd -"
-#alias ls="ls --color"
-#alias ls="ls -G"
 alias t="tmux attach"
 alias grep="grep -i"
 alias df="df -h"
@@ -139,11 +103,6 @@ alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
 
-## Filesystems
-alias bf="du -x | sort -nr | head -10"
-alias removeDot_="find . -iname '._*' -exec rm -rf {} \;"
-alias cleandots="find . -regex '.*\(.AppleDouble\|.DS_Store\)$' -ls -exec rm -r {} \;"
-
 # Git shortcuts
 alias g="git"
 alias gs="git r1 -n 1; git branch | grep \*; git status --short"
@@ -161,6 +120,11 @@ alias gba="git branch -a"
 alias gcb="gc -b"
 alias gf="git fetch"
 
+## Filesystems
+alias bf="du -x | sort -nr | head -10"
+alias removeDot_="find . -iname '._*' -exec rm -rf {} \;"
+alias cleandots="find . -regex '.*\(.AppleDouble\|.DS_Store\)$' -ls -exec rm -r {} \;"
+
 # Convenience
 alias scrot="scrot ~/screenshots/%Y-%m-%d_%H%M%S.png"
 alias listmonofonts="fc-list :spacing=100 family style | sort -n"
@@ -170,7 +134,3 @@ alias meminfo="echo -e '/proc/meminfo:\n';grep --color=auto '^[Mem|Swap]*[Free|T
 alias listsoundcards="aplay -l | awk -F \: '/,/{print $2}' | awk '{print $1}' | uniq"
 alias listsounddevices="aplay -L | grep :CARD"
 alias ff_colours='for i in `seq 30 37`; do echo -e "\e[0;${i}m $i \e[1;${i}m $i \e[m"; done'
-
-function thumb {
-  convert -resize 250x250 "$1" "${1/\./_thumb.}"
-}

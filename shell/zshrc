@@ -2,12 +2,10 @@
 source "$HOME/.shellrc"
 source "$HOME/.zsh_git"
 
-
 # Import modules/stuff
 autoload -U  compinit   && compinit -i
 autoload -U  promptinit && promptinit
 autoload -U  colors     && colors
-
 
 ### Variables
 esc="$(echo -e '\e')"
@@ -23,20 +21,22 @@ function set_title {
   echo -n "$Title"
 }
 
-if [ $TERM != 'linux' ]; then
-  function chpwd {
-    pwd="$(pwd | sed s:$HOME:~:)"
-    set_title "$USER@$HOST $pwd"
-  }
-  chpwd
+if [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; then
+  puser=
+  phost=
+  pdivider=
+else
+  puser=" $USER "
+  phost=" $HOSTNAME "
+  pdivider=":"
 fi
 
 ### Setup prompt
 setopt PROMPT_SUBST
 
-user_info () { [[ $USER != "amy" ]] && echo $USER || echo "" }
+#user_info () { [[ $USER != "amy" ]] && echo $USER || echo "" }
 
-PROMPT='%{$fg[$host_color]%}%n %{$reset_color%}: %{$fg[$host_color]%}%m %{$fg[magenta]%}%~%u $(git_info)
+PROMPT='%{$fg[$host_color]%}$puser%{$reset_color%}$pdivider%{$fg[$host_color]%}$phost%{$fg[magenta]%}%~%u $(git_info)
 %(?.%{$fg[blue]%}.%{$fg[red]%}%? )%(!.#.$)%{$reset_color%} '
 
 # History
@@ -44,12 +44,6 @@ export HISTSIZE=2000
 export HISTFILE="$HOME/.history"
 export SAVEHIST="$HISTSIZE"
 setopt hist_ignore_all_dups
-
-
-#### Aliases ########################################################
-# (zsh specific--also see .shellrc)
-#alias -g G='| grep -P'
-#alias -g L='| less'
 
 
 #### Fix key bindings ###############################################
