@@ -1,1 +1,0 @@
-../../../color/day/color.vim

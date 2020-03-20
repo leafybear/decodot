@@ -1,47 +1,62 @@
-""""APPEARANCE
-syntax on               " syntax hightlightinh
-set t_Co=256
+" This must be first, because it changes other options as side effect
+set nocompatible
 
-"colorscheme decodot   " decodot color scheme
+filetype off                  " required for Vundle
 
-set tabstop=4     " number of visual spaces per TAB
-set softtabstop=4   " number of spaces in tab when editing
-set number              " show line numbers
-set showcmd             " show command in bottom bar
-set cursorline          " highlight current line
-filetype indent on      " load filetype-specific indent files
-set wildmenu            " visual autocomplete for command menu
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-""""SEARCHING
-set showmatch           " highlight matching [{()}]
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
+Plugin 'airblade/vim-gitgutter'
+Plugin 'mhartington/oceanic-next'
+Plugin 'lifepillar/vim-solarized8'
 
-""""MOVEMENT
-set foldenable          " enable folding
-set foldlevelstart=10   " open most folds by default
-set foldnestmax=10      " 10 nested fold max
-set foldmethod=indent   " fold based on indent level
-" space open/closes folds
-nnoremap <space> za
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
-" move vertically by visual line
-nnoremap j gj
-nnoremap k gk
+set hidden
 
-""""BACKUPS FILES
-set backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set backupskip=/tmp/*,/private/tmp/*
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set writebackup
+set cursorline    " highlight current line in editor
+set nowrap        " don't wrap lines
+set tabstop=4     " a tab is four spaces
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set number        " always show line numbers
+set shiftwidth=4  " number of spaces to use for autoindenting
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                    "    case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to
+                    "    shiftwidth, not tabstop
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
 
-"""TMUX SPECIFIC
-" allows cursor change in tmux mode
-if exists('$TMUX')
-    let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
-    let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
-else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
+set visualbell           " don't beep
+set noerrorbells         " don't beep
+
+nnoremap j gj	" pressing down jumps to the next row 
+nnoremap k gk	" 		in the editor (much more natural)
+
+
+" if you forgot to sudo before editing, hit :w!!
+cmap w!! w !sudo tee % >/dev/null
+
+set nobackup
+set noswapfile
+
+if &t_Co >= 256 || has("gui_running")
+	set background=dark
+	colorscheme solarized8
+"	colorscheme OceanicNext
+endif
+
+if &t_Co > 2 || has("gui_running")
+    " switch syntax highlighting on, when the terminal has colors
+    syntax on
 endif
