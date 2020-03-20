@@ -26,8 +26,8 @@ if [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; then
   phost=
   pdivider=
 else
-  puser=" $USER "
-  phost=" $HOSTNAME "
+  puser="$USER "
+  phost=" $HOST "
   pdivider=":"
 fi
 
