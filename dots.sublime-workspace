@@ -7,14 +7,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "sxhkd/sxhkdrc",
-			"settings":
-			{
-				"buffer_size": 1947,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -101,11 +93,15 @@
 	"expanded_folders":
 	[
 		"/Users/amy/dots",
-		"/Users/amy/dots/shell",
-		"/Users/amy/dots/sxhkd"
+		"/Users/amy/dots/x"
 	],
 	"file_history":
 	[
+		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-l3or1g/config.h",
+		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-04lc8l/exports",
+		"/Users/amy/Downloads/dwm/dmrc",
+		"/Users/amy/dots/x/Xresources",
+		"/Users/amy/dots/sxhkd/sxhkdrc",
 		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-b6r71t/dwm-uselessgap-6.2.diff",
 		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-fykbhq/config.h",
 		"/var/folders/mv/vr8tf05d7hj19w7lg1lmrz840000gn/T/rsub-pd5lnh/config.h",
@@ -171,115 +167,6 @@
 			"sheets":
 			[
 			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "sxhkd/sxhkdrc",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1947,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1575,
-								1575
-							]
-						],
-						"settings":
-						{
-							"bracket_highlighter.busy": false,
-							"bracket_highlighter.locations":
-							{
-								"close":
-								{
-								},
-								"icon":
-								{
-								},
-								"open":
-								{
-								},
-								"unmatched":
-								{
-								}
-							},
-							"bracket_highlighter.regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content"
-							],
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1313.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
 		}
 	],
 	"incremental_find":
@@ -299,18 +186,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.5,
 			1.0
 		],
 		"rows":
@@ -362,7 +242,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},

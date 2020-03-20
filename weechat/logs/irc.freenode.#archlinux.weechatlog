@@ -1,0 +1,114 @@
+2020-03-05 20:42:24	 > 	lbear (~amy@45.126.24.49) has joined #archlinux
+2020-03-05 20:42:24	 - 	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste | pacman 5.2 is out; check your .pacnews http://allanmcrae.com/2019/10/pacman-5-2-release/ | Installing? New `base` package; read the install guide carefully | https://www.archlinux.org/news/sshd-needs-restarting-after-upgrading-to-openssh-82p1/"
+2020-03-05 20:42:24	 - 	Topic set by phrik (~phrik@archlinux/bot/phrik) on Mon, 17 Feb 2020 13:03:05
+2020-03-05 20:42:24	 - 	Channel #archlinux: 1683 nicks (2 ops, 0 voices, 1681 normals)
+2020-03-05 20:42:25	 - 	Channel created on Sun, 15 Feb 2004 16:08:31
+2020-03-05 20:43:04	horseface_	how do i add a user to a group?
+2020-03-05 20:43:07	empresses	lambda: and so it does, as the user uses it. Download, install. For years.. building up that cache.
+2020-03-05 20:43:20	 > 	tkrizek (~tkrizek@2001:67c:1220:80c:df:5350:68c3:aed5) has joined #archlinux
+2020-03-05 20:43:20	 > 	HerbY_NL2 (~HerbY_NL2@2001:67c:2564:518:6995:aa7:b9f3:38a6) has joined #archlinux
+2020-03-05 20:43:20	 > 	pclark36 (~pclark36@85-99-74-65.gci.net) has joined #archlinux
+2020-03-05 20:43:20	 > 	b30wulf (uid175355@gateway/web/irccloud.com/x-imhffzumgfvxuuma) has joined #archlinux
+2020-03-05 20:43:20	 > 	cisco87 (~cisco87@cisco87.powered.by.lunarbnc.net) has joined #archlinux
+2020-03-05 20:43:20	 > 	anzuof (e2b3dea21d@unaffiliated/anzuof) has joined #archlinux
+2020-03-05 20:43:20	 > 	csantosb (~user@2a0c:5a80:9000:c500:eeb1:d7ff:fe2d:4f6b) has joined #archlinux
+2020-03-05 20:43:20	 > 	ChrisWarrick (kwpolska@nikola/developer/kwpolska) has joined #archlinux
+2020-03-05 20:43:20	 > 	tedchange (tedchange@is.a.1337.fucker.bnc4you.xyz) has joined #archlinux
+2020-03-05 20:43:20	 > 	kameloso (~kameloso@2001:41d0:2:80b4::) has joined #archlinux
+2020-03-05 20:43:20	 > 	d10n-work (sid37161@gateway/web/irccloud.com/x-vruaufgzhhuamxli) has joined #archlinux
+2020-03-05 20:43:20	 > 	NeoHamled (sid129388@gateway/web/irccloud.com/x-ehykxmyjqbbugsso) has joined #archlinux
+2020-03-05 20:43:20	 > 	fatalhalt (~fatalhalt@2601:244:4d01:52df:225:90ff:feda:2428) has joined #archlinux
+2020-03-05 20:43:20	 > 	krator44 (~krator44@unaffiliated/krator44) has joined #archlinux
+2020-03-05 20:43:20	 > 	lilmike (~server@mtserver.mwtd.net) has joined #archlinux
+2020-03-05 20:43:20	 > 	svenstaro (~svenstaro@archlinux/developer/svenstaro) has joined #archlinux
+2020-03-05 20:43:20	 > 	martin02 (silas@hund.fs.lmu.de) has joined #archlinux
+2020-03-05 20:43:20	 > 	Celmor[m] (celmormatr@gateway/shell/matrix.org/x-tpznmotjkeuuijnz) has joined #archlinux
+2020-03-05 20:43:20	 > 	_schrotti (~schrotti@p200300CB6736AF007285C2FFFE7A97B3.dip0.t-ipconnect.de) has joined #archlinux
+2020-03-05 20:43:20	 > 	tafa (~ta20@109.125.132.93) has joined #archlinux
+2020-03-05 20:43:20	 > 	thecoffemaker (~thecoffem@unaffiliated/thecoffemaker) has joined #archlinux
+2020-03-05 20:43:20	 > 	DarkRTA (~Dark@unaffiliated/darkrta) has joined #archlinux
+2020-03-05 20:43:20	 > 	dirhael (~dirhael@defreitas.no) has joined #archlinux
+2020-03-05 20:43:20	 > 	nando293921 (~Nando15@cpe-76-185-128-7.satx.res.rr.com) has joined #archlinux
+2020-03-05 20:43:20	 > 	blueyed (~daniel@hahler.de) has joined #archlinux
+2020-03-05 20:43:20	 > 	dlind (~dlind@c83-255-140-110.bredband.comhem.se) has joined #archlinux
+2020-03-05 20:43:20	 > 	hovr (~nobody@unaffiliated/randomio) has joined #archlinux
+2020-03-05 20:43:20	 > 	syr (~syr@molten.corium.dev) has joined #archlinux
+2020-03-05 20:43:20	 > 	Ultima (~Ultima@unaffiliated/ultima) has joined #archlinux
+2020-03-05 20:43:20	 > 	Adbray (~Adbray@2600:6c48:6f7f:d764:20d2:f865:e8d8:e36b) has joined #archlinux
+2020-03-05 20:43:20	 > 	ravustaja (~ravustaja@178-55-171-169.bb.dnainternet.fi) has joined #archlinux
+2020-03-05 20:43:20	 > 	hays (hays@fsf/member/hays) has joined #archlinux
+2020-03-05 20:43:20	 > 	tb0n3 (~tbone@174-083-088-156.res.spectrum.com) has joined #archlinux
+2020-03-05 20:43:20	 > 	jayray (~jayray@2602:ffc5:30::1:604) has joined #archlinux
+2020-03-05 20:43:20	 > 	Bluewind (~Bluewind@archlinux/developer/Bluewind) has joined #archlinux
+2020-03-05 20:43:20	 > 	thaumavorio (~thaumavor@thaumavor.io) has joined #archlinux
+2020-03-05 20:43:20	 > 	hourensou (~hourensou@h-10-217-88.A328.priv.bahnhof.se) has joined #archlinux
+2020-03-05 20:43:20	 > 	XDjackieXD (~jackie@irc.chaosfield.at) has joined #archlinux
+2020-03-05 20:43:20	 > 	elelay (~elelay@163.172.180.119) has joined #archlinux
+2020-03-05 20:43:20	 > 	grawity (grawity@sky.nullroute.eu.org) has joined #archlinux
+2020-03-05 20:43:20	 > 	BrainDamage (~BrainDama@unaffiliated/braindamage) has joined #archlinux
+2020-03-05 20:43:20	 > 	szt (~szt@botters/szt) has joined #archlinux
+2020-03-05 20:43:20	 > 	luckman212 (luckman212@unaffiliated/luckman212) has joined #archlinux
+2020-03-05 20:43:20	 > 	Zir0h (~Zir0h@psr01.ziroh.be) has joined #archlinux
+2020-03-05 20:43:20	 > 	Albori (~Albori@67-43-243-189.fidnet.com) has joined #archlinux
+2020-03-05 20:43:20	 > 	hekel (~hekel@unaffiliated/hekel) has joined #archlinux
+2020-03-05 20:43:20	 > 	mkoskar (~mkoskar@unaffiliated/mkoskar) has joined #archlinux
+2020-03-05 20:43:20	 > 	charims (~quassel@wsip-24-234-28-130.lv.lv.cox.net) has joined #archlinux
+2020-03-05 20:43:20	 > 	teatime07 (~teatime07@unaffiliated/teatime07) has joined #archlinux
+2020-03-05 20:43:20	 > 	karlthane (~quassel@75-49-154-22.lightspeed.dllstx.sbcglobal.net) has joined #archlinux
+2020-03-05 20:43:20	 > 	Natch (~Natch@h-112-130.A444.priv.bahnhof.se) has joined #archlinux
+2020-03-05 20:43:20	 > 	zephyrz4 (~zephyrz4@146.115.174.234) has joined #archlinux
+2020-03-05 20:43:20	 > 	anthony25 (~anthony25@vm-irc-0.aruhier.fr) has joined #archlinux
+2020-03-05 20:43:20	 > 	traace (~traace@2a01:4f8:1c1c:2ad5::1) has joined #archlinux
+2020-03-05 20:43:20	 > 	export (~export@unaffiliated/exported) has joined #archlinux
+2020-03-05 20:43:20	 > 	cassie (~quassel@unaffiliated/cassie) has joined #archlinux
+2020-03-05 20:43:20	 > 	genericsauce (~genericsa@2a01:4f8:140:4221::2) has joined #archlinux
+2020-03-05 20:43:21	 > 	EastAPOLO (~EastAPOLO@unaffiliated/eastapolo) has joined #archlinux
+2020-03-05 20:43:21	 > 	kajo (~kajo@2a02:2455:a9f:1700:ca2a:14ff:fe0f:7dd1) has joined #archlinux
+2020-03-05 20:43:21	 > 	isophote (~isophote@2601:480:4101:2cbe::10) has joined #archlinux
+2020-03-05 20:43:21	 > 	Foucault_ (~Foucault_@snf-818902.vm.okeanos.grnet.gr) has joined #archlinux
+2020-03-05 20:43:21	 > 	Athemis (~Athemis@pelargir.athemis.de) has joined #archlinux
+2020-03-05 20:43:21	 > 	kapil_ (uid36151@gateway/web/irccloud.com/x-qrzodphzjpvrxisl) has joined #archlinux
+2020-03-05 20:43:21	 > 	Lekensteyn (~Lekenstey@i.am.lekensteyn.nl) has joined #archlinux
+2020-03-05 20:43:21	 > 	luminoso (~lumos@2001:818:e72b:3100:2c6f:60ff:fe68:ce71) has joined #archlinux
+2020-03-05 20:43:21	 > 	skreech (~skreech@unaffiliated/skreech) has joined #archlinux
+2020-03-05 20:43:21	 > 	dropheaders (~dropheade@240b:10:b3c0:7a00:ba27:ebff:fe88:10df) has joined #archlinux
+2020-03-05 20:43:21	 > 	GH0S1 (~GH0S1@2602:ffc5::ffc5:d74d) has joined #archlinux
+2020-03-05 20:43:21	 > 	de-vri-es (~de-vri-es@voyager.de-vri.es) has joined #archlinux
+2020-03-05 20:43:21	 > 	hammer065 (~hammer065@unaffiliated/hammer065) has joined #archlinux
+2020-03-05 20:43:21	 > 	demonicm1niac3 (~bugger@2a02:810d:abbf:ceb9:21c:25ff:fe95:93c5) has joined #archlinux
+2020-03-05 20:43:21	 > 	Oxyd (~oxyd@pdpc/supporter/student/oxyd) has joined #archlinux
+2020-03-05 20:43:21	 > 	ricaz (znc@2a02:c207:2028:4696::1) has joined #archlinux
+2020-03-05 20:43:21	 > 	xacc (~xacc@unaffiliated/xacc) has joined #archlinux
+2020-03-05 20:43:21	 > 	vendion (~vendion@unaffiliated/vendion) has joined #archlinux
+2020-03-05 20:43:21	 > 	marulkan (~marulkan@mailhost.dev0.nu) has joined #archlinux
+2020-03-05 20:43:21	 > 	orcus (~orcus@unaffiliated/orcus) has joined #archlinux
+2020-03-05 20:43:21	 > 	realitygaps (~realityga@unaffiliated/realitygaps) has joined #archlinux
+2020-03-05 20:43:21	 > 	ArGGu^^ (~quassel@dsl-trebng12-b048aa-75.dhcp.inet.fi) has joined #archlinux
+2020-03-05 20:43:21	 > 	ORANGE_MAN_BAD (ORANGE_MAN@relaychat.party) has joined #archlinux
+2020-03-05 20:43:21	 > 	Hertog (~sander@2001:bc8:47a4:1d29::1) has joined #archlinux
+2020-03-05 20:43:21	 > 	seraxis (~meowmeow@sera.sh) has joined #archlinux
+2020-03-05 20:43:21	 > 	MidnightRanger (~MidnightR@167.172.164.227) has joined #archlinux
+2020-03-05 20:43:21	 > 	TitouanT (~t2@2001:bc8:47a4:201c::1) has joined #archlinux
+2020-03-05 20:43:21	 > 	abeniis (~Abeniis@46.20.166.115) has joined #archlinux
+2020-03-05 20:43:21	 > 	stfn (~stfn@unaffiliated/stfn) has joined #archlinux
+2020-03-05 20:43:21	 > 	Processus42 (~leo@unaffiliated/processus42) has joined #archlinux
+2020-03-05 20:43:21	 > 	jtdowney (~jtdowney@unaffiliated/jtdowney) has joined #archlinux
+2020-03-05 20:43:36	 > 	fyrgebraec (~enceladus@195.25.86.166) has joined #archlinux
+2020-03-05 20:43:53	empresses	lambda: if the users don't know it, and since the bug is of significance in the long run, it's dumb. It's a ticking time bomb. That's just my opinion.
+2020-03-05 20:43:58	 < 	d10n-work (sid37161@gateway/web/irccloud.com/x-vruaufgzhhuamxli) has quit (Max SendQ exceeded)
+2020-03-05 20:43:58	 < 	kapil_ (uid36151@gateway/web/irccloud.com/x-qrzodphzjpvrxisl) has quit (Max SendQ exceeded)
+2020-03-05 20:43:58	 < 	xacc (~xacc@unaffiliated/xacc) has quit (Max SendQ exceeded)
+2020-03-05 20:43:58	 < 	kameloso (~kameloso@2001:41d0:2:80b4::) has quit (Max SendQ exceeded)
+2020-03-05 20:44:01	Namarrgon	!give horseface_ aw users
+2020-03-05 20:44:02	@phrik	horseface_: Users - https://wiki.archlinux.org/index.php/Users
+2020-03-05 20:44:24	 > 	kameloso (~kameloso@2001:41d0:2:80b4::) has joined #archlinux
+2020-03-05 20:45:17	 > 	xacc (~xacc@unaffiliated/xacc) has joined #archlinux
+2020-03-05 20:46:04	 < 	asasasas (~asasasas@45.77.53.139) has quit (Remote host closed the connection)
+2020-03-05 20:46:10	 < 	argo (~argo@unaffiliated/argo) has quit (Quit: WeeChat 2.7.1)
+2020-03-05 20:46:52	 < 	horseface_ (~horseface@unaffiliated/horseface) has quit (Quit: Leaving)
+2020-03-05 20:47:32	 > 	asasasas (~asasasas@45.77.53.139) has joined #archlinux
+2020-03-05 20:50:05	 > 	lbear (~amy@45.126.24.49) has joined #archlinux
+2020-03-05 20:50:05	 - 	Topic for #archlinux is "Welcome to Arch Linux, Good Luck: https://archlinux.org | Rules: https://goo.gl/XWFreH | Pastebins: see !paste | pacman 5.2 is out; check your .pacnews http://allanmcrae.com/2019/10/pacman-5-2-release/ | Installing? New `base` package; read the install guide carefully | https://www.archlinux.org/news/sshd-needs-restarting-after-upgrading-to-openssh-82p1/"
+2020-03-05 20:50:05	 - 	Topic set by phrik (~phrik@archlinux/bot/phrik) on Mon, 17 Feb 2020 13:03:05
+2020-03-05 20:50:05	 - 	Channel #archlinux: 1766 nicks (2 ops, 0 voices, 1764 normals)
+2020-03-05 20:50:06	 - 	Channel created on Sun, 15 Feb 2004 16:08:31
