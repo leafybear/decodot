@@ -7,13 +7,14 @@ function getHostColour {
   #  31     32      33    34       35    36
   # red  green  yellow  blue  magenta  cyan
   case "$1" in
-    Bear-Book.local ) echo "magenta" ;;
-    Kat-Book.local ) echo "magenta" ;;
+    Bear-Book.local ) echo "green" ;;
+    Kat-Book.local ) echo "green" ;;
+    Nookintosh.local  ) echo "green" ;;
     Sweetie ) echo "cyan"    ;;
-    Luna    ) echo "green"   ;;
-    Nook    ) echo "yellow"   ;;
-    Kat-Tower ) echo "yellow"   ;;
-    *        ) echo "red"     ;;
+    Luna    ) echo "cyan"   ;;
+    Nook    ) echo "cyan"   ;;
+    Kat-Tower ) echo "cyan"   ;;
+    *        ) echo "yellow"     ;;
   esac
 }
 
@@ -67,6 +68,12 @@ if [ "$TERM" = "xterm" ]; then
   TERM="${TERM}-256color"
 fi
 
+if [[ `uname` == Darwin ]]; then
+  alias ls="ls -G"
+else
+  alias ls="ls --color"
+fi
+
  #       _ _
  #  __ _| (_)__ _ ___ ___ ___
  # / _` | | / _` (_-</ -_|_-<
@@ -83,7 +90,6 @@ alias df="df -h"
 alias du="du -hc"
 alias ping="ping -c 5"
 alias vi="vim"
-alias ls="ls --color"
 alias sl="ls"
 alias ll="ls -lah"
 alias lsd="ls -la | grep '^d'"
