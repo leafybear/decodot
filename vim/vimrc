@@ -16,6 +16,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 " colors
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'sainnhe/vim-color-forest-night'
+Plugin 'mhartington/oceanic-next'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -78,6 +79,7 @@ cmap w!! w !sudo tee % >/dev/null
 if exists('+termguicolors')
 	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+	set termguicolors
 endif
 
 if &t_Co >= 256 || has("gui_running")
@@ -86,12 +88,17 @@ if &t_Co >= 256 || has("gui_running")
 "	colorscheme solarized8
 
 	"" Forest Night Theme
-	set termguicolors
-	let g:forest_night_enable_italic = 1
-	let g:forest_night_disable_italic_comment = 1
-	let g:airline_theme = 'forest_night'
-	colorscheme forest-night
+"	let g:forest_night_enable_italic = 1
+"	let g:forest_night_disable_italic_comment = 1
+"	let g:airline_theme = 'forest_night'
+"	colorscheme forest-night
 
+	"" Oceanic Next Theme
+	syntax on
+	colorscheme OceanicNext
+	let g:airline_theme='oceanicnext'
+	let g:oceanic_next_terminal_bold = 1
+	let g:oceanic_next_terminal_italic = 1
 endif
 
 if &t_Co > 2 || has("gui_running")
