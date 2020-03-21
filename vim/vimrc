@@ -73,6 +73,13 @@ cmap w!! w !sudo tee % >/dev/null
 
 "" - - - - - - - - - - - - - - - - - -
 "" C O L O U R    S C H E M E S
+
+" Enable true color for tmux
+if exists('+termguicolors')
+	let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
 if &t_Co >= 256 || has("gui_running")
 	"" Solarized 8 Theme
 "	set background=dark
