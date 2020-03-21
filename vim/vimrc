@@ -1,20 +1,30 @@
 " This must be first, because it changes other options as side effect
 set nocompatible
 
+"" - - - - - - - - - - - - - - - - - - - -
+"" V U N D L E     P L U G I N S
 filetype off                  " required for Vundle
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+"" PLUGINS HERE
+Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'mhartington/oceanic-next'
+Plugin 'preservim/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'lifepillar/vim-solarized8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+"" - - - - - - - - - - - - - - - - - - - - 
 
+" don't make backups
+set nobackup
+set noswapfile
+
+"" E D I T I N G
 set hidden
 
 set cursorline    " highlight current line in editor
@@ -32,28 +42,33 @@ set smarttab      " insert tabs on the start of a line according to
                     "    shiftwidth, not tabstop
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
-
 set history=1000         " remember more commands and search history
 set undolevels=1000      " use many muchos levels of undo
 set wildignore=*.swp,*.bak,*.pyc,*.class
 set title                " change the terminal's title
 set visualbell           " don't beep
 set noerrorbells         " don't beep
+set encoding=utf-8		 " save files with UTF-8 encoding
+" find bad whitespace in python files
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
+"" K E Y M A P S
 nnoremap j gj	" pressing down jumps to the next row 
 nnoremap k gk	" 		in the editor (much more natural)
 
+"" P L U G I N   S E T T I N G S
+map <C-n> :NERDTreeToggle<CR>
+let g:airline#extensions#tabline#enabled = 1
 
 " if you forgot to sudo before editing, hit :w!!
 cmap w!! w !sudo tee % >/dev/null
 
-set nobackup
-set noswapfile
 
+"" - - - - - - - - - - - - - - - - - -
+"" C O L O U R    S C H E M E S
 if &t_Co >= 256 || has("gui_running")
 	set background=dark
 	colorscheme solarized8
-"	colorscheme OceanicNext
 endif
 
 if &t_Co > 2 || has("gui_running")
