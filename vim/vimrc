@@ -84,8 +84,8 @@ endif
 
 if &t_Co >= 256 || has("gui_running")
 	"" Solarized 8 Theme
-"	set background=dark
-"	colorscheme solarized8
+	set background=dark
+	colorscheme solarized8
 
 	"" Forest Night Theme
 "	let g:forest_night_enable_italic = 1
@@ -94,11 +94,11 @@ if &t_Co >= 256 || has("gui_running")
 "	colorscheme forest-night
 
 	"" Oceanic Next Theme
-	syntax on
-	colorscheme OceanicNext
-	let g:airline_theme='oceanicnext'
-	let g:oceanic_next_terminal_bold = 1
-	let g:oceanic_next_terminal_italic = 1
+"	syntax on
+"	colorscheme OceanicNext
+"	let g:airline_theme='oceanicnext'
+"	let g:oceanic_next_terminal_bold = 1
+"	let g:oceanic_next_terminal_italic = 1
 endif
 
 if &t_Co > 2 || has("gui_running")

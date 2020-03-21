@@ -4,8 +4,6 @@ bspwm \
 color \
 compton \
 git \
-i3 \
-irssi \
 mpd \
 mps \
 mpv \
