@@ -13,7 +13,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'preservim/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+" colors
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'sainnhe/vim-color-forest-night'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -56,6 +58,11 @@ au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 nnoremap j gj	" pressing down jumps to the next row 
 nnoremap k gk	" 		in the editor (much more natural)
 
+nnoremap gb :ls<CR>:b<Space>
+map gn :bn<cr>	" 	next buffer
+map gp :bp<cr>	"   previous buffer
+map gd :bd<cr>  "	close buffer
+
 "" P L U G I N   S E T T I N G S
 map <C-n> :NERDTreeToggle<CR>
 let g:airline#extensions#tabline#enabled = 1
@@ -67,8 +74,17 @@ cmap w!! w !sudo tee % >/dev/null
 "" - - - - - - - - - - - - - - - - - -
 "" C O L O U R    S C H E M E S
 if &t_Co >= 256 || has("gui_running")
-	set background=dark
-	colorscheme solarized8
+	"" Solarized 8 Theme
+"	set background=dark
+"	colorscheme solarized8
+
+	"" Forest Night Theme
+	set termguicolors
+"	let g:forest_night_enable_italic = 1
+"	let g:forest_night_disable_italic_comment = 1
+	let g:airline_theme = 'forest_night'
+	colorscheme forest-night
+
 endif
 
 if &t_Co > 2 || has("gui_running")
