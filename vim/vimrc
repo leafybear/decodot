@@ -9,14 +9,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 "" PLUGINS HERE
-Plugin 'vim-airline/vim-airline'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'preservim/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'vim-airline/vim-airline'	" the fancy statusbar
+Plugin 'airblade/vim-gitgutter'		" show git repo status
+Plugin 'preservim/nerdtree'			" a file tree browser
+Plugin 'Xuyuanp/nerdtree-git-plugin' " adds git support
+Plugin 'mhinz/vim-startify'			" fancy start page
 " colors
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'sainnhe/vim-color-forest-night'
 Plugin 'mhartington/oceanic-next'
+Plugin 'tomasr/molokai'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,15 +85,20 @@ if exists('+termguicolors')
 endif
 
 if &t_Co >= 256 || has("gui_running")
+	"" Molokai
+"	colorscheme molokai
+"	let g:rehash256 = 1
+"	let g:molokai_original = 1
+
 	"" Solarized 8 Theme
-	set background=dark
-	colorscheme solarized8
+"	set background=dark
+"	colorscheme solarized8
 
 	"" Forest Night Theme
-"	let g:forest_night_enable_italic = 1
-"	let g:forest_night_disable_italic_comment = 1
-"	let g:airline_theme = 'forest_night'
-"	colorscheme forest-night
+	let g:forest_night_enable_italic = 1
+	let g:forest_night_disable_italic_comment = 1
+	let g:airline_theme = 'forest_night'
+	colorscheme forest-night
 
 	"" Oceanic Next Theme
 "	syntax on
