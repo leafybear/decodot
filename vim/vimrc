@@ -14,11 +14,12 @@ Plugin 'airblade/vim-gitgutter'		" show git repo status
 Plugin 'preservim/nerdtree'			" a file tree browser
 Plugin 'Xuyuanp/nerdtree-git-plugin' " adds git support
 Plugin 'mhinz/vim-startify'			" fancy start page
+"Plugin 'ryanoasis/vim-devicons'		" icons for the file browser
 " colors
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lifepillar/vim-solarized8'
 Plugin 'sainnhe/vim-color-forest-night'
-Plugin 'mhartington/oceanic-next'
-Plugin 'tomasr/molokai'
+Plugin 'KeitaNakamura/neodark.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -73,7 +74,6 @@ let g:airline#extensions#tabline#enabled = 1
 " if you forgot to sudo before editing, hit :w!!
 cmap w!! w !sudo tee % >/dev/null
 
-
 "" - - - - - - - - - - - - - - - - - -
 "" C O L O U R    S C H E M E S
 
@@ -85,27 +85,20 @@ if exists('+termguicolors')
 endif
 
 if &t_Co >= 256 || has("gui_running")
-	"" Molokai
-"	colorscheme molokai
-"	let g:rehash256 = 1
-"	let g:molokai_original = 1
 
 	"" Solarized 8 Theme
 "	set background=dark
-"	colorscheme solarized8
+"	colorscheme solarized8_flat
+
+	"" Neo Dark Theme
+	colorscheme neodark
 
 	"" Forest Night Theme
-	let g:forest_night_enable_italic = 1
-	let g:forest_night_disable_italic_comment = 1
-	let g:airline_theme = 'forest_night'
-	colorscheme forest-night
+"	let g:forest_night_enable_italic = 1
+"	let g:forest_night_disable_italic_comment = 1
+"	let g:airline_theme = 'forest_night'
+"	colorscheme forest-night
 
-	"" Oceanic Next Theme
-"	syntax on
-"	colorscheme OceanicNext
-"	let g:airline_theme='oceanicnext'
-"	let g:oceanic_next_terminal_bold = 1
-"	let g:oceanic_next_terminal_italic = 1
 endif
 
 if &t_Co > 2 || has("gui_running")
