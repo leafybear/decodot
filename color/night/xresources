@@ -45,7 +45,7 @@
 
 ! Shading 0-100 dark, 100-200 light
 urxvt*transparent:      true
-urxvt*shading:          45
+urxvt*shading:          20
 
 !Colored man pages
 URxvt.colorIT:  #9f8fbc

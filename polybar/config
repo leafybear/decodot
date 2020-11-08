@@ -23,23 +23,48 @@ padding = 0
 module-margin = 0
 
 ;Baloo, Miso:style=regular
-font-0 = Miso:style=regular:size=20:antialias=true;5
-font-1 = FontAwesome:size=20;5
-font-2 = Wuncon Siji:size=16;3
-font-3 = unifont:fontformat=truetype:size=18;3
+font-0 = Miso:style=regular:size=24:antialias=true;5
+font-1 = FontAwesome:size=24;5
+font-2 = Wuncon Siji:size=18;3
+font-3 = unifont:fontformat=truetype:size=20;3
 
 
-modules-left = i3 bspwm
-modules-center = mpd
-modules-right = filesystem xbacklight volume battery wlan eth  date
+modules-left = bspwm
+modules-center = xwindow
+modules-right = filesystem  cpu  memory  temperature  wlan  eth  date
+
+; Unused modules
+; i3 xbacklight volume battery
 
 wm-restack = i3
 
+[module/cpu]
+type = internal/cpu
+; Seconds to sleep between updates
+; Default: 1
+interval = 0.5
+label = cpu %percentage%%
+
+[module/memory]
+type = internal/memory
+; Seconds to sleep between updates
+; Default: 1
+interval = 3
+label = mem %percentage_used%%
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:30:...%
+label = %title:0:60:...%
 label-padding = 4
+
+[module/temperature]
+type = internal/temperature
+interval = 0.5
+thermal-zone = 0
+hwmon-path = /sys/devices/pci0000:00/0000:00:03.1/0000:0a:00.0/0000:0b:00.0/0000:0c:00.0/hwmon/hwmon5/temp2_input
+base-temperature = 20
+warn-temperature = 60
+label = gpu %temperature-c%
 
 [module/filesystem]
 type = internal/fs
@@ -57,7 +82,7 @@ label-unmounted-background = ${colors.module-b-bg}
 type = internal/bspwm
 pin-workspaces = true
 inline-mode = false
-enable-click = false
+enable-click = true
 enable-scroll = false
 reverse-scroll = false
 fuzzy-match = true
@@ -203,7 +228,7 @@ format-connected = <label-connected>
 format-connected-foreground = ${colors.module-b-fg}
 format-connected-background = ${colors.module-b-bg}
 format-connected-padding = 5
-label-connected = %essid%
+label-connected = %essid% %local_ip%
 
 ;label-connected = %essid% - %local_ip%
 format-disconnected = <label-disconnected>

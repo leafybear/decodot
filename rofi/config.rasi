@@ -1,0 +1,11 @@
+configuration {
+	theme: "solarized";
+	font: "Miso 32";
+	lines: 5;
+	separator-style: "solid";
+	hide-scrollbar: true; 
+	color-normal: "argb:d0282828, #ebdbb2, argb:d032302f, #665c54, #fbf1c7";
+	color-urgent: "argb:d0cc241d, #282828, argb:d0cc241d, #fb4934, #282828";
+	color-active: "argb:d0d79921, #282828, argb:d0d79921, #fabd2f, #282828";
+	color-window: "argb:d0282828, #a89984, #a89984";
+}

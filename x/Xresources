@@ -5,7 +5,7 @@
 
 ! CURSOR THEME
 Xcursor.theme:		cursor-bridge
-Xcursor.size:		48
+Xcursor.size:		64
 
 ! FONT SETTINGS
 Xft*dpi:            192
@@ -13,10 +13,10 @@ Xft*antialias:      true
 Xft.rgba:           rgb
 Xft.hinting:        true
 Xft.hintstyle:      hintslight
-*font:				xft:Luculent:style=Regular:size=10
-*boldFont:  		xft:Luculent:style=Bold:size=10
-*italicFont:  		xft:Luculent:style=Italic Oblique:size=10
-*boldItalicFont:  	xft:Luculent:style=Bold Italic:size=10
+*font:				xft:Luculent:style=Regular:size=12
+*boldFont:  		xft:Luculent:style=Bold:size=12
+*italicFont:  		xft:Luculent:style=Italic Oblique:size=12
+*boldItalicFont:  	xft:Luculent:style=Bold Italic:size=12
 
 ! URXVT
 urxvt*borderLess:      	false
@@ -43,7 +43,7 @@ urxvt*urlLauncher:      	surf
 !rofi.padding:	300
 !rofi.fullscreen:	true
 !rofi.bw:	0
-rofi.font:	Miso 24
+rofi.font:	Miso 32
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
 rofi.lines:	5

@@ -3,3 +3,4 @@ shellrc	$HOME/.shellrc
 bashrc	$HOME/.bashrc
 bash_profile	$HOME/.bash_profile
 zsh_git	$HOME/.zsh_git
+aliases	$HOME/.aliases
