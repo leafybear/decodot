@@ -5,10 +5,9 @@ pseudo-transparency = true
 
 [bar/top]
 width = 100%
-height = 34
+height = 60
 offset-x = 0
 offset-y = -1
-;bottom = true
 
 fixed-center = true
 
@@ -23,32 +22,133 @@ padding = 0
 module-margin = 0
 
 ;Baloo, Miso:style=regular
-font-0 = Miso:style=regular:size=24:antialias=true;5
+font-0 = Miso:style=regular:size=28:antialias=true;5
 font-1 = FontAwesome:size=24;5
 font-2 = Wuncon Siji:size=18;3
 font-3 = unifont:fontformat=truetype:size=20;3
 
-
 modules-left = bspwm
-;modules-center = xwindow
+;modules-center = 
 modules-right = filesystem  cpu  memory  temperature  wlan  eth  date
 
 
-wm-restack = i3
+
+[bar/top-float]
+override-redirect = true
+width = 98%
+offset-x = 1%
+offset-y = 10
+radius = 12.0
+
+fixed-center = true
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+underline-size = 3
+underline-color = ${colors.underline}
+
+spacing = 0
+padding = 0
+module-margin = 0
+
+;Baloo, Miso:style=regular
+font-0 = Miso:style=regular:size=28:antialias=true;5
+font-1 = FontAwesome:size=24;5
+font-2 = Wuncon Siji:size=18;3
+font-3 = unifont:fontformat=truetype:size=20;3
+
+modules-left = bspwm
+;modules-center = 
+modules-right = filesystem  cpu  memory  temperature  wlan  eth  date
+
+
+
+[bar/left]
+width = 18%
+height = 60
+offset-x = 1%
+offset-y = 10
+radius = 12
+
+fixed-center = true
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+underline-size = 3
+underline-color = ${colors.underline}
+
+spacing = 0
+padding = 0
+module-margin = 0
+
+;Baloo, Miso:style=regular
+font-0 = Miso:style=regular:size=28:antialias=true;5
+font-1 = FontAwesome:size=24;5
+font-2 = Wuncon Siji:size=18;3
+font-3 = unifont:fontformat=truetype:size=20;3
+
+modules-left = bspwm
+
+
+
+
+[bar/right]
+width = 28%
+height = 60
+offset-x = 71%
+offset-y = 10
+radius = 12
+
+fixed-center = true
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+underline-size = 3
+underline-color = ${colors.underline}
+
+spacing = 0
+padding = 0
+module-margin = 0
+
+;Baloo, Miso:style=regular
+font-0 = Miso:style=regular:size=28:antialias=true;5
+font-1 = FontAwesome:size=24;5
+font-2 = Wuncon Siji:size=18;3
+font-3 = unifont:fontformat=truetype:size=20;3
+
+modules-right = filesystem  cpu  memory  temperature  wlan  eth  date
+
+
+
 
 [module/cpu]
 type = internal/cpu
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 0.5
-label = cpu %percentage%%
+border = ${colors.bg}
+border-size = 1
+label-radius = 14
+label-padding = 4
+label-margin = 5
+label-background = ${colors.module-a-bg}
+label-foreground = ${colors.module-a-fg}
+label = C %percentage%%
+
+
 
 [module/memory]
 type = internal/memory
 ; Seconds to sleep between updates
 ; Default: 1
 interval = 3
-label = mem %percentage_used%%
+label = M %percentage_used%%
+label-padding = 5
+
+
 
 
 [module/temperature]
@@ -58,7 +158,11 @@ thermal-zone = 0
 hwmon-path = /sys/devices/pci0000:00/0000:00:03.1/0000:0a:00.0/0000:0b:00.0/0000:0c:00.0/hwmon/hwmon5/temp2_input
 base-temperature = 20
 warn-temperature = 60
-label = gpu %temperature-c%
+label = G %temperature-c%
+label-padding = 5
+
+
+
 
 [module/filesystem]
 type = internal/fs
@@ -69,8 +173,10 @@ label-mounted = %mountpoint% %percentage_used%%
 label-mounted-padding = 5
 label-unmounted = %mountpoint%  ?
 label-unmounted-padding = 5
-label-mounted-background = ${colors.module-b-bg}
-label-unmounted-background = ${colors.module-b-bg}
+
+
+
+
 
 [module/bspwm]
 type = internal/bspwm
@@ -142,14 +248,11 @@ format-connected = <label-connected>
 format-connected-foreground = ${colors.module-b-fg}
 format-connected-background = ${colors.module-b-bg}
 format-connected-padding = 5
-label-connected = %essid% %local_ip%
 
-;label-connected = %essid% - %local_ip%
 format-disconnected = <label-disconnected>
 format-disconnected-foreground = ${colors.module-b-fg}
 format-disconnected-background = ${colors.module-b-bg}
 format-disconnected-padding = 5
-label-disconnected = %ifname% offline
 
 ramp-signal-0 = 0
 ramp-signal-1 = 1
@@ -157,6 +260,13 @@ ramp-signal-2 = 2
 ramp-signal-3 = 3
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.module-b-ramp-fg}
+
+;label-connected = %essid% - %local_ip%
+label-disconnected = %ifname% offline
+label-connected = %essid% %local_ip%
+
+
+
 
 [module/eth]
 type = internal/network
@@ -173,6 +283,9 @@ format-disconnected =
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.module-b-fg}
+
+
+
 
 [module/date]
 type = internal/date
@@ -192,6 +305,8 @@ label = %date% %time%
 label-padding = 2
 label-foreground = ${colors.module-a-fg}
 
+
+
 [module/volume]
 type = internal/volume
 
@@ -205,13 +320,13 @@ format-muted-foreground = ${colors.module-b-ramp-fg}
 format-muted-background = ${colors.module-b-bg}
 format-muted-padding = 5
 
-label-volume = %percentage%
-label-muted = 
-
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 ramp-headphones-0 = 
 ramp-volume-foreground = ${colors.module-b-ramp-fg}
 ramp-muted-foreground = ${colors.module-b-ramp-fg}
+
+label-volume = %percentage%
+label-muted = 
 
