@@ -1,19 +1,16 @@
-bin/decodot $1 alias \
+bin/decodot $1 \
 bin \
 bspwm \
 color \
-compton \
+dunst \
 git \
-mpd \
-mps \
 mpv \
-ncmpcpp \
+picom \
 polybar \
 ranger \
+rofi \
 shell \
-sublime-text \
 sxhkd \
 tmux \
 vim \
-weechat \
-x
+x \
