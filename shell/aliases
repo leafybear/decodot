@@ -20,7 +20,7 @@ alias feh="feh -FZ"
 alias wallpaperme="feh --bg-fill"
 alias iina="/Applications/IINA.app/Contents/MacOS/iina-cli"
 alias atom="/Applications/Atom.app/Contents/Resources/app/atom.sh"
-alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
+#alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
 #alias dockerCleanUp="docker rm $(docker ps -a -f STATUS=exited | awk '{print }')"
 #alias dl="docker ps -a"

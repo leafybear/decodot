@@ -1,5 +1,5 @@
-fonts	$HOME/.fonts
-icons	$HOME/.icons
+fonts	$HOME/.local/share/fonts
+icons	$HOME/.local/share/icons
 xinitrc	$HOME/.xinitrc
 Xresources	$HOME/.Xresources
 xscreensaver	$HOME/.xscreensaver

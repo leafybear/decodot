@@ -13,10 +13,18 @@ Xft*antialias:      true
 Xft.rgba:           rgb
 Xft.hinting:        true
 Xft.hintstyle:      hintslight
-*font:				xft:Luculent:style=Regular:size=12
-*boldFont:  		xft:Luculent:style=Bold:size=12
-*italicFont:  		xft:Luculent:style=Italic Oblique:size=12
-*boldItalicFont:  	xft:Luculent:style=Bold Italic:size=12
+!*font:				xft:Luculent:style=Bold:size=11
+!*boldFont:  		xft:Luculent:style=Italic:size=11
+!*italicFont:  		xft:Luculent:style=Regular:size=11
+!*boldItalicFont:  	xft:Luculent:style=Bold Italic:size=11
+*font:				xft:VictorMono Nerd Font Mono:style=Regular:size=11
+*boldFont:  		xft:VictorMono Nerd Font Mono:style=SemiBold,Regular:size=11
+*italicFont:  		xft:VictorMono Nerd Font:style=Italic:size=11
+*boldItalicFont:  	xft:VictorMono Nerd Font:style=Bold Italic:size=11
+
+
+
+vim*internalBorder: 	0
 
 ! URXVT
 urxvt*borderLess:      	false
@@ -38,11 +46,6 @@ urxvt.url-select.underline:	true
 urxvt*urlLauncher:      	surf
 
 ! ROFI
-!rofi.line-margin: 5
-!rofi.eh:	2
-!rofi.padding:	300
-!rofi.fullscreen:	true
-!rofi.bw:	0
 rofi.font:	Miso 32
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
