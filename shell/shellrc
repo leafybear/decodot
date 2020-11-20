@@ -6,9 +6,11 @@
 # This can have unexpected consequences.
 #[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
+
 if [ "$TERM" = "xterm" ]; then
   TERM="${TERM}-256color"
 fi
+
 
 # Use the correct options on macOS and Linux
 if [[ `uname` == Darwin ]]; then
@@ -16,6 +18,12 @@ if [[ `uname` == Darwin ]]; then
 else
   alias ls="ls --color"
 fi
+
+
+function command_exists {
+  hash "$1" &> /dev/null
+}
+
 
 # When connecting via ssh, always [re]attach to a terminal manager
 if command_exists tmux && [ -z $TMUX ]; then
