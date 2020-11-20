@@ -2,44 +2,20 @@
 # ~/.shellrc - shell agnostic rc file, sourced by bashrc, zshrc etc.
 # NOTE: Try to keep things in here sh-compliant.
 
-#### Setup prompt colour ############################################
-function getHostColour {
-  #  31     32      33    34       35    36
-  # red  green  yellow  blue  magenta  cyan
-  case "$1" in
-    Bear-Book.local ) echo "green" ;;
-    Kat-Book.local ) echo "green" ;;
-    Nookintosh.local  ) echo "green" ;;
-    Sweetie ) echo "cyan"    ;;
-    Luna    ) echo "cyan"   ;;
-    Nook    ) echo "cyan"   ;;
-    Kat-Tower ) echo "cyan"   ;;
-    *        ) echo "yellow"     ;;
-  esac
-}
-
-unamen="`uname -n`"
-host_color="`getHostColour $unamen`"
-
-function command_exists {
-  hash "$1" &> /dev/null
-}
-
-# When connecting via ssh, always [re]attach to a terminal manager
-if command_exists tmux && [ -z $TMUX ]; then
-  if [ "$SSH_TTY" != "" -a "$TERM" -a "$TERM" != "screen" -a "$TERM" != "dumb" ]; then
-    pgrep tmux
-    # $? is the exit code of pgrep; 0 means there was a result (tmux is already running)
-    if [ $? -eq 0 ]; then
-      tmux -u attach -d
-    else
-      tmux -u
-    fi
-  fi
-fi
 
 # If there is a display attached, immediately start X
 #[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+if [ "$TERM" = "xterm" ]; then
+  TERM="${TERM}-256color"
+fi
+
+if [[ `uname` == Darwin ]]; then
+  alias ls="ls -G"
+else
+  alias ls="ls --color"
+fi
+
 
 #              _                            _
 #  ___ _ ___ _(_)_ _ ___ _ _  _ __  ___ _ _| |_
@@ -72,20 +48,49 @@ export LESS_TERMCAP_se=$'\e[m'
 
 export LSCOLORS=Gxfxcxdxbxegedabagacad
 
-if [ "$TERM" = "xterm" ]; then
-  TERM="${TERM}-256color"
-fi
+#       _ _
+#  __ _| (_)__ _ ___ ___ ___
+# / _` | | / _` (_-</ -_|_-<
+# \__,_|_|_\__,_/__/\___/__/
+# shell aliases
 
-if [[ `uname` == Darwin ]]; then
-  alias ls="ls -G"
-else
-  alias ls="ls --color"
-fi
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias -- -="cd -"
+alias t="tmux attach"
+alias r="ranger"
+alias grep="grep -i"
+alias df="df -h"
+alias du="du -hc"
+alias ping="ping -c 5"
+alias vi="vim"
+alias sl="ls"
+alias ll="ls -lah"
+alias lsd="ls -la | grep '^d'"
+alias feh="feh -FZ"
+alias wallpaperme="feh --bg-fill"
+alias iina="/Applications/IINA.app/Contents/MacOS/iina-cli"
+alias atom="/Applications/Atom.app/Contents/Resources/app/atom.sh"
+#alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
 
- #       _ _
- #  __ _| (_)__ _ ___ ___ ___
- # / _` | | / _` (_-</ -_|_-<
- # \__,_|_|_\__,_/__/\___/__/
+# Enable aliases to be sudo’ed
+alias sudo="sudo "
 
- source $HOME/.aliases
+# Launch Krita with DPI scale factor
+alias krita="env QT_SCALE_FACTOR=1.6 krita"
 
+# Git shortcuts
+alias g="git"
+alias gs="git r1 -n 1; git branch | grep \*; git status --short"
+alias gl="git log --decorate --oneline --graph --date-order --all"
+alias ga="git add"
+alias gp="git push"
+alias gpa="gp --all"
+alias gu="git pull"
+alias gd="git diff"
+alias gdc="gd --cached"
+alias gm="git commit -m"
+alias gma="git commit -am"
+alias gb="git branch"

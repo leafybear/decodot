@@ -1,0 +1,82 @@
+# ~/.zshrc
+source "$HOME/.shellrc"
+source "$HOME/.zsh_git"
+
+# Import modules/stuff
+autoload -U  compinit   && compinit -i
+autoload -U  promptinit && promptinit
+autoload -U  colors     && colors
+
+### Variables
+esc="$(echo -e '\e')"
+up="${esc}[A"
+down="${esc}[B"
+
+### Hooks to update title
+# Usage: set_title "new-title"
+function set_title {
+  title_set="${esc}]0"
+  title_stop="$(echo -e '\007')"
+  Title="$title_set;$@$title_stop"
+  echo -n "$Title"
+}
+
+if [ "$TERM" = "screen-256color" ] && [ -n "$TMUX" ]; then
+  puser=
+  phost=
+  pdivider=
+else
+  puser="$USER "
+  phost=" $HOST "
+  pdivider=":"
+fi
+
+### Setup prompt
+setopt PROMPT_SUBST
+
+#user_info () { [[ $USER != "amy" ]] && echo $USER || echo "" }
+
+PROMPT='%{$fg[$host_color]%}$puser%{$reset_color%}$pdivider%{$fg[$host_color]%}$phost%{$fg[magenta]%}%~%u $(git_info)
+%(?.%{$fg[blue]%}.%{$fg[red]%}%? )%(!.#.$)%{$reset_color%} '
+
+# History
+export HISTSIZE=2000
+export HISTFILE="$HOME/.history"
+export SAVEHIST="$HISTSIZE"
+setopt hist_ignore_all_dups
+
+
+#### Fix key bindings ###############################################
+bindkey -v         # vi-like bindings
+
+# Borrow a bunch of neat stuff from the default emacs-like bindings, that the
+# vi-like bindings lack.
+bindkey    "^A"    beginning-of-line
+#bindkey    "^D"    delete-char-or-list
+bindkey    '^E'    end-of-line
+#bindkey    "^G"    send-break
+bindkey    "^H"    backward-delete-char
+bindkey    "^N"    down-line-or-history
+#bindkey    "^O"    accept-line-and-down-history
+bindkey    "^P"    up-line-or-history
+#bindkey    "^R"    history-incremental-search-backward
+bindkey    "^R"    history-incremental-pattern-search-backward
+#bindkey    "^S"    history-incremental-search-forward
+bindkey    "^V"    quoted-insert
+bindkey    '^?'    backward-delete-char
+
+# vi-"normal mode" bindings
+bindkey -a "^A"    beginning-of-line
+bindkey -a '^E'    end-of-line
+bindkey -a '^K'    kill-whole-line
+
+# Also fix a bunch of other keys
+bindkey '^[[H'     beginning-of-line # <Home>
+bindkey '^[[F'     end-of-line       # <End>
+bindkey "^[[1;5D"  backward-word     # <C-left>
+bindkey "^[[1;5C"  forward-word      # <C-right>
+
+bindkey "^K"       kill-whole-line
+bindkey "^U"       undo
+bindkey "^['"      quote-line
+bindkey "^[[39;5u" quote-line

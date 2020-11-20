@@ -17,10 +17,18 @@ Xft.hintstyle:      hintslight
 !*boldFont:  		xft:Luculent:style=Italic:size=11
 !*italicFont:  		xft:Luculent:style=Regular:size=11
 !*boldItalicFont:  	xft:Luculent:style=Bold Italic:size=11
-*font:				xft:VictorMono Nerd Font Mono:style=Regular:size=11
-*boldFont:  		xft:VictorMono Nerd Font Mono:style=SemiBold,Regular:size=11
-*italicFont:  		xft:VictorMono Nerd Font:style=Italic:size=11
-*boldItalicFont:  	xft:VictorMono Nerd Font:style=Bold Italic:size=11
+!*font:				xft:Iosevka Nerd Font:style=regular:size=12
+!*boldFont:  		xft:Iosevka Nerd Font:style=heavy:size=12
+!*italicFont:  		xft:Iosevka Nerd Font:style=italic:size=12
+!*boldItalicFont:  	xft:Iosevka Nerd Font:style=heavy italic:size=12
+!*font:				xft:Hurmit Nerd Font:style=medium:size=12
+!*boldFont:  		xft:Hurmit Nerd Font:style=bold:size=12
+!*italicFont:  		xft:Hurmit Nerd Font:style=light:size=12
+!*boldItalicFont:  	xft:Hurmit Nerd Font:style=bold:size=12
+*font:				xft:Hack Nerd Font:style=regular:size=10
+*boldFont:  		xft:Hack Nerd Font:style=bold:size=10
+*italicFont:  		xft:Hack Nerd Font:style=italic:size=10
+*boldItalicFont:  	xft:Hack Nerd Font:style=bold italic:size=10
 
 
 
@@ -45,8 +53,3 @@ urxvt.url-select.launcher:	/usr/bin/surf
 urxvt.url-select.underline:	true
 urxvt*urlLauncher:      	surf
 
-! ROFI
-rofi.font:	Miso 32
-rofi.separator-style: solid
-rofi.hide-scrollbar: true
-rofi.lines:	5

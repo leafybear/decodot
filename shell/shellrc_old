@@ -1,0 +1,91 @@
+#!/bin/sh
+# ~/.shellrc - shell agnostic rc file, sourced by bashrc, zshrc etc.
+# NOTE: Try to keep things in here sh-compliant.
+
+#### Setup prompt colour ############################################
+function getHostColour {
+  #  31     32      33    34       35    36
+  # red  green  yellow  blue  magenta  cyan
+  case "$1" in
+    Bear-Book.local ) echo "green" ;;
+    Kat-Book.local ) echo "green" ;;
+    Nookintosh.local  ) echo "green" ;;
+    Sweetie ) echo "cyan"    ;;
+    Luna    ) echo "cyan"   ;;
+    Nook    ) echo "cyan"   ;;
+    Kat-Tower ) echo "cyan"   ;;
+    *        ) echo "yellow"     ;;
+  esac
+}
+
+unamen="`uname -n`"
+host_color="`getHostColour $unamen`"
+
+function command_exists {
+  hash "$1" &> /dev/null
+}
+
+# When connecting via ssh, always [re]attach to a terminal manager
+if command_exists tmux && [ -z $TMUX ]; then
+  if [ "$SSH_TTY" != "" -a "$TERM" -a "$TERM" != "screen" -a "$TERM" != "dumb" ]; then
+    pgrep tmux
+    # $? is the exit code of pgrep; 0 means there was a result (tmux is already running)
+    if [ $? -eq 0 ]; then
+      tmux -u attach -d
+    else
+      tmux -u
+    fi
+  fi
+fi
+
+# If there is a display attached, immediately start X
+#[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+#              _                            _
+#  ___ _ ___ _(_)_ _ ___ _ _  _ __  ___ _ _| |_
+# / -_) ' \ V / | '_/ _ \ ' \| '  \/ -_) ' \  _|
+# \___|_||_\_/|_|_| \___/_||_|_|_|_\___|_||_\__|
+# environment variables
+
+export DOTDIR=$HOME/dots
+export GOPATH=$HOME/go
+export EDITOR="vim"
+export PATH=$PATH
+export PATH=$GOPATH/bin:$HOME/.local/bin:$HOME/local/bin:$HOME/.bin:$DOTDIR/bin:$PATH
+export PATH=$HOME/apps/Natron:$PATH
+export PATH=$HOME/apps/Discord:$PATH
+
+export HISTCONTROL=ignoredups
+export PAGER=less
+export BROWSER=surf
+export GREP_COLORS="mt=38;5;208:cx=38;5;246"
+# for QT apps on 4k display
+export QT_SCALE_FACTOR=1.6
+
+# see termcap(5)
+export LESS_TERMCAP_md=$'\e[1;33m'
+export LESS_TERMCAP_me=$'\e[m'
+export LESS_TERMCAP_us=$'\e[0;32m'
+export LESS_TERMCAP_ue=$'\e[m'
+export LESS_TERMCAP_so=$'\e[0;40;38m'
+export LESS_TERMCAP_se=$'\e[m'
+
+export LSCOLORS=Gxfxcxdxbxegedabagacad
+
+if [ "$TERM" = "xterm" ]; then
+  TERM="${TERM}-256color"
+fi
+
+if [[ `uname` == Darwin ]]; then
+  alias ls="ls -G"
+else
+  alias ls="ls --color"
+fi
+
+ #       _ _
+ #  __ _| (_)__ _ ___ ___ ___
+ # / _` | | / _` (_-</ -_|_-<
+ # \__,_|_|_\__,_/__/\___/__/
+
+ source $HOME/.aliases
+
