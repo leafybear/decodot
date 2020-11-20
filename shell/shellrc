@@ -2,20 +2,33 @@
 # ~/.shellrc - shell agnostic rc file, sourced by bashrc, zshrc etc.
 # NOTE: Try to keep things in here sh-compliant.
 
-
 # If there is a display attached, immediately start X
+# This can have unexpected consequences.
 #[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 if [ "$TERM" = "xterm" ]; then
   TERM="${TERM}-256color"
 fi
 
+# Use the correct options on macOS and Linux
 if [[ `uname` == Darwin ]]; then
   alias ls="ls -G"
 else
   alias ls="ls --color"
 fi
 
+# When connecting via ssh, always [re]attach to a terminal manager
+if command_exists tmux && [ -z $TMUX ]; then
+  if [ "$SSH_TTY" != "" -a "$TERM" -a "$TERM" != "screen" -a "$TERM" != "dumb" ]; then
+    pgrep tmux
+    # $? is the exit code of pgrep; 0 means there was a result (tmux is already running)
+    if [ $? -eq 0 ]; then
+      tmux -u attach -d
+    else
+      tmux -u
+    fi
+  fi
+fi
 
 #              _                            _
 #  ___ _ ___ _(_)_ _ ___ _ _  _ __  ___ _ _| |_
