@@ -17,6 +17,8 @@ Plugin 'mhinz/vim-startify'			" fancy start page
 Plugin 'majutsushi/tagbar'			" browser for tags in a file
 Plugin 'chrisbra/vim-commentary'	" line commenting tool
 Plugin 'kien/ctrlp.vim'				" fuzzy search tool
+Plugin 'ryanoasis/vim-devicons'		" add icons for file types
+Plugin 'gko/vim-coloresque'			" show colors in the file
 " colors
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lifepillar/vim-solarized8'
@@ -87,20 +89,9 @@ if exists('+termguicolors')
 endif
 
 if &t_Co >= 256 || has("gui_running")
-
-	"" Solarized 8 Theme
-"	set background=dark
-"	colorscheme solarized8_flat
-
-	"" Neo Dark Theme
-	colorscheme neodark
-
-	"" Forest Night Theme
-"	let g:forest_night_enable_italic = 1
-"	let g:forest_night_disable_italic_comment = 1
-"	let g:airline_theme = 'forest_night'
-"	colorscheme forest-night
-
+	
+	source ~/.theme/theme.vim
+	
 endif
 
 if &t_Co > 2 || has("gui_running")

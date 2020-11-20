@@ -1,21 +1,31 @@
-#### x settings and niceties
-export XDG_CONFIG_HOME=$HOME/.config
-export BSPWM_STATE=$HOME/.bspwm-state.json
-
+# __  __    ___    _  _     ___    _____  
+# \ \/ /   |_ _|  | \| |   |_ _|  |_   _| 
+#  >  <     | |   | .` |    | |     | |   
+# /_/\_\   |___|  |_|\_|   |___|   _|_|_  
+#_|"""""|_|"""""|_|"""""|_|"""""|_|"""""| 
+#"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-'"`-0-0-' 
+#
+#
 xrdb $HOME/.Xresources
 xsetroot -name $HOSTNAME
 xsetroot -cursor_name left_ptr
 
 sh ~/.fehbg &
-compton --config $HOME/.config/compton -cCb &
+picom --experimental-backends &
+dunst > /dev/null 2>&1 &
 xscreensaver -no-splash &
 
-## set starting backlight and volume values
-#xbacklight -set 50
-#/usr/bin/xcalib -d :0 $HOME/.icc/6000.icm
-amixer -q set Master 60 unmute
+# unmute all devices
+for x in `amixer controls  | grep layback` ; do amixer cset "${x}" on ; done
+# set all devices to 70% volume
+for x in `amixer controls  | grep layback` ; do amixer cset "${x}" 70% ; done
+
+#### x settings and niceties
+export XDG_CONFIG_HOME=$HOME/.config
+export BSPWM_STATE=$HOME/.bspwm-state.json
+
+#### set device prefs
+xinput set-prop "pointer:Logitech M585" "libinput Natural Scrolling Enabled" 1
 
 #### window manager
-# exec i3 -V >> ~/.i3-log-$(date + '%F-%k-%M-%S') 2>&1
-
 exec bspwm

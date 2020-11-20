@@ -1,0 +1,37 @@
+bspc config normal_border_color     "#222222"
+bspc config focused_border_color    "#6c6e94"
+
+# presel feedback message
+bspc config presel_border_color "#eca585"
+bspc config presel_feedback_color   "#eca585"
+
+# urgent window
+bspc config urgent_border_color "#e4436f"
+
+# unfocused sticky window
+bspc config normal_sticky_border_color "#01a5b0"
+
+# focused locked window, focused monitor
+# focused_locked_border_color
+
+# focused locked window, unfocused monitor
+# active_locked_border_color
+
+# unfocused locked window
+# normal_locked_border_color
+
+# focused sticky window, focused monitor
+# focused_sticky_boder_color
+
+# focused sticky window, unfocused monitor
+# active_sticky_border_color
+
+# focused private window, focused monitor
+# focused_private_border_color
+
+# unfocused private window, focused monitor
+# active_private_border_color
+
+# unfocused private window
+# normal_private_border_color
+

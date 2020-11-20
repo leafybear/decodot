@@ -13,13 +13,15 @@ source $HOME/.theme/bspwm
 
 # workspaces
 bspc monitor -d cmd chat www 3d paint ?
-#bspc monitor HDMI2 -d cmd edit www remote etc
+
 bspc desktop ^3 -l monocle
+bspc desktop ^4 -l monocle
+bspc desktop ^5 -l monocle
 
 # visual options
-bspc config border_width    2
+bspc config border_width    1
 bspc config window_gap      12
-bspc config top_padding		33
+bspc config top_padding		0
 bspc config right_padding	0
 bspc config left_padding	0
 bspc config bottom_padding	0
@@ -37,16 +39,14 @@ bspc config super mod4
 bspc rule -a feh state=fullscreen
 bspc rule -a mpv state=floating sticky=on rectangle=400x250+40+40
 #bspc rule -a Sublime_text desktop=^2
-bspc rule -a discord desktop=^2 follow=on
+bspc rule -a discord desktop=^2
 bspc rule -a Sublime_text desktop=^2 follow=on
 bspc rule -a Opera desktop=^3 follow=on
 bspc rule -a firefox desktop=^3 follow=on
 bspc rule -a Blender desktop=^4 follow=on
 bspc rule -a krita desktop=^5 follow=on
 bspc rule -a Natron desktop=^5 follow=on
-
-# "use tabs consistently" external rules
-#bspc config external_rules_command "$(which external_rules)"
+bspc rule -a Gpick state=floating
 
 # start up apps
 $HOME/.config/polybar/launch.sh &

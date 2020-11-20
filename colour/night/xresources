@@ -1,0 +1,106 @@
+!		DARK THEME
+! . . . . . . . . . . . . . . . . . .
+
+
+!--------------------------------------------
+! General Colors
+
+*background:    #151515
+*foreground:    #C7C79D
+
+! black
+*color0:        #222222
+*color8:        #666666
+
+! red
+*color1:        #ca637c
+*color9:        #d9799b
+
+! green
+*color2:        #b7ce42
+*color10:       #cce164
+
+! yellow
+*color3:        #f1ab57
+*color11:       #dbd162
+
+! blue
+*color4:        #66aabb
+*color12:       #aaccbb
+
+! magenta
+*color5:        #9f8fbc
+*color13:       #c2a1ff
+
+! cyan
+*color6:        #7ea79f
+*color14:       #7ea79f
+
+! white
+*color7:        #C7C79D
+*color15:       #e4e4b9
+
+!--------------------------------------------
+! URxvt
+
+! Shading 0-100 dark, 100-200 light
+urxvt*transparent:      true
+urxvt*shading:          20
+
+!Colored man pages
+URxvt.colorIT:  #9f8fbc
+URxvt.colorBD:  #7ea79f
+URxvt.colorUL:  #b7ce42
+urxvt*cursorColor:                  #4D4D4C
+urxvt*scrollColor:                  #4D4D4C
+
+!-------------------------------------------
+! i3 WM
+
+*.i3_focus_border:	#7ea79f
+*.i3_focus_bg:		#7ea79f
+*.i3_focus_text:	#222222
+*.i3_focus_indicator: #7ea79f
+*.i3_focus_child:	#7ea79f
+
+*.i3_inact_border:	#222222
+*.i3_inact_bg:		#222222
+*.i3_inact_text:	#222222
+*.i3_inact_indicator: #222222
+*.i3_inact_child:	#222222
+
+*.i3_unfocus_border:	#222222
+*.i3_unfocus_bg:		#222222
+*.i3_unfocus_text:		#222222
+*.i3_unfocus_indicator: #222222
+*.i3_iunfocus_child:	#222222
+
+*.i3_urgent_border:		#d9799b
+*.i3_urgent_bg:			#d9799b
+*.i3_urgent_text:		#222222
+*.i3_urgent_indicator: #d9799b
+*.i3_urgent_child:	#d9799b
+
+*.i3_bg:				#222222
+
+!-------------------------------------------
+! DMenu
+
+dmenu.selforeground:	    #ececec
+dmenu.background:	        #211c18
+dmenu.selbackground:	    #943852
+dmenu.foreground:	        #ececec
+dmenu.font:	                "Miso-14"
+
+!-------------------------------------------
+! Rofi
+
+rofi.color-enabled: true
+
+!                  bg       border   separator
+rofi.color-window: argb:d0282828, #a89984, #a89984
+
+!                  bg             fg       bg-alt   hl-bg    hl-fg
+rofi.color-normal: argb:d0282828, #ebdbb2, argb:d032302f, #665c54, #fbf1c7
+rofi.color-active: argb:d0d79921, #282828, argb:d0d79921, #fabd2f, #282828
+rofi.color-urgent: argb:d0cc241d, #282828, argb:d0cc241d, #fb4934, #282828
