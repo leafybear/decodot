@@ -50,4 +50,3 @@ bspc rule -a Gpick state=floating
 
 # start up apps
 $HOME/.config/polybar/launch.sh &
-urxvt &
