@@ -9,7 +9,7 @@ picom \
 polybar \
 ranger \
 rofi \
-shell \ 
+shell \
 sxhkd \
 tmux \
 vim \

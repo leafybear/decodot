@@ -1,0 +1,8 @@
+{
+  urxvt.URxvt = {
+    AlwaysUserIcon = No;
+    Icon = Terminal.tiff;
+    KeepOnBottom = Yes;
+    StartWorkspace = apple;
+  };
+}
