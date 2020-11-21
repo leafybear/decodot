@@ -34,7 +34,7 @@ if "DOTDIR" in os.environ:
 else:
 	usage("DOTDIR environment variable not defined.")
 
-## check folder and wutwhere exist
+## check folder and dotwhere exist
 if not os.path.isdir(dotdir):
 	usage(dotdir+" doesn't exist.")
 
@@ -53,12 +53,12 @@ else:
 ### DO SOMETHING
 for folder in folders:
 
-	wutwhere = dotdir + "/" + folder + "/.wutwhere"
-	if not os.path.exists(wutwhere):
-		print(wutwhere+" doesn't exist.")
+	dotwhere = dotdir + "/" + folder + "/dotwhere"
+	if not os.path.exists(dotwhere):
+		print(dotwhere+" doesn't exist.")
 	else:
 		## PROCEED
-		with open(wutwhere) as fp:
+		with open(dotwhere) as fp:
 			for line in fp:
 				original, link = line.split("\t")
 				if original == ".":
