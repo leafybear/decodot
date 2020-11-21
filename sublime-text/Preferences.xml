@@ -1,0 +1,20 @@
+{
+	"block_caret": true,
+	"caret_style": "phase",
+	"color_scheme": "Packages/Colorsublime - Themes/Flat_Dark.tmTheme",
+	"copy_with_empty_selection": true,
+	"create_window_at_startup": true,
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "Luculent",
+	"font_size": 14,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"theme": "ayu-mirage.sublime-theme",
+	"trim_trailing_white_space_on_save": true
+}
