@@ -15,6 +15,6 @@
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
-	"theme": "ayu-mirage.sublime-theme",
+	"theme": "Default.sublime-theme",
 	"trim_trailing_white_space_on_save": true
 }
