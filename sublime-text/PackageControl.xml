@@ -5,9 +5,11 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
 		"Agila Theme",
 		"ayu",
 		"Colorsublime",
+		"MarkdownEditing",
 		"Package Control",
 		"Theme - Gravity",
 		"Theme - One Dark"
