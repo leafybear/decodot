@@ -19,6 +19,7 @@ Plugin 'chrisbra/vim-commentary'	" line commenting tool
 Plugin 'kien/ctrlp.vim'				" fuzzy search tool
 Plugin 'ryanoasis/vim-devicons'		" add icons for file types
 Plugin 'gko/vim-coloresque'			" show colors in the file
+Plugin 'vimwiki/vimwiki'			" vim wiki
 " colors
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'lifepillar/vim-solarized8'
