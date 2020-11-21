@@ -1,7 +1,7 @@
 bin/decodot $1 \
 bin \
 bspwm \
-color \
+colour \
 dunst \
 git \
 mpv \

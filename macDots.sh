@@ -1,8 +1,9 @@
 bin/decodot $1 \
 bin \
-color \
+colour \
 git \
 ranger \
 tmux \
 vim \
 shell \
+sublime-text \
