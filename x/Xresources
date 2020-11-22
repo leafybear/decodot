@@ -4,8 +4,12 @@
 #endif
 
 ! CURSOR THEME
-Xcursor.theme:		cursor-bridge
-!Xcursor.size:		64
+Xcursor.theme:		cursor-oreo-grey
+Xcursor.size:		48
+!Xcursor.theme:		cursor-bibata-modern-classic
+!Xcursor.size:		40
+! bibata: 22, 24, 28, 32, 40, 48, 56, 64, 72, 80, 88, 96
+! oreo: 32, 64
 
 ! FONT SETTINGS
 Xft*dpi:            192

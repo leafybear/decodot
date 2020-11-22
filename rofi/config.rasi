@@ -1,5 +1,4 @@
 configuration {
-	theme: "neon-gods";
 	font: "cozettevector 22";
 	width: 50;
 	lines: 10;
