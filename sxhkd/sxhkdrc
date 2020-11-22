@@ -4,7 +4,7 @@ super + Return
 	urxvt
 
 super + space
-	rofi  -show run
+	rofi -show run -theme $HOME/.theme/rofi.rasi
 
 ##--------------- Nodes and Desktops
 
