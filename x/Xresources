@@ -4,7 +4,7 @@
 #endif
 
 ! CURSOR THEME
-Xcursor.theme:		cursor-oreo-grey
+Xcursor.theme:		cursor-bibata-blue
 Xcursor.size:		48
 !Xcursor.theme:		cursor-bibata-modern-classic
 !Xcursor.size:		40
