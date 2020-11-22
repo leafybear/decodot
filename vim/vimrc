@@ -29,7 +29,7 @@ Plugin 'KeitaNakamura/neodark.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-"" - - - - - - - - - - - - - - - - - - - - 
+"" - - - - - - - - - - - - - - - - - - - -
 
 " don't make backups
 set nobackup
@@ -37,6 +37,9 @@ set noswapfile
 
 "" E D I T I N G
 set hidden
+
+set splitbelow    " more natural locations to
+set splitright    "     put new split windows
 
 set cursorline    " highlight current line in editor
 set nowrap        " don't wrap lines
@@ -64,13 +67,14 @@ set encoding=utf-8		 " save files with UTF-8 encoding
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
 "" K E Y M A P S
-nnoremap j gj	" pressing down jumps to the next row 
-nnoremap k gk	" 		in the editor (much more natural)
+nnoremap j gj	   " pressing down jumps to the next row
+nnoremap k gk	   " 		in the editor (much more natural)
+nnoremap U <C-r> " redo an undone edit
 
 nnoremap gb :ls<CR>:b<Space>
 map gn :bn<cr>	" 	next buffer
 map gp :bp<cr>	"   previous buffer
-map gd :bd<cr>  "	close buffer
+map gd :bd<cr>  "	  close buffer
 
 "" P L U G I N   S E T T I N G S
 map <C-n> :NERDTreeToggle<CR>
@@ -101,9 +105,9 @@ if exists('+termguicolors')
 endif
 
 if &t_Co >= 256 || has("gui_running")
-	
+
 	source ~/.theme/theme.vim
-	
+
 endif
 
 if &t_Co > 2 || has("gui_running")
