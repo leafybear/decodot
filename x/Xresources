@@ -4,19 +4,23 @@
 #endif
 
 ! CURSOR THEME
-Xcursor.theme:		cursor-bibata-blue
-Xcursor.size:		48
+Xcursor.theme:		cursor-material
+Xcursor.size:		32
 !Xcursor.theme:		cursor-bibata-modern-classic
 !Xcursor.size:		40
 ! bibata: 22, 24, 28, 32, 40, 48, 56, 64, 72, 80, 88, 96
 ! oreo: 32, 64
 
 ! FONT SETTINGS
-Xft*dpi:            192
+! 100% 96, 125% 120, 150% 144, 200% 192
+Xft*dpi:            120
 Xft*antialias:      true
 Xft.rgba:           rgb
 Xft.hinting:        true
-Xft.hintstyle:      hintslight
+!Xft.hintstyle:      hintslight
+Xft.hintstyle:  hintfull
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
 !*font:				xft:Luculent:style=Bold:size=11
 !*boldFont:  		xft:Luculent:style=Italic:size=11
 !*italicFont:  		xft:Luculent:style=Regular:size=11
@@ -29,10 +33,10 @@ Xft.hintstyle:      hintslight
 !*boldFont:  		xft:Hurmit Nerd Font:style=bold:size=12
 !*italicFont:  		xft:Hurmit Nerd Font:style=light:size=12
 !*boldItalicFont:  	xft:Hurmit Nerd Font:style=bold:size=12
-*font:				xft:Hack Nerd Font:style=regular:size=10
-*boldFont:  		xft:Hack Nerd Font:style=bold:size=10
-*italicFont:  		xft:Hack Nerd Font:style=italic:size=10
-*boldItalicFont:  	xft:Hack Nerd Font:style=bold italic:size=10
+*font:				xft:Hack Nerd Font:style=regular:size=12
+*boldFont:  		xft:Hack Nerd Font:style=bold:size=12
+*italicFont:  		xft:Hack Nerd Font:style=italic:size:12
+*boldItalicFont:  	xft:Hack Nerd Font:style=bold italic:size=12
 
 
 

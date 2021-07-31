@@ -1,7 +1,7 @@
 ##-------------- Launch apps
 
 super + Return
-	urxvt
+	kitty
 
 super + space
 	rofi -show run -theme $HOME/.theme/rofi.rasi
@@ -37,8 +37,12 @@ super + l
 	bspc desktop -l next
 
 # Close node
-super + w
+super + shift + w
 	bspc node -k
+
+# Close just the panel, not the app
+super + w
+	bspc node -c
 
 # Toggle monocle mode
 super + m
@@ -93,4 +97,5 @@ XF86MonBrightness{Down,Up}
 	exec xbacklight {-dec,-inc} 10
 
 Print
-	exec scrot ~/screenshots/%Y-%m-%d_%H%M%S.png
+	exec ~/.bin/screenshotter.sh
+#	exec scrot ~/screenshots/%Y-%m-%d_%H%M%S.png
