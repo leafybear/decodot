@@ -26,3 +26,4 @@ vim/vim/bundle
 zsh/zsh/history
 *.sublime-workspace
 *.sublime-project
+nvim/local
