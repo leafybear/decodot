@@ -14,3 +14,6 @@ sxhkd \
 tmux \
 vim \
 x \
+nnn \
+nvim \
+kitty \
