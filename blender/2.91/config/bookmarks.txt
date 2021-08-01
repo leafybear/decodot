@@ -1,0 +1,7 @@
+[Bookmarks]
+[Recent]
+/home/amy/art/blender/
+/mnt/storage/blender/
+/home/amy/art/blender/sample-scenes/classroom/
+/home/amy/art/blender/themes/
+/home/amy/art/blender/sample-scenes/blender_splash_fishy_cat/

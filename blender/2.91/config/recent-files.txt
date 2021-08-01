@@ -1,0 +1,3 @@
+/home/amy/art/blender/fire monkey.blend
+/home/amy/art/blender/sample-scenes/classroom/classroom.blend
+/home/amy/art/blender/sample-scenes/blender_splash_fishy_cat/fishy_cat.blend

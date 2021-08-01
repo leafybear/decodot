@@ -1,0 +1,2 @@
+{X.Org/AMD Radeon RX 5700 XT (NAVI10, DRM 3.39.0, 5.9.2-arch1-1, LLVM 10.0.1)/4.6 (Core Profile) Mesa 20.2.1}=SUPPORTED
+{X.Org/AMD Radeon RX 5700 XT (NAVI10, DRM 3.39.0, 5.9.4-arch1-1, LLVM 10.0.1)/4.6 (Core Profile) Mesa 20.2.1}=SUPPORTED

@@ -1,0 +1,6 @@
+/home/amy/art/blender/sample-scenes/Blender 2.blend
+/home/amy/downloads/sample-scenes/blender_splash_fishy_cat/fishy_cat.blend
+/home/amy/downloads/blends/locotracteur-y6453.blend
+/home/amy/downloads/blends/low-poly-japanese-scene.blend
+/home/amy/downloads/sample-scenes/classroom/classroom.blend
+/home/amy/Downloads/splash-pokedstudio.blend

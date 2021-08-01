@@ -76,6 +76,7 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 # g:-!git diff SHOW GIT DIFF FOR FILE
 export NNN_PLUG='e:-!sudo -E vim $nnn*;p:preview-tui;d:diffs;v:imgview;b:bookmarks;u:dups;r:rsyncpp'
 export NNN_FIFO=/tmp/nnn.fifo
+export SPLIT="V"
 
 #       _ _
 #  __ _| (_)__ _ ___ ___ ___
