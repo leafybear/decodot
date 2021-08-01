@@ -38,6 +38,11 @@ if command_exists tmux && [ -z $TMUX ]; then
   fi
 fi
 
+# cd on quitting nnn file manager
+if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
+	    source /usr/share/nnn/quitcd/quitcd.bash_zsh
+fi
+
 #              _                            _
 #  ___ _ ___ _(_)_ _ ___ _ _  _ __  ___ _ _| |_
 # / -_) ' \ V / | '_/ _ \ ' \| '  \/ -_) ' \  _|
@@ -67,6 +72,10 @@ export LESS_TERMCAP_so=$'\e[0;40;38m'
 export LESS_TERMCAP_se=$'\e[m'
 
 export LSCOLORS=Gxfxcxdxbxegedabagacad
+# nnn file manager config
+# g:-!git diff SHOW GIT DIFF FOR FILE
+export NNN_PLUG='e:-!sudo -E vim $nnn*;p:preview-tui;d:diffs;v:imgview;b:bookmarks;u:dups;r:rsyncpp'
+export NNN_FIFO=/tmp/nnn.fifo
 
 #       _ _
 #  __ _| (_)__ _ ___ ___ ___
