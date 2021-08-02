@@ -8,7 +8,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
 polybar top >> /tmp/polybar1.log 2>&1 & disown
-# polybar left >> /tmp/polybar1.log 2>&1 & disown
-# polybar right >> /tmp/polybar1.log 2>&1 & disown
+#polybar left >> /tmp/polybar1.log 2>&1 & disown
+#polybar right >> /tmp/polybar1.log 2>&1 & disown
 
 echo "Bars launched..."

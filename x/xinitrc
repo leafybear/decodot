@@ -29,4 +29,3 @@ xinput set-prop "pointer:Logitech M585" "libinput Natural Scrolling Enabled" 1
 
 #### window manager
 exec bspwm
-kitty &

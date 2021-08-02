@@ -1,4 +1,5 @@
-bspc config normal_border_color     "#6c6e94"
+#bspc config normal_border_color     "#6c6e94"
+bspc config normal_border_color     "#1c212a"
 bspc config focused_border_color    "#24e39d"
 
 # presel feedback message
