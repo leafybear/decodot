@@ -30,8 +30,8 @@ map("", "<Down>", 'v:count ? "j" : "gj"', {expr = true})
 map("", "<Up>", 'v:count ? "k" : "gk"', {expr = true})
 
 -- OPEN TERMINALS --
-map("n", "<C-l>", ":vnew +terminal/usr/bin/zsh | setlocal nobuflisted <CR>", opt) -- term over right
-map("n", "<C-x>", ":10new +terminal/usr/bin/zsh | setlocal nobuflisted <CR>", opt) --  term bottom
+map("n", "<C-l>", ":vnew +terminal | setlocal nobuflisted <CR>", opt) -- term over right
+map("n", "<C-x>", ":10new +terminal | setlocal nobuflisted <CR>", opt) --  term bottom
 map("n", "<C-t>t", ":terminal <CR>", opt) -- term buffer
 
 -- copy whole file content
@@ -134,6 +134,7 @@ map("n", "<Leader>fp", ":Telescope media_files <CR>", opt)
 map("n", "<Leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<Leader>fh", ":Telescope help_tags<CR>", opt)
 map("n", "<Leader>fo", ":Telescope oldfiles<CR>", opt)
+map("n", "<Leader>th", ":Telescope themes<CR>", opt)
 
 -- bufferline tab stuff
 map("n", "<S-t>", ":enew<CR>", opt) -- new buffer
