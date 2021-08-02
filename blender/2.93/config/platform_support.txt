@@ -1,0 +1,1 @@
+{AMD/AMD Radeon RX 5700 XT (NAVI10, DRM 3.41.0, 5.13.6-arch1-1, LLVM 12.0.1)/4.6 (Core Profile) Mesa 21.1.5}=SUPPORTED
