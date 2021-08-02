@@ -1,5 +1,5 @@
 configuration {
-	font: "cozettevector 16";
+	font: "Bungee 16";
 	width: 50;
 	lines: 10;
 	separator-style: "solid";
