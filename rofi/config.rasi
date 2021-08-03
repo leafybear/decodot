@@ -1,5 +1,5 @@
 configuration {
-	font: "Bungee 16";
+	font: "Silkscreen 14";
 	width: 50;
 	lines: 10;
 	separator-style: "solid";
