@@ -1,24 +1,29 @@
-o.termguicolors = true
-o.syntax = 'on'
-o.errorbells = false
-o.smartcase = true
-o.showmode = false
-bo.swapfile = false
-o.backup = false
-o.undodir = vim.fn.stdpath('config') .. '/undodir'
-o.undofile = true
-o.incsearch = true
-o.hidden = true
-o.completeopt='menuone,noinsert,noselect'
-bo.autoindent = true
-bo.smartindent = true
-o.tabstop = 2
-o.softtabstop = 2
-o.shiftwidth = 2
-o.expandtab = true
-wo.number = true
-wo.relativenumber = true
-wo.signcolumn = 'yes'
-wo.wrap = false
-
 vim.g.mapleader = ' '
+
+local fn = vim.fn
+local execute = vim.api.nvim_command
+
+-- Sensible defaults
+require('settings')
+
+-- Auto install packer.nvim if not exists
+local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
+end
+vim.cmd [[packadd packer.nvim]]
+vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
+
+-- Install plugins
+require('plugins')
+
+-- Key mappings
+require('keymappings')
+
+-- Another option is to groups configuration in one folder
+require('config')
+
+-- OR you can invoke them individually here
+--require('config.colorscheme')  -- color scheme
+--require('config.completion')   -- completion
+--require('config.fugitive')     -- fugitive
