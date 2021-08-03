@@ -1,8 +1,24 @@
-local chad_modules = {
-    "options",
-    "mappings"
-}
+o.termguicolors = true
+o.syntax = 'on'
+o.errorbells = false
+o.smartcase = true
+o.showmode = false
+bo.swapfile = false
+o.backup = false
+o.undodir = vim.fn.stdpath('config') .. '/undodir'
+o.undofile = true
+o.incsearch = true
+o.hidden = true
+o.completeopt='menuone,noinsert,noselect'
+bo.autoindent = true
+bo.smartindent = true
+o.tabstop = 2
+o.softtabstop = 2
+o.shiftwidth = 2
+o.expandtab = true
+wo.number = true
+wo.relativenumber = true
+wo.signcolumn = 'yes'
+wo.wrap = false
 
-for i = 1, #chad_modules, 1 do
-    pcall(require, chad_modules[i])
-end
+vim.g.mapleader = ' '
