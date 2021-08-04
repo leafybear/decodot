@@ -68,7 +68,7 @@ return packer.startup(
 
         use {
             "kabouzeid/nvim-lspinstall",
-            event = "BufEnter"
+            event = "BufRead"
         }
 
         use {
@@ -81,7 +81,7 @@ return packer.startup(
 
         use {
             "onsails/lspkind-nvim",
-            event = "BufEnter",
+            event = "BufRead",
             config = function()
                 require("plugins.others").lspkind()
             end
@@ -117,7 +117,9 @@ return packer.startup(
         }
 
         -- file managing , picker etc
-        use {
+		use { 'mcchrish/nnn.vim' }
+
+		use {
             "kyazdani42/nvim-tree.lua",
             cmd = "NvimTreeToggle",
             config = function()

@@ -1,10 +1,9 @@
-local chad_theme = require("user_config").ui.theme
+vim.g.nvchad_theme = "onedark"
 
-vim.g.nvchad_theme = chad_theme
 local present, base16 = pcall(require, "base16")
 
 if present then
-    base16(base16.themes[chad_theme], true)
+    base16(base16.themes["onedark"], true)
     require "highlights"
     return true
 else
