@@ -1,5 +1,14 @@
+
+local fn = vim.fn
+local execute = vim.api.nvim_command
+local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
+
+-- Map leader to space
+g.mapleader = "  "
+
+g.autosave = false
 
 opt.ruler = false
 opt.hidden = true
@@ -15,16 +24,16 @@ opt.updatetime = 250 -- update interval for gitsigns
 opt.timeoutlen = 400
 opt.clipboard = "unnamedplus"
 
--- disable nvim intro
-opt.shortmess:append("sI")
-
--- disable tilde on end of buffer: https://github.com/  neovim/neovim/pull/8546#issuecomment-643643758
-vim.cmd("let &fcs='eob: '")
-
 -- Numbers
 opt.number = true
 opt.numberwidth = 2
--- opt.relativenumber = true
+
+-- disable nvim intro
+opt.shortmess:append("sI")
+
+-- disable tilde on end of buffer
+-- https://github.com/  neovim/neovim/pull/8546#issuecomment-643643758
+vim.cmd("let &fcs='eob: '")
 
 -- Indenline
 opt.expandtab = true
@@ -34,9 +43,6 @@ opt.smartindent = true
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append("<>hl")
-
-g.mapleader = " "
-g.auto_save = false
 
 -- disable builtin vim plugins
 local disabled_built_ins = {
