@@ -2,11 +2,11 @@
 -- Sensible defaults
 require('settings')
 
+-- Key mappings
+require('keymappings')
+
 -- Install plugins
 --require('plugins')
-
--- Key mappings
---require('keymappings')
 
 -- Theme colours
 --require('theme')

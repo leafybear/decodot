@@ -7,6 +7,8 @@ mps/mps-youtube/input_history
 mps/mps-youtube/play_history.m3u
 mps/mps-youtube/cache*
 mpv/watch_later
+nnn/.selection
+nvim/plugin/packer_compiled.lua
 ranger/history
 ranger/bookmarks
 sublime-text/SBS*
@@ -26,6 +28,3 @@ vim/vim/bundle
 zsh/zsh/history
 *.sublime-workspace
 *.sublime-project
-nnn/.selection
-nvim/plugin/packer_compiled.lua
-nvim/plugin/packer_compiled.lua
