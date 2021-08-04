@@ -1,4 +1,3 @@
-
 -- Sensible defaults
 require('settings')
 

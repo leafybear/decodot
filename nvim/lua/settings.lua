@@ -6,9 +6,7 @@ local opt = vim.opt
 local g = vim.g
 
 -- Map leader to space
-g.mapleader = "  "
-
-g.autosave = false
+g.mapleader = " "
 
 opt.ruler = false
 opt.hidden = true
@@ -30,6 +28,8 @@ opt.numberwidth = 2
 
 -- disable nvim intro
 opt.shortmess:append("sI")
+
+g.autosave = false
 
 -- disable tilde on end of buffer
 -- https://github.com/  neovim/neovim/pull/8546#issuecomment-643643758

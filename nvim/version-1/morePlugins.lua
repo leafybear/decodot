@@ -58,11 +58,6 @@
             }
         }
 
-        -- code formatter
-        use {
-            "sbdchd/neoformat",
-            cmd = "Neoformat"
-        }
 
 
         -- various lua system tools

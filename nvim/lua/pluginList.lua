@@ -65,5 +65,12 @@ return packer.startup(
 
         -- file manager
         use { "mcchrish/nnn.vim" }
+        
+        -- code formatter
+        use {
+            "sbdchd/neoformat",
+            cmd = "Neoformat"
+        }
+
     end
 )
