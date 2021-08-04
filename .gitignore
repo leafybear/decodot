@@ -28,3 +28,4 @@ zsh/zsh/history
 *.sublime-project
 nnn/.selection
 nvim/plugin/packer_compiled.lua
+nvim/plugin/packer_compiled.lua
