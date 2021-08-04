@@ -117,15 +117,17 @@ return packer.startup(
         }
 
         -- file managing , picker etc
-		use { 'mcchrish/nnn.vim' }
-
-		use {
-            "kyazdani42/nvim-tree.lua",
-            cmd = "NvimTreeToggle",
-            config = function()
-                require "plugins.nvimtree"
-            end
+      	use { 
+          'mcchrish/nnn.vim' 
         }
+
+--	use {
+--            "kyazdani42/nvim-tree.lua",
+--            cmd = "NvimTreeToggle",
+--            config = function()
+--                require "plugins.nvimtree"
+--            end
+--        }
 
         use {
             "kyazdani42/nvim-web-devicons",

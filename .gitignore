@@ -27,3 +27,4 @@ zsh/zsh/history
 *.sublime-workspace
 *.sublime-project
 nnn/.selection
+nvim/plugin/packer_compiled.lua
