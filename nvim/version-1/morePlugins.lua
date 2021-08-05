@@ -1,18 +1,3 @@
-
-
-
-
-
-
-        -- syntax highlighting
-        use {
-            "nvim-treesitter/nvim-treesitter",
-            event = "BufRead",
-            config = function()
-                require "plugins.treesitter"
-            end
-        }
-
         -- LSP plugins
         use {
             "kabouzeid/nvim-lspinstall",
@@ -58,38 +43,6 @@
             }
         }
 
-
-
-        -- various lua system tools
-        use {
-            "nvim-lua/plenary.nvim",
-            event = "BufRead"
-        }
-
-        -- popup windows
-        use {
-            "nvim-lua/popup.nvim",
-            after = "plenary.nvim"
-        }
-
-        -- find, filter, preview
-        use {
-            "nvim-telescope/telescope.nvim",
-            cmd = "Telescope",
-            config = function()
-                require "plugins.telescope"
-            end
-        }
-        use {
-            "nvim-telescope/telescope-fzf-native.nvim",
-            run = "make",
-            cmd = "Telescope"
-        }
-        use {
-            "nvim-telescope/telescope-media-files.nvim",
-            cmd = "Telescope"
-        }
-
         -- git stuff
         use {
             "lewis6991/gitsigns.nvim",
@@ -123,21 +76,6 @@
             end
         }
 
-        -- cool startup screen
-        use {
-            "glepnir/dashboard-nvim",
-            cmd = {
-                "Dashboard",
-                "DashboardNewFile",
-                "DashboardJumpMarks",
-                "SessionLoad",
-                "SessionSave"
-            },
-            setup = function()
-                require "plugins.dashboard"
-            end
-        }
-
         -- load autosave only if its globally enabled
         use {
             "Pocco81/AutoSave.nvim",
@@ -146,28 +84,6 @@
             end,
             cond = function()
                 return vim.g.auto_save == true
-            end
-        }
-
-        -- smooth scroll
-        use {
-            "karb94/neoscroll.nvim",
-            event = "WinScrolled",
-            config = function()
-                require("plugins.others").neoscroll()
-            end
-        }
-
-        -- minimal clean workspace for zero distractions
-        use {
-            "Pocco81/TrueZen.nvim",
-            cmd = {
-                "TZAtaraxis",
-                "TZMinimalist",
-                "TZFocus"
-            },
-            config = function()
-                require "plugins.zenmode"
             end
         }
 
