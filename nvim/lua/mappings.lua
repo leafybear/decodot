@@ -46,6 +46,13 @@ map("n", "<Leader>fm", ":Neoformat<CR>", opt)
 map("n", "<leader>/", ":CommentToggle<CR>", opt)
 map("v", "<leader>/", ":CommentToggle<CR>", opt)
 
+-- Compe
+map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+map("i", "<CR>", "v:lua.completions()", {expr = true})
+
 -- Truezen
 map("n", "<leader>zz", ":TZAtaraxis<CR>", opt)
 map("n", "<leader>zm", ":TZMinimalist<CR>", opt)
@@ -66,5 +73,12 @@ map("n", "<Leader>ff", ":Telescope find_files <CR>", opt)
 map("n", "<Leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<Leader>fh", ":Telescope help_tags<CR>", opt)
 map("n", "<Leader>th", ":Telescope themes<CR>", opt)
--- map("n", "<Leader>fp", ":Telescope media_files <CR>", opt)
--- map("n", "<Leader>fo", ":Telescope oldfiles<CR>", opt)
+map("n", "<Leader>fp", ":Telescope media_files <CR>", opt)
+map("n", "<Leader>fo", ":Telescope oldfiles<CR>", opt)
+
+-- Packer commands till because we are not loading it at startup
+-- vim.cmd("silent! command PackerCompile lua require 'pluginList' require('packer').compile()")
+-- vim.cmd("silent! command PackerInstall lua require 'pluginList' require('packer').install()")
+-- vim.cmd("silent! command PackerStatus lua require 'pluginList' require('packer').status()")
+-- vim.cmd("silent! command PackerSync lua require 'pluginList' require('packer').sync()")
+-- vim.cmd("silent! command PackerUpdate lua require 'pluginList' require('packer').update()")

@@ -52,6 +52,12 @@ return require('packer').startup(function()
 	use { "norcalli/nvim-colorizer.lua", 
 		event = "BufRead",
         	config = function() require "plugins.colorizer" end }
+        
+	-- Advanced syntax highlighting
+        use { "nvim-treesitter/nvim-treesitter",
+            event = "BufRead",
+            config = function() require "plugins.treesitter" end
+        }
 
 	-- Git
 	use { 'airblade/vim-gitgutter' }
@@ -64,12 +70,21 @@ return require('packer').startup(function()
 	-- Code formatting
         use { "sbdchd/neoformat",
 		cmd = "Neoformat" }
-	
-	-- Advanced syntax highlighting
-        use { "nvim-treesitter/nvim-treesitter",
-	--	config = function() require "plugins.treesitter" end
-        }
         
+	-- Auto pair brackets etc
+        use { "windwp/nvim-autopairs",
+            after = "nvim-compe",
+            config = function() require "plugins.autopairs" end
+        }
+
+	-- Auto complete features
+	use { "hrsh7th/nvim-compe", 
+            event = "InsertEnter",
+            config = function() require "plugins.compe" end }
+
+	-- language server protocol client for Neovim
+	-- use { 'neovim/nvim-lspconfig' }
+	
 	-- Comprehensive theming tools
 	use { "siduck76/nvim-base16.lua",
 	--	after = "packer.nvim",
@@ -80,5 +95,5 @@ return require('packer').startup(function()
         use { "karb94/neoscroll.nvim",
             event = "WinScrolled",
             config = function() require "plugins.neoscroll" end }
-	
+
 end)
