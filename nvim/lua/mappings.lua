@@ -73,8 +73,8 @@ map("n", "<Leader>ff", ":Telescope find_files <CR>", opt)
 map("n", "<Leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<Leader>fh", ":Telescope help_tags<CR>", opt)
 map("n", "<Leader>th", ":Telescope themes<CR>", opt)
-map("n", "<Leader>fp", ":Telescope media_files <CR>", opt)
-map("n", "<Leader>fo", ":Telescope oldfiles<CR>", opt)
+-- map("n", "<Leader>fp", ":Telescope media_files <CR>", opt)
+-- map("n", "<Leader>fo", ":Telescope oldfiles<CR>", opt)
 
 -- Packer commands till because we are not loading it at startup
 -- vim.cmd("silent! command PackerCompile lua require 'pluginList' require('packer').compile()")

@@ -39,10 +39,10 @@ return require('packer').startup(function()
 	use { 'nvim-telescope/telescope.nvim',
       		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
 		config = function() require "plugins.telescope" end }
-        use { "nvim-telescope/telescope-fzf-native.nvim",
-		run = "make", cmd = "Telescope" }
-        use { "nvim-telescope/telescope-media-files.nvim",
-		cmd = "Telescope" }
+        -- use { "nvim-telescope/telescope-fzf-native.nvim",
+		-- run = "make", cmd = "Telescope" }
+        -- use { "nvim-telescope/telescope-media-files.nvim",
+		-- cmd = "Telescope" }
 
 	-- NNN file manager inside of neovim
 	use { 'mcchrish/nnn.vim',
