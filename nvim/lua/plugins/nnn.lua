@@ -1,6 +1,6 @@
 require("nnn").setup {
 	command = "nnn -o -C",
-	session = 'local',
+	session = 'local'
 	-- set_default_mappings = 0,
 	-- replace_netrw = 1,
 	-- action = {
@@ -10,7 +10,7 @@ require("nnn").setup {
 	-- 	["<c-o>"] = copy_to_clipboard,
 	-- },
 	-- layout = { left= '~20%' }
-	layout = { window = { width = 0.5,
-				height = 0.6,
-				hightlight = "Debug" } }
+	-- layout = { window = { width = 0.5,
+	-- 			height = 0.6,
+	-- 			hightlight = "Debug" } }
 }
