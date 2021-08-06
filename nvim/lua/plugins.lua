@@ -45,7 +45,8 @@ return require('packer').startup(function()
 		cmd = "Telescope" }
 
 	-- NNN file manager inside of neovim
-	use {'mcchrish/nnn.vim'}
+	use { 'mcchrish/nnn.vim',
+		config = function() require "plugins.nnn" end }
         
 	-- Show color previews in-line in editor
 	use { "norcalli/nvim-colorizer.lua", 
