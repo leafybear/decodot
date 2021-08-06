@@ -40,7 +40,7 @@ fi
 
 # cd on quitting nnn file manager
 if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
-	    source /usr/share/nnn/quitcd/quitcd.bash_zsh
+	source /usr/share/nnn/quitcd/quitcd.bash_zsh
 fi
 
 #              _                            _

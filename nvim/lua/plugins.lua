@@ -27,21 +27,29 @@ return require('packer').startup(function()
 
 	-- Enhanced status bar line
 	use { "glepnir/galaxyline.nvim",
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+            	config = function() require "plugins.statusline" end }
+
+	-- beautiful distraction free editing
+        use { "Pocco81/TrueZen.nvim",
+            cmd = { "TZAtaraxis", "TZMinimalist", "TZFocus" },
+            config = function() require "plugins.truezen" end }
 
 	-- Fuzzy finder
 	use { 'nvim-telescope/telescope.nvim',
-      		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}} }
-        --use { "nvim-telescope/telescope-fzf-native.nvim",
-	--	run = "make", cmd = "Telescope" }
-        --use { "nvim-telescope/telescope-media-files.nvim",
-	--	cmd = "Telescope" }
+      		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
+		config = function() require "plugins.telescope" end }
+        use { "nvim-telescope/telescope-fzf-native.nvim",
+		run = "make", cmd = "Telescope" }
+        use { "nvim-telescope/telescope-media-files.nvim",
+		cmd = "Telescope" }
 
 	-- NNN file manager inside of neovim
 	use {'mcchrish/nnn.vim'}
         
 	-- Show color previews in-line in editor
 	use { "norcalli/nvim-colorizer.lua", 
+		event = "BufRead",
         	config = function() require "plugins.colorizer" end }
 
 	-- Git
@@ -64,8 +72,12 @@ return require('packer').startup(function()
 	-- Comprehensive theming tools
 	use { "siduck76/nvim-base16.lua",
 	--	after = "packer.nvim",
-	--	config = function() require "theme" end
+		config = function() require "theme" end
         }
+        
+	-- smooth scrolling with the mouse
+        use { "karb94/neoscroll.nvim",
+            event = "WinScrolled",
+            config = function() require "plugins.neoscroll" end }
 	
 end)
-

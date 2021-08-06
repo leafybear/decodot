@@ -1,11 +1,6 @@
-local present, true_zen = pcall(require, "true-zen")
-if not present then
-    return
-end
+require('true-zen').setup {
 
-true_zen.setup(
-    {
-        ui = {
+	ui = {
             bottom = {
                 laststatus = 0,
                 ruler = false,
@@ -66,5 +61,4 @@ true_zen.setup(
             ui_elements_commands = false,
             cursor_by_mode = false
         }
-    }
-)
+}

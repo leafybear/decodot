@@ -39,6 +39,18 @@ map("n", "<S-x>", ":bd!<CR>", opt) -- close tab
 map("n", "<TAB>", ":BufferLineCycleNext<CR>", opt)
 map("n", "<S-TAB>", ":BufferLineCyclePrev<CR>", opt)
 
+-- Neoformatter
+map("n", "<Leader>fm", ":Neoformat<CR>", opt)
+
+-- Commenter
+map("n", "<leader>/", ":CommentToggle<CR>", opt)
+map("v", "<leader>/", ":CommentToggle<CR>", opt)
+
+-- Truezen
+map("n", "<leader>zz", ":TZAtaraxis<CR>", opt)
+map("n", "<leader>zm", ":TZMinimalist<CR>", opt)
+map("n", "<leader>zf", ":TZFocus<CR>", opt)
+
 -- Dashboard
 map("n", "<Leader>db", ":Dashboard<CR>", opt)
 map("n", "<Leader>fn", ":DashboardNewFile<CR>", opt)
@@ -51,20 +63,8 @@ map("n", "<Leader>fw", ":Telescope live_grep<CR>", opt)
 map("n", "<Leader>gt", ":Telescope git_status <CR>", opt)
 map("n", "<Leader>cm", ":Telescope git_commits <CR>", opt)
 map("n", "<Leader>ff", ":Telescope find_files <CR>", opt)
-map("n", "<Leader>fp", ":Telescope media_files <CR>", opt)
 map("n", "<Leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<Leader>fh", ":Telescope help_tags<CR>", opt)
-map("n", "<Leader>fo", ":Telescope oldfiles<CR>", opt)
 map("n", "<Leader>th", ":Telescope themes<CR>", opt)
-
--- Truezen
-map("n", "<leader>zz", ":TZAtaraxis<CR>", opt)
-map("n", "<leader>zm", ":TZMinimalist<CR>", opt)
-map("n", "<leader>zf", ":TZFocus<CR>", opt)
-
--- Neoformatter
-map("n", "<Leader>fm", ":Neoformat<CR>", opt)
-
--- Commenter
-map("n", "<leader>/", ":CommentToggle<CR>", opt)
-map("v", "<leader>/", ":CommentToggle<CR>", opt)
+-- map("n", "<Leader>fp", ":Telescope media_files <CR>", opt)
+-- map("n", "<Leader>fo", ":Telescope oldfiles<CR>", opt)
