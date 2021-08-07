@@ -30,7 +30,7 @@ end
 M.list_themes = function(return_type)
     local themes = {}
     -- folder where theme files are stored
-    local themes_folder = vim.fn.stdpath("config") .. "/lua/themes"
+    local themes_folder = vim.fn.stdpath("config") .. "/lua/themes/colours"
     -- list all the contents of the folder and filter out files with .lua extension, then append to themes table
     local fd = vim.loop.fs_scandir(themes_folder)
     if fd then
@@ -84,7 +84,7 @@ M.change_theme = function(current_theme, new_theme)
         return
     end
 
-    local file = vim.fn.stdpath("config") .. "/lua/user_config.lua"
+    local file = vim.fn.stdpath("config") .. "/lua/themes/user_config.lua"
     -- store in data variable
     local data = assert(M.file("r", file))
     local find = "theme = .?" .. current_theme .. ".?"

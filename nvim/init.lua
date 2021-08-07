@@ -6,21 +6,10 @@
 -- |_| \_|\___|\___/|____/ \___|\__,_|_|    
 --                                         
 -- neovim options for LeafyBear
+-- Last edit August 2021
+-- based on NvChad neovim config
 --
 
 require('options')
-
--- Auto install packer.nvim if not exists
-local fn = vim.fn
-local execute = vim.api.nvim_command
--- . . . . . . . . . . . . . . . . . . . .
-local install_path = fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  execute('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
-end
-vim.cmd [[packadd packer.nvim]]
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
-
-require('plugins')
 require('mappings')
 

@@ -8,8 +8,20 @@
 --                 |___/             
 --
 
+-- Check if Packer is available. Install it if not.
+local present, _ = pcall(require, "packerInit")
+local packer
 
-return require('packer').startup(function()
+if present then
+    packer = require "packer"
+else
+    return false
+end
+
+local use = packer.use
+
+return packer.startup(function()
+--return require('packer').startup(function()
     
 	-- Packer can manage itself as an optional plugin
 	use {'wbthomason/packer.nvim', opt = true}
@@ -88,7 +100,7 @@ return require('packer').startup(function()
 	-- Comprehensive theming tools
 	use { "siduck76/nvim-base16.lua",
 	--	after = "packer.nvim",
-		config = function() require "theme" end
+		config = function() require "themes.theme" end
         }
         
 	-- smooth scrolling with the mouse
