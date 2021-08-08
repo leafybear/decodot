@@ -28,7 +28,7 @@ M.reload_theme = function(theme_name)
 
     if
         not reload_plugin {
-            "highlights",
+            "themes.highlights",
             "plugins.bufferline",
             "galaxyline",
             "plugins.statusline"
