@@ -100,6 +100,9 @@ return packer.startup(function()
 				"TZFocus" },
 		config = function() require "plugins.zenmode" end }
 
+	-- alternative to telescope for when it doesnt work
+	use { "liuchengxu/vim-clap" }
+
 -- PART 3
 
 	-- show whitespace characters and indentation
