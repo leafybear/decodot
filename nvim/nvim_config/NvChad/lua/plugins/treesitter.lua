@@ -6,11 +6,7 @@ end
 ts_config.setup {
     ensure_installed = {
         "bash",
-        "lua",
-		"python",
-		"c",
-		"json",
-		"haskell"
+        "lua"
     },
     highlight = {
         enable = true,
