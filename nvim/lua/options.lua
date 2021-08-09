@@ -29,6 +29,9 @@ opt.cmdheight = 1
 opt.updatetime = 250 -- update interval for gitsigns
 opt.timeoutlen = 400
 opt.clipboard = "unnamedplus"
+opt.tabstop = 4
+opt.expandtab = false
+opt.shiftwidth = 0
 
 -- Numbers
 opt.number = true

@@ -47,11 +47,11 @@ map("n", "<leader>/", ":CommentToggle<CR>", opt)
 map("v", "<leader>/", ":CommentToggle<CR>", opt)
 
 -- Compe
-map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-map("i", "<CR>", "v:lua.completions()", {expr = true})
+-- map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+-- map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+-- map("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+-- map("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+-- map("i", "<CR>", "v:lua.completions()", {expr = true})
 
 -- Truezen
 map("n", "<leader>zz", ":TZAtaraxis<CR>", opt)

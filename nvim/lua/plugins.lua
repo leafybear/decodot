@@ -26,12 +26,17 @@ return packer.startup(function()
 	use {'wbthomason/packer.nvim', --opt = true,
             event = "VimEnter" }
  
- 	-- NNN file manager inside of neovim
+	-- NNN file manager inside of neovim
  	use { 'mcchrish/nnn.vim',
  		config = function() require "plugins.nnn" end }
 
 	-- Git info in the gutter
 	use { 'airblade/vim-gitgutter' }
+
+	-- Indentation guides on all lines
+        use { "lukas-reineke/indent-blankline.nvim",
+            event = "BufRead",
+            setup = function() require("plugins.indent").blankline() end }
 
   	-- Simple line commenting
   	use { "terrortylor/nvim-comment",
@@ -77,10 +82,14 @@ return packer.startup(function()
  		requires='kyazdani42/nvim-web-devicons',
  		config = function() require "plugins.bufferline" end }
 
--- 	-- Fuzzy finder
--- 	use { 'nvim-telescope/telescope.nvim',
---       		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
--- 		config = function() require "plugins.telescope" end }
+ 	-- Fuzzy finder
+ 	use { 'nvim-telescope/telescope.nvim',
+       		requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
+ 		config = function() require "plugins.telescope" end }
+        use { "nvim-telescope/telescope-fzf-native.nvim",
+		run = "make", cmd = "Telescope" }
+        use { "nvim-telescope/telescope-media-files.nvim",
+		cmd = "Telescope" }
 
 	-- pretty  dashboard for opening files
 	use { "glepnir/dashboard-nvim",
@@ -97,10 +106,6 @@ return packer.startup(function()
         use { "Pocco81/TrueZen.nvim",
             cmd = { "TZAtaraxis", "TZMinimalist", "TZFocus" },
             config = function() require "plugins.truezen" end }
---         -- use { "nvim-telescope/telescope-fzf-native.nvim",
--- 		-- run = "make", cmd = "Telescope" }
---         -- use { "nvim-telescope/telescope-media-files.nvim",
--- 		-- cmd = "Telescope" }
 
 -- 	-- language server protocol client for Neovim
 -- 	-- use { 'neovim/nvim-lspconfig' }
