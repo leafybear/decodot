@@ -1,6 +1,6 @@
 local M = {
     ui = {
-        theme = "tokyonight"
+        theme = "gruvchad"
     }
 }
 

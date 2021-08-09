@@ -22,7 +22,8 @@ local use = packer.use
 
 return packer.startup(function()
 
-	-- PLUGINS ORDERED BY COMPLEXITY AND DEPENDENCIES
+-- PLUGINS ORDERED BY COMPLEXITY AND DEPENDENCIES
+-- PART 1
 
 	-- Packer plugin manager
 	use {'wbthomason/packer.nvim',
@@ -60,6 +61,8 @@ return packer.startup(function()
 		event = "BufRead",
 		config = function() require "plugins.treesitter" end }
 
+-- PART 2
+
 	-- fancy tab bar
     use { "akinsho/nvim-bufferline.lua",
 		after = "nvim-base16.lua",
@@ -75,15 +78,11 @@ return packer.startup(function()
 		cmd = "Telescope",
 		config = function() require "plugins.telescope" end }
 
-        -- use {
-        --     "nvim-telescope/telescope-fzf-native.nvim",
+        -- use { "nvim-telescope/telescope-fzf-native.nvim",
         --     run = "make",
-        --     cmd = "Telescope"
-        -- }
-        -- use {
-        --     "nvim-telescope/telescope-media-files.nvim",
-        --     cmd = "Telescope"
-        -- }
+        --     cmd = "Telescope" }
+        -- use { "nvim-telescope/telescope-media-files.nvim",
+        --     cmd = "Telescope" }
 	
     -- file picker dashboard
 	use { "glepnir/dashboard-nvim",
@@ -101,4 +100,68 @@ return packer.startup(function()
 				"TZFocus" },
 		config = function() require "plugins.zenmode" end }
 
+-- PART 3
+
+	-- show whitespace characters and indentation
+	use { "lukas-reineke/indent-blankline.nvim",
+		event = "BufRead",
+		setup = function() require "plugins.blankline" end }
+
+	-- smooth scrolling
+    use { "karb94/neoscroll.nvim",
+		event = "WinScrolled",
+		config = function() require "plugins.neoscroll" end }
+
+	-- git status marks in gutter
+	use "airblade/vim-gitgutter"
+
+	-- preview colors in code
+	use { "norcalli/nvim-colorizer.lua",
+		event = "BufRead",
+		config = function() require "plugins.colorizer" end }
+
+	-- code formatter
+	use { "sbdchd/neoformat",
+		cmd = "Neoformat" }
+
+-- PART 4
+	
+    -- load compe in insert mode only
+    use { "hrsh7th/nvim-compe",
+		event = "InsertEnter",
+		config = function() require "plugins.compe" end }
+
+	-- auto pair quotes and brackets
+	use { "windwp/nvim-autopairs",
+		after = "nvim-compe",
+		config = function() require "plugins.autopairs" end }
+	
+-- 	use {
+-- 		"kabouzeid/nvim-lspinstall",
+-- 		event = "BufRead"
+-- 	}
+-- 
+-- 	use {
+-- 		"neovim/nvim-lspconfig",
+-- 		after = "nvim-lspinstall",
+-- 		config = function()
+-- 			require "plugins.lspconfig"
+-- 		end
+-- 	}
+-- 
+-- 	use {
+-- 		"onsails/lspkind-nvim",
+-- 		event = "BufEnter",
+-- 		config = function()
+-- 			require("plugins.others").lspkind()
+-- 		end
+-- 	}
+-- 
+-- 	use {
+-- 		"ray-x/lsp_signature.nvim",
+-- 		after = "nvim-lspconfig",
+-- 		config = function()
+-- 			require("plugins.others").signature()
+-- 		end
+-- 	}
 end)
