@@ -4,6 +4,8 @@ colour \
 git \
 ranger \
 tmux \
-vim \
+nvim \
+nnn \
+gitui \
 shell \
 sublime-text \

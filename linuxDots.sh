@@ -16,4 +16,5 @@ vim \
 x \
 nnn \
 nvim \
+gitui \
 kitty \

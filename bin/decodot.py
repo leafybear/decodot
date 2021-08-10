@@ -1,10 +1,12 @@
+# :::::::::::::::::::::::::::::::::::::::::::
+#  Deco-Dot
+#  symlink farmer for dot files
+#  decodot.py
+# 
+#  A. Bentley (leafybear@icloud.com)
+#  edit: 2017
+# :. : . : . : . : . : . : . : . : . : . : .:
 #!/usr/bin/python
-##- - - - - - - - - - - - -
-##    DECO-DOT
-##
-##    (leafybear) 2017
-##		Amy Bentley
-##- - - - - - - - - - - - -
 
 import os, sys
 

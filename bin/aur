@@ -1,8 +1,14 @@
+# :::::::::::::::::::::::::::::::::::::::::::
+#  AUR
+#  Clone a repository from AUR, make the package install
+#  and cleanup afterward.
+#  aur.sh
+# 
+#  A. Bentley (leafybear@icloud.com)
+#  edit: 2017
+# :. : . : . : . : . : . : . : . : . : . : .:
 #!/bin/bash
 
-# Clone a repository from AUR
-# make the package install
-# and cleanup afterward.
 
 git clone https://aur.archlinux.org/$1.git
 cd $1

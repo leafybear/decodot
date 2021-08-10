@@ -1,10 +1,13 @@
+# :::::::::::::::::::::::::::::::::::::::::::
+#  Deco-Theme
+#  set color theme for several X and CLI apps
+#  decotheme.py
+# 
+#  A. Bentley (leafybear@icloud.com)
+#  edit: 2017
+# :. : . : . : . : . : . : . : . : . : . : .:
 #!/usr/bin/python
-##- - - - - - - - - - - - -
-##    DECO THEME
-##
-##    (leafybear) 2017
-##		Amy Bentley
-##- - - - - - - - - - - - -
+
 import sys, os, random
 
 args = sys.argv
