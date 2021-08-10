@@ -1,4 +1,0 @@
-#!/bin/bash
-# execute a command and send the output to me in an email
-
-"$@" | mutt -s "Nook minion report" leafybear@icloud.com &
