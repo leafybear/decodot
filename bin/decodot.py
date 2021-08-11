@@ -1,7 +1,6 @@
 # :::::::::::::::::::::::::::::::::::::::::::
 #  Deco-Dot
 #  symlink farmer for dot files
-#  decodot.py
 # 
 #  A. Bentley (leafybear@icloud.com)
 #  edit: 2017
@@ -34,7 +33,9 @@ def usage(error):
 if "DOTDIR" in os.environ:
 	dotdir = os.environ["DOTDIR"]
 else:
-	usage("DOTDIR environment variable not defined.")
+	print("DOTDIR env variable isn't defined.")
+    dotdir = input ("Where should I look for dotfiles? ") 
+
 
 ## check folder and dotwhere exist
 if not os.path.isdir(dotdir):

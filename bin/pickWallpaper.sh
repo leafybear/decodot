@@ -2,7 +2,6 @@
 #  Pick Wallpaper
 #  open a folder as thumbnails and set the marked one as
 #  the wallpaper.
-#  pickWallpaper.sh
 # 
 #  A. Bentley (leafybear@icloud.com)
 #  edit: aug 2021
