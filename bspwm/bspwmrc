@@ -12,7 +12,8 @@ sxhkd &
 source $HOME/.theme/bspwm
 
 # workspaces
-bspc monitor -d cmd www art ?
+bspc monitor DisplayPort-0 -d cmd www art ?
+bspc monitor HDMI-A-2 -d aria binary circe emerge
 
 #bspc desktop ^3 -l monocle
 #bspc desktop ^4 -l monocle

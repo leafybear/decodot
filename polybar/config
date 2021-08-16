@@ -3,8 +3,9 @@ pseudo-transparency = true
 
 include-file = ~/.theme/polybar.ini
 
-include-file = $HOME/.config/polybar/bar_top.ini
-include-file = $HOME/.config/polybar/bar_double_top.ini
-include-file = $HOME/.config/polybar/bar_top_centre.ini
+include-file = $HOME/.config/polybar/bars/top.ini
+include-file = $HOME/.config/polybar/bars/top-split.ini
+include-file = $HOME/.config/polybar/bars/top-centre.ini
+include-file = $HOME/.config/polybar/bars/second-screen.ini
 
 include-file = $HOME/.config/polybar/modules.ini
