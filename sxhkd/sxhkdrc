@@ -7,6 +7,9 @@ super + space
 	rofi -show run -theme $HOME/.theme/rofi.rasi
 
 ##--------------- Nodes and Desktops
+# Focus on workspace 3
+super + n
+	bspc desktop --focus ^3
 
 # Focus the next/prev window on the desktop
 super + {a,s}
@@ -19,6 +22,10 @@ super + {_,shift + } {Left,Down,Up,Right}
 # Focus (move node to) a desktop
 super + {_,shift + } {1-9}
 	bspc {desktop -f,node -d} ^{1-9}
+
+# Move node to a monitor
+ctrl + alt + {Left,Right}
+	bspc node -d {next,prev} -f
 
 # Float, fullscreen (embiggen), or tile the window
 super + {f,e,t}
