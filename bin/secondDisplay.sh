@@ -6,5 +6,5 @@
 secondDisplayIsAvailable=$(xrandr --query | grep 'HDMI-A-2')
 if [[ $secondDisplayIsAvailable = *connected* ]]; then
 	xrandr --output HDMI-A-2 --mode 1920x1080 -r 60 --right-of DisplayPort-0
-	# xrandr --output HDMI-A-2 --scale 0.75x0.75 --right-of DisplayPort-0
+	# xrandr --output HDMI-A-2 --scale 0.5x0.5 --right-of DisplayPort-0
 fi

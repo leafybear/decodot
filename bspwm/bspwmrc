@@ -14,7 +14,7 @@ source $HOME/.theme/bspwm
 # workspaces
 # bspc monitor DisplayPort-0 -d cmd www art xtra
 bspc monitor -d cmd www art xtra
-bspc monitor HDMI-A-2 -d reference video chat
+bspc monitor HDMI-A-2 -d video reference chat
 
 # bspc desktop ^3 -l monocle
 # bspc desktop ^4 -l monocle
