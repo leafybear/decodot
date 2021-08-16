@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
+# #!/usr/bin/env sh
+#!/bin/bash
 
 # Terminate already running bar instances
 killall -q polybar
@@ -8,6 +9,11 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
 polybar top >> /tmp/polybar1.log 2>&1 & disown
-polybar second-screen >> /tmp/polybar2.log 2>&1 & disown
+
+# Launch a second bar if I have another display
+secondDisplayIsAvailable=$(xrandr --query | grep 'HDMI-A-2')
+if [[ $secondDisplayIsAvailable = *connected* ]]; then
+	polybar second-screen >> /tmp/polybar2.log 2>&1 & disown
+fi
 
 echo "Bars launched..."
