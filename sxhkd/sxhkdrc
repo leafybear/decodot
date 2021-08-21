@@ -92,10 +92,12 @@ super + alt + {Left,Down,Up,Right}
 ## -------------- Function keys
 
 XF86Audio{RaiseVolume,LowerVolume}
-	exec amixer -q set Master 5%{+,-} unmute
+        exec amixer -q set PCM 5%{+,-} unmute
+    # exec $DOTDIR/bin/dunst_volume_alt.sh {up,down}
 
 XF86AudioMute
-	exec amixer -q set Master toggle
+    exec $DOTDIR/bin/dunst_volume_alt.sh mute
+	# exec amixer -q set PCM toggle
 
 XF86Audio{Play,Next,Prev}
 	exec mpc {toggle,next,prev}

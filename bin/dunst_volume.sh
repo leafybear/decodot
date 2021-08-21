@@ -6,11 +6,11 @@
 # $./volume.sh mute
 
 function get_volume {
-    amixer get Master | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
+    amixer get PCM | grep '%' | head -n 1 | cut -d '[' -f 2 | cut -d '%' -f 1
 }
 
 function is_mute {
-    amixer get Master | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
+    amixer get PCM | grep '%' | grep -oE '[^ ]+$' | grep off > /dev/null
 }
 
 function send_notification {
@@ -25,19 +25,19 @@ function send_notification {
 case $1 in
     up)
 	# Set the volume on (if it was muted)
-	amixer -q set Master on > /dev/null
+	amixer -q set PCM on > /dev/null
 	# Up the volume (+ 5%)
-	amixer -q sset Master 5%+ > /dev/null
+	amixer -q sset PCM 5%+ > /dev/null
 	send_notification
 	;;
     down)
-	amixer -q set Master on > /dev/null
-	amixer -q sset Master 5%- > /dev/null
+	amixer -q set PCM on > /dev/null
+	amixer -q sset PCM 5%- > /dev/null
 	send_notification
 	;;
     mute)
     	# Toggle mute
-	amixer -q set Master 1+ toggle > /dev/null
+	amixer -q set PCM 1+ toggle > /dev/null
 	if is_mute ; then
 	    dunstify -i audio-volume-muted -t 8 -r 2593 -u normal "Mute"
 	else
