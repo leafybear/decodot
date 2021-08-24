@@ -1,7 +1,20 @@
+--    ___       _   _                 
+--   /___\_ __ | |_(_) ___  _ __  ___ 
+--  //  // '_ \| __| |/ _ \| '_ \/ __|
+-- / \_//| |_) | |_| | (_) | | | \__ \
+-- \___/ | .__/ \__|_|\___/|_| |_|___/
+--       |_|                          
+-- 
+
+--local fn = vim.fn
+--local execute = vim.api.nvim_command
+--local cmd = vim.cmd
+
 local opt = vim.opt
 local g = vim.g
 
-opt.undofile = true
+g.autosave = false
+
 opt.ruler = false
 opt.hidden = true
 opt.ignorecase = true
@@ -15,29 +28,26 @@ opt.cmdheight = 1
 opt.updatetime = 250 -- update interval for gitsigns
 opt.timeoutlen = 400
 opt.clipboard = "unnamedplus"
-
--- disable nvim intro
-opt.shortmess:append("sI")
-
--- disable tilde on end of buffer: https://github.com/  neovim/neovim/pull/8546#issuecomment-643643758
-opt.fillchars = {eob = " "}
+opt.tabstop = 4
+opt.expandtab = false
+opt.shiftwidth = 0
 
 -- Numbers
 opt.number = true
 opt.numberwidth = 2
--- opt.relativenumber = true
+
+-- disable nvim intro
+opt.shortmess:append("sI")
+
+-- disable tilde on end of buffer
+vim.cmd("let &fcs='eob: '")
 
 -- Indenline
-opt.expandtab = true
-opt.shiftwidth = 2
 opt.smartindent = true
 
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append("<>hl")
-
-g.mapleader = " "
-g.auto_save = false
 
 -- disable builtin vim plugins
 local disabled_built_ins = {
@@ -64,11 +74,3 @@ local disabled_built_ins = {
 for _, plugin in pairs(disabled_built_ins) do
     vim.g["loaded_" .. plugin] = 1
 end
-
--- Don't show status line on vim terminals
-vim.cmd [[ au TermOpen term://* setlocal nonumber laststatus=0 ]]
-
--- Open a file from its last left off position
--- vim.cmd [[ au BufReadPost * if expand('%:p') !~# '\m/\.git/' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif ]]
--- File extension specific tabbing
--- vim.cmd [[ autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4 ]]
