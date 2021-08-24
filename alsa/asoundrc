@@ -1,11 +1,11 @@
 # HDMI speaker output
 
-defaults.pcm.card 0
-defaults.pcm.device 10
-defaults.ctl.card 0
+# defaults.pcm.card 0
+# defaults.pcm.device 10
+# defaults.ctl.card 0
 
 # Gaming Headphones
 
-# defaults.pcm.card 2
-# defaults.pcm.device 0
-# defaults.ctl.card 2
+defaults.pcm.card 2
+defaults.pcm.device 0
+defaults.ctl.card 2

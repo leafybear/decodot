@@ -16,10 +16,6 @@ source $HOME/.theme/bspwm
 bspc monitor -d cmd www art xtra
 bspc monitor HDMI-A-2 -d video reference chat
 
-# bspc desktop ^3 -l monocle
-# bspc desktop ^4 -l monocle
-# bspc desktop ^5 -l monocle
-
 # visual options
 bspc config border_width    2
 bspc config window_gap      12
@@ -37,22 +33,27 @@ bspc config focus_follows_pointer	true
 
 bspc config super mod4
 
+# desktop rules
+
+# bspc desktop ^3 -l monocle
+# bspc desktop ^4 -l monocle
+# bspc desktop ^5 -l monocle
+
 # app rules
 bspc rule -a mpv state=floating sticky=on rectangle=400x250+40+40
+bspc rule -a Gpick state=floating
 
-bspc rule -a Opera desktop=^2 follow=on
 bspc rule -a firefox desktop=^2 follow=on
 bspc rule -a Blender desktop=^3 follow=on
 bspc rule -a krita desktop=^3 follow=on
 bspc rule -a Natron desktop=^3 follow=on
+bspc rule -a surf desktop=^5
+bspc rule -a Opera desktop=^5
 bspc rule -a PureRef desktop=^6 
 bspc rule -a XnView MP desktop=^6
-bspc rule -a qimgv state=fullscreen
+bspc rule -a qimgv desktop=^6 #state=fullscreen
 bspc rule -a discord desktop=^7
-
 bspc rule -a Gpick state=floating
-# bspc rule -a feh state=fullscreen
-# bspc rule -a Sublime_text desktop=^2 follow=on
 
 # set up a second screen if I have a script to do so.
 if [ -x $DOTDIR/bin/secondDisplay.sh ]; then
@@ -62,6 +63,4 @@ fi
 # start up apps
 $HOME/.config/polybar/launch.sh &
 kitty &
-firefox &
 discord &
-bspc desktop -f cmd node -d 1
