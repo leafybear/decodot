@@ -37,7 +37,7 @@ super + {_, shift +} q
 
 # Swap to biggest on active desktop
 super + b
-	bspc node -s biggest.active --follow
+	bspc node -s biggest.local --follow
 
 # Cycle desktop layout
 super + l
