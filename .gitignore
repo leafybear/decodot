@@ -29,3 +29,4 @@ zsh/zsh/history
 *.sublime-workspace
 *.sublime-project
 nnn/sessions
+blender/2.93/config/platform_support.txt
