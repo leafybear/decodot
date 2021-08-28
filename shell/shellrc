@@ -124,6 +124,8 @@ alias sudo="sudo "
 # Launch Krita with DPI scale factor
 alias krita="env QT_SCALE_FACTOR=1.6 krita"
 
+alias focus-wacom="xinput map-to-output 17 DisplayPort-0"
+
 # Git shortcuts
 alias g="git"
 alias gs="git r1 -n 1; git branch | grep \*; git status --short"
