@@ -31,8 +31,7 @@ def usage(error):
 if "DOTDIR" in os.environ:
     dotdir = os.environ["DOTDIR"]
 else:
-	print("DOTDIR env variable isn't defined.")
-    dotdir = input ("Where should I look for dotfiles? ") 
+	usage("DOTDIR env variable isn't defined.")
 
 ## check folder and wutwhere exist
 if not os.path.isdir(dotdir):
