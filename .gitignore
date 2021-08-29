@@ -30,3 +30,4 @@ zsh/zsh/history
 *.sublime-project
 nnn/sessions
 blender/2.93/config/platform_support.txt
+nvim/nvchad.nvim/plugin/packer_compiled.lua
