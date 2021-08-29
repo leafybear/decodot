@@ -20,9 +20,6 @@ local use = packer.use
 
 return packer.startup(function()
 
--- PLUGINS ORDERED BY COMPLEXITY AND DEPENDENCIES
--- PART 1
-
 	-- Packer plugin manager
 	use {'wbthomason/packer.nvim',
             event = "VimEnter" }
@@ -36,28 +33,32 @@ return packer.startup(function()
 		cmd = "CommentToggle",
 		config = function() require "plugins.comment" end }
 
+	-- code formatter
+	use { "sbdchd/neoformat",
+	 	cmd = "Neoformat" }
+
 	-- advanced syntax highlighting
 	use { "nvim-treesitter/nvim-treesitter",
 		event = "BufRead",
 		config = function() require "plugins.treesitter" end }
 
-	-- -- preview colors in code
-	-- use { "norcalli/nvim-colorizer.lua",
-	-- 	event = "BufRead",
-	-- 	config = function() require "plugins.colorizer" end }
+	-- preview colors in code
+	use { "norcalli/nvim-colorizer.lua",
+		event = "BufRead",
+		config = function() require "plugins.colorizer" end }
 
-	-- -- show whitespace characters and indentation
-	-- use { "lukas-reineke/indent-blankline.nvim",
-	-- 	event = "BufRead",
-	-- 	setup = function() require "plugins.blankline" end }
+	-- show whitespace characters and indentation
+	use { "lukas-reineke/indent-blankline.nvim",
+		event = "BufRead",
+		setup = function() require "plugins.blankline" end }
 
-	-- -- smooth scrolling
-    -- use { "karb94/neoscroll.nvim",
-	-- 	event = "WinScrolled",
-	-- 	config = function() require "plugins.neoscroll" end }
+	-- smooth scrolling
+    use { "karb94/neoscroll.nvim",
+		event = "WinScrolled",
+		config = function() require "plugins.neoscroll" end }
 
-	-- -- git status marks in gutter
-	-- use "airblade/vim-gitgutter"
+	-- git status marks in gutter
+	use "airblade/vim-gitgutter"
     
 	-- file icons
     use { "kyazdani42/nvim-web-devicons" }
@@ -74,43 +75,21 @@ return packer.startup(function()
 	use { "glepnir/dashboard-nvim",
 		cmd = { "Dashboard",
 			"DashboardNewFile",
+			"DashboardFindFile",
+			"DashboardFindHistory",
+			"DashboardFindWord",
 			"DashboardJumpMarks",
+			"DashboardChangeColorscheme",
 			"SessionLoad",
 			"SessionSave" },
 		setup = function() require "plugins.dashboard" end }
 
--- -- PART 2
+	-- fuzzy file finder
+	use { "nvim-telescope/telescope.nvim",
+		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } }
 
-	-- -- Extra lua functions needed by some plugins
-	-- use { "nvim-lua/plenary.nvim",
-	-- 	event = "BufRead" }
-	
-	-- -- Small popup window library
-	-- use { "nvim-lua/popup.nvim",
-	-- 	after = "plenary.nvim" }
-	
-	-- -- fuzzy file finder window
-	-- use { "nvim-telescope/telescope.nvim",
-	-- 	cmd = "Telescope",
-	-- 	config = function() require "plugins.telescope" end }
-
-        -- -- use { "nvim-telescope/telescope-fzf-native.nvim",
-        -- --     run = "make",
-        -- --     cmd = "Telescope" }
-        -- -- use { "nvim-telescope/telescope-media-files.nvim",
-        -- --     cmd = "Telescope" }
-	
-
-
-	-- -- alternative to telescope for when it doesnt work
-	-- use { "liuchengxu/vim-clap" }
-
--- -- PART 3
-
-
-	-- -- code formatter
-	-- use { "sbdchd/neoformat",
-	-- 	cmd = "Neoformat" }
+	-- alternative to telescope for when it doesnt work
+	use { "liuchengxu/vim-clap" }
 
 -- -- PART 4
 	
@@ -152,4 +131,11 @@ return packer.startup(function()
 -- 			require("plugins.others").signature()
 -- 		end
 -- 	}
+
+	-- THEMES
+	-- use("folke/tokyonight.nvim")
+	-- use("drewtempelmeyer/palenight.vim")
+	-- use("pineapplegiant/spaceduck")
+	use{ "Pocco81/Catppuccino.nvim",
+		config = function() require "plugins.catppuccino" end }
 end)
