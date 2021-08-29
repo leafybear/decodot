@@ -45,6 +45,9 @@ map("n", "<Leader>fm", ":Neoformat<CR>", opt)
 map("n", "<leader>/", ":CommentToggle<CR>", opt)
 map("v", "<leader>/", ":CommentToggle<CR>", opt)
 
+-- Twilight
+map("n", "<leader>t", ":Twilight<CR>", opt)
+
 -- Dashboard
 map("n", "<Leader>db", ":Dashboard<CR>", opt)
 map("n", "<Leader>fn", ":DashboardNewFile<CR>", opt)

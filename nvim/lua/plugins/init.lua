@@ -21,16 +21,17 @@ local use = packer.use
 return packer.startup(function()
 
 	-- THEMES
-	--junegunn/seoul256.vim
-	-- use("folke/tokyonight.nvim")
+	-- junegunn/seoul256.vim
+	use { "folke/tokyonight.nvim",
+		config = function() require "plugins.tokyonight" end }
 	-- use("drewtempelmeyer/palenight.vim")
 	-- use("pineapplegiant/spaceduck")
-	use{ "Pocco81/Catppuccino.nvim",
-		config = function() require "plugins.catppuccino" end }
+ 	-- use{ "Pocco81/Catppuccino.nvim",
+	--	config = function() require "plugins.catppuccino" end }
 
 	-- Packer plugin manager
 	use {'wbthomason/packer.nvim',
-            event = "VimEnter", opt = true }
+        event = "VimEnter", opt = true }
  
 	-- NNN file manager inside of neovim
  	use { 'mcchrish/nnn.vim',
@@ -59,6 +60,9 @@ return packer.startup(function()
 	use { "folke/twilight.nvim",
 		config = function() require("twilight").setup { } end }
 
+	-- dims your inactive windows
+	use { "sunjon/shade.nvim" }
+
 	-- smooth scrolling
     use { "karb94/neoscroll.nvim",
 		event = "WinScrolled",
@@ -69,6 +73,10 @@ return packer.startup(function()
 
 	-- git status marks in gutter
 	use { "airblade/vim-gitgutter" }
+
+	-- -- displays a popup with possible key bindings of the command you started typing
+	-- use { "folke/which-key.nvim",
+	-- 	config = function() require("which-key").setup { } end }
 
 	-- -- quickly bring up all modified files in a diffsplit
 	-- use { "sindrets/diffview.nvim" }
@@ -83,6 +91,9 @@ return packer.startup(function()
 	-- fancy tab bar
     use { "akinsho/nvim-bufferline.lua",
 		config = function() require "plugins.bufferline" end }
+
+	-- -- alternative to telescope for when it doesnt work
+	-- use { "liuchengxu/vim-clap" }
 
     -- file picker dashboard
 	use { "glepnir/dashboard-nvim",
@@ -101,48 +112,8 @@ return packer.startup(function()
 	use { "nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } }
 
-	-- -- alternative to telescope for when it doesnt work
-	-- use { "liuchengxu/vim-clap" }
-
--- -- PART 4
-	
-    -- -- load compe in insert mode only
-    -- use { "hrsh7th/nvim-compe",
-	-- 	event = "InsertEnter",
-	-- 	config = function() require "plugins.compe" end }
-
-	-- -- auto pair quotes and brackets
-	-- use { "windwp/nvim-autopairs",
-	-- 	after = "nvim-compe",
-	-- 	config = function() require "plugins.autopairs" end }
-	
--- 	use {
--- 		"kabouzeid/nvim-lspinstall",
--- 		event = "BufRead"
--- 	}
--- 
--- 	use {
--- 		"neovim/nvim-lspconfig",
--- 		after = "nvim-lspinstall",
--- 		config = function()
--- 			require "plugins.lspconfig"
--- 		end
--- 	}
--- 
--- 	use {
--- 		"onsails/lspkind-nvim",
--- 		event = "BufEnter",
--- 		config = function()
--- 			require("plugins.others").lspkind()
--- 		end
--- 	}
--- 
--- 	use {
--- 		"ray-x/lsp_signature.nvim",
--- 		after = "nvim-lspconfig",
--- 		config = function()
--- 			require("plugins.others").signature()
--- 		end
--- 	}
+	-- A File Explorer For Neovim Written In Lua
+	use { 'kyazdani42/nvim-tree.lua',
+		requires = 'kyazdani42/nvim-web-devicons' }
 
 end)

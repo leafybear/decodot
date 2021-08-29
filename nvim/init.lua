@@ -22,3 +22,9 @@ cmd "silent! command PackerInstall lua require 'plugins' require('packer').insta
 cmd "silent! command PackerStatus lua require 'plugins' require('packer').status()"
 cmd "silent! command PackerSync lua require 'plugins' require('packer').sync()"
 cmd "silent! command PackerUpdate lua require 'plugins' require('packer').update()"
+
+-- open the dashboard if its available
+-- local present, colorizer = pcall(require, "dashboard")
+-- if present then
+--	cmd "Dashboard"
+-- end
