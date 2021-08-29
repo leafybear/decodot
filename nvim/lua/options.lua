@@ -6,12 +6,14 @@
 --       |_|                          
 -- 
 
---local fn = vim.fn
---local execute = vim.api.nvim_command
---local cmd = vim.cmd
+-- local fn = vim.fn
+-- local execute = vim.api.nvim_command
 
 local opt = vim.opt
 local g = vim.g
+local cmd = vim.cmd
+
+cmd("colorscheme tokyonight")
 
 g.autosave = false
 

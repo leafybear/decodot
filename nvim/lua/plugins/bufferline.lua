@@ -5,7 +5,7 @@ end
 
 bufferline.setup({
   options = {
-    mappings = true,
+    -- mappings = true,
     show_close_icon = true,
     diagnostics = "nvim_lsp",
     always_show_bufferline = true,
