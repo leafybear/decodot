@@ -20,9 +20,17 @@ local use = packer.use
 
 return packer.startup(function()
 
+	-- THEMES
+	--junegunn/seoul256.vim
+	-- use("folke/tokyonight.nvim")
+	-- use("drewtempelmeyer/palenight.vim")
+	-- use("pineapplegiant/spaceduck")
+	use{ "Pocco81/Catppuccino.nvim",
+		config = function() require "plugins.catppuccino" end }
+
 	-- Packer plugin manager
 	use {'wbthomason/packer.nvim',
-            event = "VimEnter" }
+            event = "VimEnter", opt = true }
  
 	-- NNN file manager inside of neovim
  	use { 'mcchrish/nnn.vim',
@@ -47,19 +55,24 @@ return packer.startup(function()
 		event = "BufRead",
 		config = function() require "plugins.colorizer" end }
 
-	-- show whitespace characters and indentation
-	use { "lukas-reineke/indent-blankline.nvim",
-		event = "BufRead",
-		setup = function() require "plugins.blankline" end }
+	-- dims inactive portions of the code you're editing
+	use { "folke/twilight.nvim",
+		config = function() require("twilight").setup { } end }
 
 	-- smooth scrolling
     use { "karb94/neoscroll.nvim",
 		event = "WinScrolled",
 		config = function() require "plugins.neoscroll" end }
 
+	-- -- show where your cursor moves when jumping large distances
+	-- use { "edluffy/specs.nvim" }
+
 	-- git status marks in gutter
-	use "airblade/vim-gitgutter"
-    
+	use { "airblade/vim-gitgutter" }
+
+	-- -- quickly bring up all modified files in a diffsplit
+	-- use { "sindrets/diffview.nvim" }
+
 	-- file icons
     use { "kyazdani42/nvim-web-devicons" }
     --	config = function() require "plugins.icons" end }
@@ -88,8 +101,8 @@ return packer.startup(function()
 	use { "nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/popup.nvim" }, { "nvim-lua/plenary.nvim" } } }
 
-	-- alternative to telescope for when it doesnt work
-	use { "liuchengxu/vim-clap" }
+	-- -- alternative to telescope for when it doesnt work
+	-- use { "liuchengxu/vim-clap" }
 
 -- -- PART 4
 	
@@ -132,10 +145,4 @@ return packer.startup(function()
 -- 		end
 -- 	}
 
-	-- THEMES
-	-- use("folke/tokyonight.nvim")
-	-- use("drewtempelmeyer/palenight.vim")
-	-- use("pineapplegiant/spaceduck")
-	use{ "Pocco81/Catppuccino.nvim",
-		config = function() require "plugins.catppuccino" end }
 end)
