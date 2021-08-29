@@ -31,10 +31,10 @@ return packer.startup(function()
  	-- use { 'mcchrish/nnn.vim',
  		-- config = function() require "plugins.nnn" end }
 		
-	-- -- Simple line commenting
-	-- use { "terrortylor/nvim-comment",
-	-- 	cmd = "CommentToggle",
-	-- 	config = function() require "plugins.comment" end }
+	-- Simple line commenting
+	use { "terrortylor/nvim-comment",
+		cmd = "CommentToggle",
+		config = function() require "plugins.comment" end }
 
 	-- -- Extra lua functions needed by some plugins
 	-- use { "nvim-lua/plenary.nvim",
