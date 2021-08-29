@@ -64,3 +64,4 @@ fi
 $HOME/.config/polybar/launch.sh &
 kitty &
 discord &
+greenclip daemon &
