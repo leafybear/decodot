@@ -13,8 +13,6 @@ local opt = vim.opt
 local g = vim.g
 local cmd = vim.cmd
 
-cmd("colorscheme tokyonight")
-
 g.autosave = false
 
 opt.ruler = false
