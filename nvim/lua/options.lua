@@ -37,7 +37,7 @@ opt.number = true
 opt.numberwidth = 2
 
 -- disable nvim intro
-opt.shortmess:append("sI")
+-- opt.shortmess:append("sI")
 
 -- disable tilde on end of buffer
 vim.cmd("let &fcs='eob: '")

@@ -18,6 +18,8 @@ end
 
 local use = packer.use
 
+vim.cmd("packadd packer.nvim")
+
 return packer.startup(function()
 
 	-- THEMES
@@ -97,13 +99,14 @@ return packer.startup(function()
 
     -- file picker dashboard
 	use { "glepnir/dashboard-nvim",
+		opt = true,
 		cmd = { "Dashboard",
-			"DashboardNewFile",
-			"DashboardFindFile",
-			"DashboardFindHistory",
-			"DashboardFindWord",
-			"DashboardJumpMarks",
 			"DashboardChangeColorscheme",
+      		"DashboardFindFile",
+      		"DashboardFindHistory",
+      		"DashboardFindWord",
+      		"DashboardJumpMarks",
+      		"DashboardNewfile",
 			"SessionLoad",
 			"SessionSave" },
 		setup = function() require "plugins.dashboard" end }
