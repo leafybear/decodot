@@ -52,6 +52,7 @@ map("n", "<leader>t", ":Twilight<CR>", opt)
 map("n", "<Leader>db", ":Dashboard<CR>", opt)
 map("n", "<Leader>fn", ":DashboardNewFile<CR>", opt)
 map("n", "<Leader>bm", ":DashboardJumpMarks<CR>", opt)
+map("n", "<Leader>dc", ":DashboardChangeColorscheme<CR>", opt)
 map("n", "<C-s>l", ":SessionLoad<CR>", opt)
 map("n", "<C-s>s", ":SessionSave<CR>", opt)
 
