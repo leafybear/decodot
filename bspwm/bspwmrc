@@ -13,8 +13,8 @@ source $HOME/.theme/bspwm
 
 # workspaces
 # bspc monitor DisplayPort-0 -d cmd www art xtra
-bspc monitor -d cmd www art xtra
-bspc monitor HDMI-A-2 -d video reference chat
+bspc monitor -d chroma willow sun moon branch 
+bspc monitor HDMI-A-2 -d hand eye ear 
 
 # visual options
 bspc config border_width    2
@@ -40,20 +40,22 @@ bspc config super mod4
 # bspc desktop ^5 -l monocle
 
 # app rules
-bspc rule -a mpv state=floating sticky=on rectangle=400x250+40+40
 bspc rule -a Gpick state=floating
+bspc rule -a djv state=floating sticky=on rectangle=1290x875+1827+251
+bspc rule -a radeontop state=floating rectangle=838x544+1934+223
+bspc rule -a mpv state=floating sticky=on
 
 bspc rule -a firefox desktop=^2 follow=on
 bspc rule -a Blender desktop=^3 follow=on
 bspc rule -a krita desktop=^3 follow=on
-bspc rule -a Natron desktop=^3 follow=on
-bspc rule -a surf desktop=^5
-bspc rule -a Opera desktop=^5
-bspc rule -a PureRef desktop=^6 
-bspc rule -a XnView MP desktop=^6
-bspc rule -a qimgv desktop=^6 #state=fullscreen
-bspc rule -a discord desktop=^7
-bspc rule -a Gpick state=floating
+bspc rule -a Natron desktop=^4 follow=on
+bspc rule -a "untitled - ArmorPaint" desktop=^4 follow=on
+bspc rule -a surf desktop=^6
+bspc rule -a Opera desktop=^6
+bspc rule -a PureRef desktop=^7 
+bspc rule -a XnView MP desktop=^7
+bspc rule -a qimgv desktop=^7 #state=fullscreen
+bspc rule -a discord desktop=^8
 
 # set up a second screen if I have a script to do so.
 if [ -x $DOTDIR/bin/secondDisplay.sh ]; then

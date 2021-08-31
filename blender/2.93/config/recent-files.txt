@@ -1,4 +1,8 @@
-/mnt/visual/Visual/b sandbox/materials test.blend
+/mnt/visual/Visual/b t bear room/room turntable remake.blend
+/mnt/visual/Visual/asset library/scenes/Junk Shop.blend
+/mnt/visual/Visual/asset library/scenes/blender_splash_fishy_cat/fishy_cat.blend
 /mnt/visual/Visual/b t bear room/room.blend
+/mnt/visual/Visual/b t bear room/room turntable.blend
+/mnt/visual/Visual/b sandbox/materials test.blend
 /mnt/visual/Visual/start-here.blend
 /home/amy/room.blend

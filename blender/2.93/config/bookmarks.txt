@@ -1,8 +1,11 @@
 [Bookmarks]
 /mnt/visual/Visual/
 [Recent]
-/mnt/visual/Visual/b sandbox/
 /mnt/visual/Visual/b t bear room/
+/mnt/visual/Visual/asset library/scenes/
+/mnt/visual/Visual/asset library/scenes/blender_splash_fishy_cat/
+/mnt/visual/Visual/b t bear room/render/
+/mnt/visual/Visual/b sandbox/
 /mnt/visual/Visual/
 !Home
 /home/amy/
