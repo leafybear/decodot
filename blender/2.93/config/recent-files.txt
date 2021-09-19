@@ -1,8 +1,10 @@
-/mnt/visual/Visual/b t bear room/room turntable remake.blend
-/mnt/visual/Visual/asset library/scenes/Junk Shop.blend
-/mnt/visual/Visual/asset library/scenes/blender_splash_fishy_cat/fishy_cat.blend
-/mnt/visual/Visual/b t bear room/room.blend
-/mnt/visual/Visual/b t bear room/room turntable.blend
-/mnt/visual/Visual/b sandbox/materials test.blend
+/mnt/visual/b sandbox/mats and shaders.blend
+/mnt/visual/Visual/b sandbox/mats and shaders.blend
 /mnt/visual/Visual/start-here.blend
-/home/amy/room.blend
+/mnt/visual/Visual/b sandbox/udim cube.blend
+/mnt/visual/Visual/b t lowpoly tree - texture painting in blender for absolute beginners/myIsland.blend
+/mnt/visual/Visual/b t toy plane/toy plane v2b combined uvs.blend
+/mnt/visual/Visual/b t toy plane/toy plane v2a separate uvs.blend
+/mnt/visual/Visual/b t toy plane/toy plane v2 vertex bake.blend
+/mnt/visual/Visual/b t toy plane/toy plane vertex bake.blend
+/mnt/visual/Visual/b t toy plane/toy plane.blend

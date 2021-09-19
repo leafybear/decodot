@@ -120,6 +120,8 @@ alias atom="/Applications/Atom.app/Contents/Resources/app/atom.sh"
 
 # Enable aliases to be sudo’ed
 alias sudo="sudo "
+# Edit with sudo but use my prefs
+alias svim="sudo -E nvim "
 
 # Launch Krita with DPI scale factor
 alias krita="env QT_SCALE_FACTOR=1.6 krita"

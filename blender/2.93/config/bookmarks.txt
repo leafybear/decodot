@@ -1,12 +1,13 @@
 [Bookmarks]
 /mnt/visual/Visual/
 [Recent]
-/mnt/visual/Visual/b t bear room/
-/mnt/visual/Visual/asset library/scenes/
-/mnt/visual/Visual/asset library/scenes/blender_splash_fishy_cat/
-/mnt/visual/Visual/b t bear room/render/
-/mnt/visual/Visual/b sandbox/
+/mnt/visual/asset library/textures/
+/mnt/visual/render temp/
+/mnt/visual/b sandbox/
 /mnt/visual/Visual/
-!Home
-/home/amy/
-/mnt/visual/Visual/asset library/blender themes/
+/mnt/visual/Visual/render temp/
+/mnt/visual/Visual/b sandbox/
+/mnt/visual/Visual/b t lowpoly tree - texture painting in blender for absolute beginners/
+/mnt/visual/Visual/b t toy plane/obj/
+/mnt/visual/Visual/b t toy plane/
+/mnt/visual/Visual/b t toy plane/textures/
