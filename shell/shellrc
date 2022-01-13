@@ -38,10 +38,6 @@ if command_exists tmux && [ -z $TMUX ]; then
   fi
 fi
 
-# cd on quitting nnn file manager
-if [ -f /usr/share/nnn/quitcd/quitcd.bash_zsh ]; then
-	source /usr/share/nnn/quitcd/quitcd.bash_zsh
-fi
 
 #              _                            _
 #  ___ _ ___ _(_)_ _ ___ _ _  _ __  ___ _ _| |_
@@ -52,9 +48,7 @@ fi
 export DOTDIR=$HOME/dots
 export GOPATH=$HOME/go
 export EDITOR="nvim"
-export PATH=$PATH
-export PATH=$GOPATH/bin:$HOME/.local/bin:$HOME/local/bin:$HOME/.bin:$DOTDIR/bin:$PATH
-export PATH=/opt/homebrew/bin:$PATH
+export PATH=$GOPATH/bin:/opt/homebrew/bin:$HOME/.local/bin:$HOME/local/bin:$HOME/.bin:$DOTDIR/bin:$PATH
 
 export HISTCONTROL=ignoredups
 export PAGER=bat
@@ -75,10 +69,10 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 # nnn file manager config
 # g:-!git diff SHOW GIT DIFF FOR FILE
-export NNN_PLUG='e:-!sudo -E vim $nnn*;p:preview-tui;d:diffs;f:fzcd;v:imgview;b:bookmarks;u:dups;r:rsyncppi;g:dragdrop;w:aWallpaper'
+export NNN_PLUG='e:-!sudo -E nvim $nnn*;g:aFzcd;p:preview-tui;w:aWallpaper;d:dups'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_OPENER=$HOME/.config/nnn/plugins/nuke
-export SPLIT="V"
+export SPLIT="v"
 
 # fontpreview config
 export FONTPREVIEW_PREVIEW_TEXT="Almost before we knew it,\nwe had left the ground.\n1234567890\n@#%&()~[]"
@@ -99,8 +93,9 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 alias t="tmux attach"
 alias r="ranger"
-alias n="nnn"
-alias nnn="nnn -c"
+alias n="nnn -e"
+alias nnn="nnn -e"
+alias N='sudo -E nnn -dH'
 alias grep="grep -i"
 alias df="df -h"
 alias du="du -hc"
@@ -125,8 +120,10 @@ alias svim="sudo -E nvim "
 
 # Launch Krita with DPI scale factor
 alias krita="env QT_SCALE_FACTOR=1.6 krita"
-
 alias focus-wacom="xinput map-to-output 17 DisplayPort-0"
+alias tubetoots="fd -a -e \"mp4\" . ~/visual/tubetoots | fzf | (nohup xargs -I{} mpv \"{}\" >/dev/null 2>&1 &)"
+alias getWindowName="xprop | grep WM_CLAS"
+alias getKeyName=""
 
 # Git shortcuts
 alias g="git"

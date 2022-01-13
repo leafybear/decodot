@@ -9,6 +9,8 @@ Xcursor.size:		32
 ! bibata: 22, 24, 28, 32, 40, 48, 56, 64, 72, 80, 88, 96
 ! oreo: 32, 64
 ! material: 32
+gnome.icon.theme: Tela
+! Papirus, Tela, Qogir..
 
 ! FONT SETTINGS
 ! 100% 96, 125% 120, 150% 144, 200% 192

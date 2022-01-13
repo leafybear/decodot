@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Littlewood
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/894940
+Icon=steam_icon_894940
+Terminal=false
+Type=Application
+Categories=Game;

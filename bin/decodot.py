@@ -5,7 +5,7 @@
 #  A. Bentley (leafybear@icloud.com)
 #  edit: 2017
 # :. : . : . : . : . : . : . : . : . : . : .:
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import os, sys
 

@@ -25,7 +25,7 @@ export XDG_CONFIG_HOME=$HOME/.config
 export BSPWM_STATE=$HOME/.bspwm-state.json
 
 #### set device prefs
-xinput set-prop "pointer:Logitech M585" "libinput Natural Scrolling Enabled" 1
+#xinput set-prop "pointer:Logitech M585" "libinput Natural Scrolling Enabled" 1
 
 #### window manager
 exec bspwm

@@ -1,4 +1,4 @@
-bin/decodot $1 \
+python3 bin/decodot.py $1 \
 bin \
 bspwm \
 colour \
