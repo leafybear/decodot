@@ -62,6 +62,7 @@ bspc rule -a minecraft-launcher desktop=^5 follow=on #state=fullscreen
 bspc rule -a "Minecraft* 1.17.1" desktop=^5 follow=on #state=fullscreen
 bspc rule -a "Steam" desktop=^5
 bspc rule -a discord desktop=^6
+bspc rule -a spotify desktop=^6
 
 # set up a second screen if I have a script to do so.
 # if [ -x $DOTDIR/bin/secondDisplay.sh ]; then
