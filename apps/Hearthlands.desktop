@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Hearthlands
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/336300
-Icon=steam_icon_336300
-Terminal=false
-Type=Application
-Categories=Game;

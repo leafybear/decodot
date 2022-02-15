@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/home/amy/local/Natron/Natron
+Exec=/home/amy/apps/Natron/Natron
 Name=Natron
 Type=Application
 Icon=natronIcon256_linux
