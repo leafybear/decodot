@@ -12,12 +12,12 @@ sxhkd &
 source $HOME/.theme/bspwm
 
 # workspaces
-bspc monitor -d shell browser blender paint extra chat 
+bspc monitor -d shell browser blender paint extra chat play 
 # bspc monitor DisplayPort-0 -d cmd www art xtra
 # bspc monitor HDMI-A-2 -d hand eye ear 
 
 # visual options
-bspc config border_width    2
+bspc config border_width    3
 bspc config window_gap      12
 bspc config top_padding		0
 bspc config right_padding	0
@@ -34,35 +34,40 @@ bspc config focus_follows_pointer	true
 bspc config super mod4
 
 # desktop rules
-
 # bspc desktop ^3 -l monocle
 # bspc desktop ^4 -l monocle
 # bspc desktop ^5 -l monocle
-
 # app rules
 bspc rule -a Gpick state=floating
 bspc rule -a djv state=floating sticky=on rectangle=1290x875+1827+251
 bspc rule -a radeontop state=floating rectangle=838x544+1934+223
 bspc rule -a mpv state=floating sticky=on rectangle=1290x875+1827+251
+bspc rule -a "Pavucontrol" state=floating sticky=on rectangle=1290x875+1827+251
+bspc rule -a "Lxappearance" state=floating sticky=on rectangle=1290x875+1827+251
 
 bspc rule -a surf desktop=^2
 bspc rule -a Opera desktop=^2
 bspc rule -a firefox desktop=^2 follow=on
-bspc rule -a Blender desktop=^3 follow=on
+
+bspc rule -a Blender desktop=^3 follow=on state=fullscreen
+
 bspc rule -a krita desktop=^4 follow=on
 bspc rule -a Natron desktop=^4 follow=on
 bspc rule -a grafx2 desktop=^4 follow=on
 bspc rule -a "untitled - ArmorPaint" desktop=^4 follow=on
-# bspc rule -a PureRef desktop=^5 
+
+bspc rule -a "PureRef" desktop=^5 
 bspc rule -a XnView MP desktop=^5
 bspc rule -a qimgv desktop=^5 #state=fullscreen
 bspc rule -a resolve desktop=^5
-bspc rule -a Dwarf_Fortress desktop=^5 follow=on #state=fullscreen
-bspc rule -a minecraft-launcher desktop=^5 follow=on #state=fullscreen
-bspc rule -a "Minecraft* 1.17.1" desktop=^5 follow=on #state=fullscreen
-bspc rule -a "Steam" desktop=^5
+
 bspc rule -a discord desktop=^6
-bspc rule -a spotify desktop=^6
+bspc rule -a "Spotify" desktop=^6
+
+bspc rule -a Dwarf_Fortress desktop=^7 follow=on #state=fullscreen
+bspc rule -a minecraft-launcher desktop=^7 follow=on #state=fullscreen
+bspc rule -a "Minecraft* 1.17.1" desktop=^7 follow=on #state=fullscreen
+bspc rule -a steam desktop=^7
 
 # set up a second screen if I have a script to do so.
 # if [ -x $DOTDIR/bin/secondDisplay.sh ]; then
