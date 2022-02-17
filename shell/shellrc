@@ -39,6 +39,34 @@ if command_exists tmux && [ -z $TMUX ]; then
 fi
 
 
+# To CD on Quit in NNN file manager
+n ()
+{
+    # Block nesting of nnn in subshells
+    if [ -n $NNNLVL ] && [ "${NNNLVL:-0}" -ge 1 ]; then
+        echo "nnn is already running"
+        return
+    fi
+
+    # The behaviour is set to cd on quit with Ctl-G
+	# prefix this line with "export" to ALWAYS cd on quit
+    NNN_TMPFILE="${XDG_CONFIG_HOME:-$HOME/.config}/nnn/.lastd"
+
+    # Unmask ^Q (, ^V etc.) (if required, see `stty -a`) to Quit nnn
+    stty start undef
+    stty stop undef
+    # stty lwrap undef
+    # stty lnext undef
+
+    nnn "$@"
+
+    if [ -f "$NNN_TMPFILE" ]; then
+            . "$NNN_TMPFILE"
+            rm -f "$NNN_TMPFILE" > /dev/null
+    fi
+}
+
+
 #              _                            _
 #  ___ _ ___ _(_)_ _ ___ _ _  _ __  ___ _ _| |_
 # / -_) ' \ V / | '_/ _ \ ' \| '  \/ -_) ' \  _|
@@ -69,7 +97,7 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 
 # nnn file manager config
 # g:-!git diff SHOW GIT DIFF FOR FILE
-export NNN_PLUG='e:-!sudo -E nvim $nnn*;g:aFzcd;p:preview-tui;w:aWallpaper;d:dups'
+export NNN_PLUG='e:-!sudo -E nvim $nnn*;g:aFzcd;p:preview-tui;w:aWallpaper;d:dups;i:imgview'
 export NNN_FIFO=/tmp/nnn.fifo
 export NNN_OPENER=$HOME/.config/nnn/plugins/nuke
 export SPLIT="v"
@@ -93,7 +121,7 @@ alias .....="cd ../../../.."
 alias -- -="cd -"
 alias t="tmux attach"
 alias r="ranger"
-alias n="nnn -e"
+#alias n="nnn -e"
 alias nnn="nnn -e"
 alias N='sudo -E nnn -dH'
 alias grep="grep -i"
@@ -102,7 +130,7 @@ alias du="du -hc"
 alias ping="ping -c 5"
 alias vi="nvim"
 alias ls="exa"
-alias sl="ls"
+#alias sl="ls"
 alias ll="exa -l"
 alias lll="exa -abghHliS"
 #alias ll="ls -lah"
