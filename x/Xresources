@@ -4,7 +4,7 @@
 #endif
 
 ! CURSOR THEME
-Xcursor.theme:		cursor-oreo-teal
+Xcursor.theme:		cursor-material
 Xcursor.size:		32
 ! bibata: 22, 24, 28, 32, 40, 48, 56, 64, 72, 80, 88, 96
 ! oreo: 32, 64

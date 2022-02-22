@@ -1,5 +1,5 @@
 configuration {
-	font: "Silkscreen 14";
+	font: "Silkscreen Bold 14";
 	width: 50;
 	lines: 10;
 	separator-style: "solid";
