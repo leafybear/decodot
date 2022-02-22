@@ -12,7 +12,10 @@ sxhkd &
 source $HOME/.theme/bspwm
 
 # workspaces
-bspc monitor -d shell browser blender paint extra chat play 
+bspc monitor -d       
+#         ﰟ    
+#bspc monitor -d                            גּ   ﴁ      﫢ﱣ ﱤ          ﯎           ﯢ ﬥ   ﳜ ﳝ ﳞ   ﳟ         ﳣ 擄麗璉שׂ 戮ﲃ ﲄ ﰟ ﳴ ﳵ 兀嗀縉      
+# bspc monitor -d shell browser blender paint extra chat play 
 # bspc monitor DisplayPort-0 -d cmd www art xtra
 # bspc monitor HDMI-A-2 -d hand eye ear 
 
@@ -55,19 +58,19 @@ bspc rule -a krita desktop=^4 follow=on
 bspc rule -a Natron desktop=^4 follow=on
 bspc rule -a grafx2 desktop=^4 follow=on
 bspc rule -a "untitled - ArmorPaint" desktop=^4 follow=on
+bspc rule -a resolve desktop=^4
 
 bspc rule -a "PureRef" desktop=^5 
 bspc rule -a XnView MP desktop=^5
 bspc rule -a qimgv desktop=^5 #state=fullscreen
-bspc rule -a resolve desktop=^5
 
 bspc rule -a discord desktop=^6
-bspc rule -a "Spotify" desktop=^6
+bspc rule -a spotify desktop=^6
 
 bspc rule -a Dwarf_Fortress desktop=^7 follow=on #state=fullscreen
 bspc rule -a minecraft-launcher desktop=^7 follow=on #state=fullscreen
 bspc rule -a "Minecraft* 1.17.1" desktop=^7 follow=on #state=fullscreen
-bspc rule -a steam desktop=^7
+bspc rule -a "Steam" desktop=^7
 
 # set up a second screen if I have a script to do so.
 # if [ -x $DOTDIR/bin/secondDisplay.sh ]; then
