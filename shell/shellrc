@@ -166,3 +166,9 @@ alias gdc="gd --cached"
 alias gm="git commit -m"
 alias gma="git commit -am"
 alias gb="git branch"
+
+# use Pokeget to draw a random pokemon sprite
+DIFF=$((898-1+1))
+R=$(($(($RANDOM%$DIFF))+X))
+pokeget -small $R
+
