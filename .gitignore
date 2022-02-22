@@ -31,8 +31,8 @@ zsh/zsh/history
 nnn/sessions
 blender/2.93/config/platform_support.txt
 nvim/nvchad.nvim/plugin/packer_compiled.lua
-shell/oh-my-zsh/cache/.zsh-update
 blender/2.93/scripts
 shell/oh-my-zsh/cache/.zsh-update
-shell/oh-my-zsh
+shell/oh-my-zsh/cache
+shell/oh-my-zsh/custom
 sys

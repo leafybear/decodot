@@ -47,6 +47,7 @@ bspc rule -a radeontop state=floating rectangle=838x544+1934+223
 bspc rule -a mpv state=floating sticky=on rectangle=1290x875+1827+251
 bspc rule -a "Pavucontrol" state=floating sticky=on rectangle=1290x875+1827+251
 bspc rule -a "Lxappearance" state=floating sticky=on rectangle=1290x875+1827+251
+bspc rule -a "Anki" state=floating sticky=on rectangle=875x875+1827+251
 
 bspc rule -a surf desktop=^2
 bspc rule -a Opera desktop=^2
