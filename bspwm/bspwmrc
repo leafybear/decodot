@@ -12,7 +12,8 @@ sxhkd &
 source $HOME/.theme/bspwm
 
 # workspaces
-bspc monitor -d         
+# bspc monitor -d        
+bspc monitor -d cmd www 3d paint ? chat play 
 #         ﰟ           
 #bspc monitor -d                            גּ   ﴁ      﫢ﱣ ﱤ          ﯎           ﯢ ﬥ   ﳜ ﳝ ﳞ   ﳟ         ﳣ 擄麗璉שׂ 戮ﲃ ﲄ ﰟ ﳴ ﳵ 兀嗀縉      
 # bspc monitor -d shell browser blender paint extra chat play 
@@ -20,7 +21,7 @@ bspc monitor -d        
 # bspc monitor HDMI-A-2 -d hand eye ear 
 
 # visual options
-bspc config border_width    3
+bspc config border_width    0
 bspc config window_gap      12
 bspc config top_padding		0
 bspc config right_padding	0
@@ -29,7 +30,8 @@ bspc config bottom_padding	0
 
 bspc config split_ratio         0.33
 bspc config borderless_monocle  true
-bspc config single_monocle 		true
+bspc config single_monocle 		false # usually I set this to true so that single windows
+# are fullscreen, but I'm liking that less rightnow
 bspc config gapless_monocle     true
 bspc config focus_by_distance   true
 bspc config focus_follows_pointer	true
@@ -37,7 +39,7 @@ bspc config focus_follows_pointer	true
 bspc config super mod4
 
 # desktop rules
-# bspc desktop ^3 -l monocle
+bspc desktop ^3 -l monocle
 # bspc desktop ^4 -l monocle
 # bspc desktop ^5 -l monocle
 # app rules
@@ -53,7 +55,7 @@ bspc rule -a surf desktop=^2
 bspc rule -a Opera desktop=^2
 bspc rule -a firefox desktop=^2 follow=on
 
-bspc rule -a Blender desktop=^3 follow=on state=fullscreen
+bspc rule -a Blender desktop=^3 follow=on
 
 bspc rule -a krita desktop=^4 follow=on
 bspc rule -a Natron desktop=^4 follow=on
