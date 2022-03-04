@@ -74,6 +74,7 @@ bspc rule -a Dwarf_Fortress desktop=^7 follow=on #state=fullscreen
 bspc rule -a "Minecraft Launcher" desktop=^7 follow=on #state=fullscreen
 bspc rule -a "Minecraft 1.18.1" desktop=^7 follow=on #state=fullscreen
 bspc rule -a "Steam" desktop=^7
+bspc rule -a "retroarch" desktop=^7
 
 # set up a second screen if I have a script to do so.
 # if [ -x $DOTDIR/bin/secondDisplay.sh ]; then
