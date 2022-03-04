@@ -6,11 +6,11 @@ super + Return
 super + space
 	rofi -show combi -combi-modi drun,run -theme $HOME/.theme/rofi.rasi
 
+super + p
+	rofimoji --selector-args="-theme $HOME/.theme/rofi.rasi"
+
 alt + space
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme $HOME/.theme/rofi.rasi
-
-# super + alt + space
-# 	rofi -modi "emoji:rofimoji" -show emoji -theme $HOME/.theme/rofi.rasi
 
 ##--------------- Nodes and Desktops
 # Focus on workspace 3
