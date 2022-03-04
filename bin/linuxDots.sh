@@ -1,4 +1,4 @@
-python3 bin/decodot.py $1 \
+python3 ../decodot.py $1 \
 apps \
 bin \
 bspwm \

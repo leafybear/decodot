@@ -5,7 +5,7 @@
 #  A. Bentley (leafybear@icloud.com)
 #  edit: 2017
 # :. : . : . : . : . : . : . : . : . : . : .:
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys, os, random
 
@@ -47,7 +47,7 @@ else:
     switch = args.pop(0)
     theme = args.pop(0)
 
-theme = dotdir + "/colour/" + theme
+theme = dotdir + "/deco-themes/" + theme
 link = "$HOME/.theme"
 
 if not os.path.exists(theme):
