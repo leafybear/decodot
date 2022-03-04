@@ -23,4 +23,4 @@ configuration {
     padding:          5;
 }
 
-/* @theme "~/.theme/rofi.rasi" */
+@theme "~/.theme/rofi.rasi"
