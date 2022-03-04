@@ -4,10 +4,11 @@ super + Return
 	kitty
 
 super + space
-	rofi -show combi -combi-modi drun,run -theme $HOME/.theme/rofi.rasi
+	rofi -show combi 
 
 super + p
-	rofimoji --selector-args="-theme $HOME/.theme/rofi.rasi"
+	rofimoji --skin-tone medium-light 
+		#--selector-args="-theme $HOME/.theme/rofi.rasi"
 
 alt + space
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme $HOME/.theme/rofi.rasi
