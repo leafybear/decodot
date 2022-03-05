@@ -1,9 +1,9 @@
-python3 ../decodot.py $1 \
+python3 $DOTDIR/decodot.py $1 \
 apps \
 bin \
 bspwm \
 cheat \
-colour \
+deco-themes \
 dunst \
 git \
 htop \
@@ -13,7 +13,6 @@ picom \
 polybar \
 qimgv \
 ranger \
-rclone \
 rofi \
 shell \
 sxhkd \

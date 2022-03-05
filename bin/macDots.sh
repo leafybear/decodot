@@ -1,4 +1,4 @@
-python3 ../decodot $1 \
+python3 $DOTDIR/decodot $1 \
 bin \
 colour \
 git \
