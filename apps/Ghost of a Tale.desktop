@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Ghost of a Tale
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/417290
+Icon=steam_icon_417290
+Terminal=false
+Type=Application
+Categories=Game;
