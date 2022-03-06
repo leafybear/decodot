@@ -4,3 +4,4 @@ xinitrc	$HOME/.xinitrc
 Xresources	$HOME/.Xresources
 xscreensaver	$HOME/.xscreensaver
 icc	$HOME/.icc
+user-dirs.dirs	$HOME/.config/user-dirs.dirs

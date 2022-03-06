@@ -7,6 +7,7 @@ deco-themes \
 dunst \
 git \
 htop \
+kitty \
 mpv \
 neofetch \
 picom \
