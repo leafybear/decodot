@@ -11,7 +11,7 @@ super + p
 		#--selector-args="-theme $HOME/.theme/rofi.rasi"
 
 alt + space
-	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}' -theme $HOME/.theme/rofi.rasi
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 ##--------------- Nodes and Desktops
 # Focus on workspace 3
