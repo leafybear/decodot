@@ -12,7 +12,6 @@ xsetroot -cursor_name left_ptr
 
 sh ~/.fehbg &
 picom --experimental-backends &
-dunst > /dev/null 2>&1 &
 xscreensaver -no-splash &
 
 # unmute all devices

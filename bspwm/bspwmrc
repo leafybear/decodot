@@ -83,6 +83,7 @@ bspc rule -a "retroarch" desktop=^7
 
 # start up apps
 $HOME/.config/polybar/launch.sh &
+$HOME/.config/dunst/launch.sh &
 kitty &
 # $HOME/local/Discord/Discord &
 greenclip daemon &
