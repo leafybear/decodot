@@ -55,10 +55,14 @@ if not os.path.exists(theme):
 else:
     os.system("ln -sfn "+theme+" "+link)
     if switch == "w":
+        wallpaper=theme+"/wallpaper.jpg"
         walldir=theme+"/wallpaper"
         if os.path.isdir(walldir):
             walls = [f.path for f in os.scandir(walldir)]
             index = random.randint(0,len(walls))
             os.system("feh --bg-fill "+walls[index])
+        elif os.path.exists(wallpaper):
+                os.system("feh --bg-fill "+wallpaper)
     os.system("xrdb ~/.Xresources")
-    os.system("$DOTDIR/bspwm/bspwmrc")
+    # I'd like to restart some things but it should happen in another script.
+    #os.system("$DOTDIR/bspwm/bspwmrc")
