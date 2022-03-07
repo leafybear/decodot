@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Indiana Jones and the Fate of Atlantis
-Comment=Play this game on Steam
-Exec=steam steam://rungameid/6010
-Icon=steam_icon_6010
-Terminal=false
-Type=Application
-Categories=Game;
