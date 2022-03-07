@@ -153,6 +153,9 @@ alias tubetoots="fd -a -e \"mp4\" . ~/visual/tubetoots | fzf | (nohup xargs -I{}
 alias getWindowName="xprop | grep WM_CLAS"
 alias getKeyName=""
 
+alias decodot="python3 decodot.py"
+alias decotheme="python3 decotheme.py"
+
 # Git shortcuts
 alias g="git"
 alias gs="git r1 -n 1; git branch | grep \*; git status --short"

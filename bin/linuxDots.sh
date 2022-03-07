@@ -18,9 +18,7 @@ rofi \
 shell \
 sxhkd \
 tmux \
-vim \
 x \
 nnn \
 nvim \
 gitui \
-kitty \
