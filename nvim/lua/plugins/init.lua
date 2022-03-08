@@ -119,4 +119,11 @@ return packer.startup(function()
 	use { 'kyazdani42/nvim-tree.lua',
 		requires = 'kyazdani42/nvim-web-devicons' }
 
+	-- a Markdown editor for note taking in neovim
+	-- depends on Telescope.nvim
+	use { 'renerocksai/telekasten.nvim',
+		requires = "nvim-telescope/telescope.nvim",
+		config = function() require "plugins.telekasten" end }
+
+
 end)

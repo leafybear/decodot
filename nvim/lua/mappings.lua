@@ -63,6 +63,19 @@ map("n", "<Leader>fb", ":Telescope buffers<CR>", opt)
 map("n", "<Leader>fh", ":Telescope help_tags<CR>", opt)
 map("n", "<Leader>fo", ":Telescope oldfiles<CR>", opt)
 
+-- Telekasten
+map("n", "<Leader>zf", ":Telekasten find_notes<CR>", opt)
+map("n", "<Leader>zd", ":Telekasten find_daily_notes<CR>", opt)
+map("n", "<Leader>zg", ":Telekasten goto_today<CR>", opt)
+map("n", "<Leader>zs", ":Telekasten search_notes<CR>", opt)
+map("n", "<Leader>zf", ":Telekasten follow_link<CR>", opt)
+map("n", "<Leader>zi", ":Telekasten insert_link<CR>", opt)
+map("n", "<Leader>zy", ":Telekasten yank_notelink<CR>", opt)
+map("n", "<Leader>x", ":Telekasten toggle_todo<CR>", opt)
+map("v", "<Leader>x", ":Telekasten toggle_todo<CR>", opt)
+-- on hesitation, bring up the panel
+map("n", "<Leader>z", ":Telekasten panel<CR>", opt)
+
 -- Compe
 -- map("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 -- map("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
