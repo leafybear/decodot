@@ -3,19 +3,38 @@
 * Decodot is a symlink farmer
 * Decotheme is a color theme swapper for config files
 
-This is also Leafybear's dotfiles repo. Bonus files! Feel free to delete anything you don't want with wild abandon. Or use them. Whatever.
+You can use these scripts alone or together. If you like to change your color scheme a lot, decotheme makes it easier to swap out config files.
+
+This is also Leafybear's dotfiles repo. Bonus files! Use what you want and delete anything else with wild abandon. 😺
 
 The only files you need are `decodot` and `decotheme` - plus a folder to store dot files in.
 
-## Who it's for
+#### Who it's for
 I aim to make it easy to use this folder as a command-line bootstrap. So, its for cli fiends and beginners alike. Linux and mac are the target environments.
 
-## How to use
 
-### DECODOT
+## DECODOT
+Example directory structure:
+
+	decodot folder/
+		decodot.py
+		kitty/
+			kitty.conf
+			dotwhere
+
+Each config group (probably per app) has a folder with a `dotwhere` inside that tells decodot where to make the symlinks in your actual $HOME. In this example, the `dotwhere` for Kitty reads
+
+	 .	$HOME/.config/kitty
+
+It tells the decodot script to make a symlink between this folder and `$HOME/.config/kitty`. So when you look inside `$HOME/.config` you would see
+	
+	kitty -> /home/leafybear/dots/kitty
+
+### How to use
+
 Put this project's folder wherever you want. Export an environment variable for the location.
 
-	export DOTDIR=/home/amy/dots
+	export DOTDIR=/home/leafybear/dots
 
 Then run `decodot` from the bin directory inside DOTDIR. You can create links to any, some, or ALL of the included app configs. You need to invoke python3 specifically for the scripts to run correctly. YMMV.
 
@@ -47,7 +66,7 @@ To set the theme and use the included wallpaper:
 Current themes:
 * day
 * night
-* neonGods
+* neonGods (this is the only really complete one atm)
 
 ## Changes
 
