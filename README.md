@@ -52,7 +52,7 @@ To remove all the links:
 
 There are two scripts inside `bin` to tailor linking for mac or linux (macDots.sh and linuxDots.sh). I don't have the same dot files on each system so I needed a quick way to pick just mac/linux configs.
 
-### DECOTHEME
+## DECOTHEME
 Some of the config files (polybar, bspwm, kitty, rofi, nvim) in my dot files are linked to the deco-themes/ directory for color values.
 
 Run _decotheme_ to switch theme to one of the themes in the folder.
