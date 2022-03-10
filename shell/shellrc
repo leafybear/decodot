@@ -76,7 +76,7 @@ n ()
 export DOTDIR=$HOME/dots
 export GOPATH=$HOME/apps/go
 export EDITOR="nvim"
-export PATH=$GOPATH/bin:/opt/homebrew/bin:$HOME/.local/bin:$HOME/local/bin:$HOME/.bin:$DOTDIR/bin:$PATH
+export PATH=$GOPATH/bin:/opt/homebrew/bin:$HOME/.local/bin:$HOME/local/bin:$HOME/.bin:$DOTDIR/bin:$HOME/grimoire:$PATH
 
 export HISTCONTROL=ignoredups
 export PAGER=bat
@@ -153,8 +153,8 @@ alias tubetoots="fd -a -e \"mp4\" . ~/visual/tubetoots | fzf | (nohup xargs -I{}
 alias getWindowName="xprop | grep WM_CLAS"
 alias getKeyName=""
 
-alias decodot="python3 decodot.py"
-alias decotheme="python3 decotheme.py"
+alias decodot="python3 $DOTDIR/decodot.py"
+alias decotheme="python3 $DOTDIR/decotheme.py"
 
 # Git shortcuts
 alias g="git"
