@@ -74,7 +74,7 @@ n ()
 # environment variables
 
 export DOTDIR=$HOME/dots
-export GOPATH=$HOME/apps/go
+export GOPATH=$HOME/local/go
 export EDITOR="nvim"
 export PATH=$GOPATH/bin:/opt/homebrew/bin:$HOME/.local/bin:$HOME/local/bin:$HOME/.bin:$DOTDIR/bin:$HOME/grimoire:$PATH
 
