@@ -5,12 +5,11 @@
 ## Github  : @adi1090x
 ## Twitter : @adi1090x
 
-dir="$HOME/.config/rofi/applets/android"
-rofi_command="rofi -theme $dir/three.rasi"
+rofi_command="rofi -theme three.rasi"
 
 # Error msg
 msg() {
-	rofi -theme "$dir/message.rasi" -e "Please install 'scrot' first."
+	rofi -e "Please install 'scrot' first."
 }
 
 # Options

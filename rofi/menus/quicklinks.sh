@@ -6,11 +6,11 @@
 ## Twitter : @adi1090x
 
 dir="$HOME/.config/rofi/applets/android"
-rofi_command="rofi -theme $dir/six.rasi"
+rofi_command="rofi -theme six.rasi"
 
 # Error msg
 msg() {
-	rofi -theme "$dir/message.rasi" -e "$1"
+	rofi -theme "message.rasi" -e "$1"
 }
 
 # Browser
