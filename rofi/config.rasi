@@ -1,6 +1,5 @@
 configuration {
 	font: "Overpass 16";
-	lines: 10;
 	separator-style: "solid";
 	hide-scrollbar: true; 
 	show-icons: true;
@@ -15,12 +14,139 @@ configuration {
 	/* combi-hide-mode-prefix: true; */
 	/* cycle: true; */
 	/* sidebar-mode: true; */
+
 }
 
+@import "~/.theme/rofi.rasi"
 
-#window {
+/* 	ROFI WINDOW ELEMENTS
+    window
+        overlay: the overlay widget.
+        mainbox: The mainbox box.
+            inputbar: The input bar box.
+                box: the horizontal @box packing the widgets
+                case-indicator: the case/sort indicator @textbox
+                prompt: the prompt @textbox
+                entry: the main entry @textbox
+                num-rows: Shows the total number of rows.
+                num-filtered-rows: Shows the total number of rows after filtering.
+            listview: The listview.
+                scrollbar: the listview scrollbar
+                element: a box in the listview holding the entries
+                    element-icon: the widget in the listview's entry showing the (optional) icon
+                    element-index: the widget in the listview's entry keybindable index (1,2,3..0)
+                    element-text: the widget in the listview's entry showing the text.
+            mode-switcher: the main horizontal @box packing the buttons.
+                button: the buttons @textbox for each mode
+            message: The container holding the textbox.
+                textbox: the message textbox
+
+	ELEMENT MODIFIERS
+    normal: no modification
+    selected: the entry is selected/highlighted by user
+    alternate: the entry is at an alternating row (uneven row)
+
+	ELEMENT STATES
+    normal: no modification
+    urgent: this entry is marked urgent
+    active: this entry is marked active
+
+	ELEMENT PATHS (all are equal)
+	element.selected
+	element selected
+	element .selected
+
+	ELEMENT PROPERTIES
+    enabled: enable/disable rendering of the widget
+    padding: padding Padding on the inside of the widget
+    margin: padding Margin on the outside of the widget
+    border: border Border around the widget (between padding and margin)/
+    border-radius: padding Sets a radius on the corners of the borders.
+    background-color: color Background color
+    background-image: image Background image
+    border-color: color Color of the border
+    cursor: cursor Type of mouse cursor that is set when the mouse pointer is hovered over the widget.
+
+
+*/
+
+* {
+	border: 0px;
+	margin: 0;
+	padding: 0;
+	spacing: 0;
+	vertical-align: 0.5;
+}
+
+window {
+	border:			0px;
     width:			25%;
-    padding:          5;
+    padding:          0;
+	border-radius:  16px;
 }
 
-@theme "~/.theme/rofi.rasi"
+mainbox {
+	children: [inputbar, listview];
+}
+
+inputbar {
+    padding:    14px;
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+prompt { 
+	padding:	4px 10px; 
+}
+
+textbox-prompt-colon {
+    str:        "";
+}
+
+entry {
+	placeholder: "";
+	blink:		true;
+}
+
+case-indicator { }
+
+textbox { }
+
+listview {
+    fixed-height: 0;
+    border:       0;
+    spacing:      0;
+    scrollbar:    false;
+    padding:      8px 0 8px 0;
+	lines:		7;
+}
+element {
+	children: [element-icon, element-text];
+    padding: 0px ;
+}
+element-icon {
+	padding: 4px 10px;
+	size: 1.5em;
+	vertical-align: 0.5;
+}
+element-text {
+	vertical-align: 0.5;
+	padding: 0;
+}
+element-text selected { }
+element normal normal { }
+element selected normal { 
+	/* border-radius:	14px; */
+}
+element alternate normal { }
+scrollbar { }
+
+mode-switcher {
+    border:       2px dash 0px 0px ;
+}
+button selected { }
+
+message {
+    border:       1px dash 0px 0px ;
+    padding:      1px ;
+}
+
