@@ -21,6 +21,6 @@ shell zsh
 
 
 # BEGIN_KITTY_THEME
-# Pixiefloss
-# include current-theme.conf
+# Rosé Pine Dawn
+include current-theme.conf
 # END_KITTY_THEME
