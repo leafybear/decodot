@@ -10,7 +10,8 @@ super + p
 	rofimoji --skin-tone medium-light 
 		#--selector-args="-theme $HOME/.theme/rofi.rasi"
 
-alt + space
+#alt + space
+super + v
 	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 ##--------------- Nodes and Desktops
