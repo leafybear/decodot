@@ -1,0 +1,42 @@
+## MAPPING
+
+# map the input stream in INPUT identified by "0:1" to the (single) output stream in out.wav
+-map 0:1
+# select all video and the third audio stream from an input file
+-map 0:v -map 0:a:2
+
+## CONVERSION
+
+# convert a folder of mp3 to wav files
+for f in *.mp3; do ffmpeg -i "$f" -acodec pcm_s16le -ac 2 -ar 16000 "wav/${f%.mp3}.wav"; done
+
+# copy metadata into a new file
+ffmpeg -i output.m4a -i ~/metadata2 -map 0:a -movflags +faststart -codec copy output-2.m4a
+
+# remove all metadata
+ffmpeg -i input.mp4 -map_metadata -1 -c copy output.m4a
+
+
+## CONCATENATION
+
+# to wav
+ffmpeg -f concat -safe 0 -i listAudio.txt -acodec pcm_s16le -ac 2 -ar 16000 output.wav
+# to mp3, 256 constant bitrate
+ffmpeg -f concat -safe 0 -i listAudio.txt -c:a libmp3lame -b:a 256k -ar 44100 output.mp3
+# to aac, 128 constant bitrate 44.1k sample rate
+ffmpeg -f concat -safe 0 -i listAudio.txt -codec:a libfdk_aac -b:a 128k -ar 44100 output.m4a
+# to aac, 48 constant bitrate 32k sample
+ffmpeg -f concat -safe 0 -i listAudio.txt -codec:a libfdk_aac -b:a 48k -ar 32000 output.m4a
+# to flac
+ffmpeg -f concat -safe 0 -i listAudio.txt -c:a flac output.flac
+
+
+## FFPROBE
+
+# show chapters
+ffprobe -i file.m4a -print_format json -show_chapters
+
+# get information
+file output.wav
+#   or
+ffmpeg -i output.wav

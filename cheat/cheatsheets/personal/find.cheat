@@ -1,0 +1,8 @@
+# find all dot files recursively
+find /your/directory/ -name ".*" -print
+
+# Find all files having .bak (*.bak) extension in the current directory and remove them
+find . -type f -name "*.bak" -exec rm -f {} \;
+
+# Find all *.bak files in the current directory and removes them with confirmation from user:
+find . -type f -name "*.bak" -exec rm -i {} \;

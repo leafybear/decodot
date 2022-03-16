@@ -1,0 +1,5 @@
+log --author=Amy --since='yesterday' --until='now' --graph --format='%Cred%h %Creset%s%Creset'
+
+log --author=Amy --pretty=format:'%C(yellow)%h | %cd %Cgreen(%cr)%C(yellow)%d%n%C(bold blue)%s%n%Creset%b%Creset' --date=short
+
+log --author=Amy --pretty=format:'%C(yellow)%h | %cd %Cgreen(%cr)%C(yellow)%d%n%Creset[%an] %C(bold blue)%s%n%Creset%b%Creset' --date=short --stat

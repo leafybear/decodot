@@ -1,0 +1,48 @@
+# Make changes to a new image
+convert
+
+# Modify original image in place
+# ..generally takes the same arguments as convert,
+# but allows you to process multiple images and replace them in place. 
+mogifry 
+
+# Remove embedded metadata
+mogrify -strip image.jpg
+
+# Extract all the images from a pdf
+pdfimages -all file.pdf pages/image
+
+# Create a pdf from images
+convert Cover.jpg images/* outfile.pdf
+
+#-----------------------------------------
+
+# Crop left edge, 120 px
+convert -gravity West -chop 120x0 input.jpg output.jpg
+
+# Crop right edge 120 px
+convert -gravity East -chop 120x0 input.jpg output.jpg
+
+# Split pages in half horizontally
+convert pages/*.jpg -crop 2x1@ +repage pages/%03d-split.png
+
+# Change DPI to 400
+convert -resample 400 infile.jpg outfile.jpg
+
+# Remove skew from image using max tolerance
+convert original.jpg -deskew 40% outfield.jpg
+
+# Rotate 90 degrees clockwise
+convert -rotate “90” in.jpg out.jpg
+
+#-----------------------------------------
+
+# Create compressed version at max size 2500px
+convert -thumbnail 2500x2500 -unsharp 0.25x0.25+8+0.065 -quality 90 -filter Triangle -define filter:support=2 -posterize 136 024.jpg 024-resize.jpg
+
+####----------
+# To join images horizontally:
+convert +append *.png out.png 
+
+# To stack images vertically:
+convert -append *.png out.png

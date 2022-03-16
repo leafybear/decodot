@@ -1,0 +1,31 @@
+# This will throw away all the existing filenames and simply number the
+# files from 1 through however many files there are X except that it will
+# preserve their extensions.
+       
+rename -N ...01 -X -e '$_ = "File-$N"' *
+
+
+# This will do the same in reverse sort order.
+
+rename -N ...01 -X -e '$_ = "$N"' -k *
+
+# Prepend "image" to every file name.
+
+rename -A "image-" *
+
+# Add the flower emoji to the end of the filenames, keeping the extension.
+
+rename -X -a " 🌸" *
+
+# Change extension from rar to cbr
+
+rename -S ".rar" ".cbr" *.rar
+
+# Make the first letter of each word a capital and change
+# underscores to spaces.
+
+rename --camelcase --rews *
+
+
+# Change padding of numbers in all files to double digits
+rename -e 's/\d+/sprintf("%02d",$&)/e' -- *

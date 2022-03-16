@@ -1,0 +1,19 @@
+# https://github.com/rg3/youtube-dl/blob/master/README.md#output-template-examples
+
+# https://stackoverflow.com/questions/8672809/use-ffmpeg-to-add-text-subtitles
+
+# CONVERT VTT to ASS
+ffmpeg -i subtitle.vtt subtitle.ass
+
+# BATCHED 
+find -name “*.vtt” -exec ffmpeg -I {}  {}.ass \;
+
+# ADD SUBTITLE TO MP4
+ffmpeg -I infile.mp4 -I infile.srt -c copy -c:s mov_text outfile.mp4
+
+# BATCHED
+find -name “*.mp4” -exec ffmpeg -I {}  -I {}.ass -c copy -c:s mov_text  {}.mp4 \;
+
+# convert everything in a folder
+
+for f in *; do ffmpeg -i "$f" -vf scale=1920:-2 -c:v libx264 -preset veryfast -crf 25 -c:a libfdk_aac -b:a 64k -ar 44100 "clean/$f.mp4"; done

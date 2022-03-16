@@ -1,0 +1,13 @@
+youtube-dl -f 22 --write-sub --sub-lang en -o ‘%(playlist_index)s - %(title)s.%(ext)s’ PLIx8QniXH-rGVz1rSkj80QWPWvyDgoV4Y
+
+youtube-dl -s -F PLn7ueQx7cc2yfRdL8B_t36Xti4n4t4p8r  | more
+
+FLAGS
+
+—audio-quality 9
+—embed-subs
+—add-metadata
+—mark-watched
+—output ‘%(title)s-%(id)s.%(ext)s’
+		this is the default
+‘%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s’
