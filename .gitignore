@@ -35,3 +35,5 @@ shell/oh-my-zsh/cache/.zsh-update
 shell/oh-my-zsh/cache
 shell/oh-my-zsh/custom
 sys
+blender/*/config/platform_support.txt
+4kat
