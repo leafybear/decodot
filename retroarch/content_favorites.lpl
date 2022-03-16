@@ -1,0 +1,19 @@
+{
+  "version": "1.5",
+  "default_core_path": "",
+  "default_core_name": "",
+  "label_display_mode": 0,
+  "right_thumbnail_mode": 0,
+  "left_thumbnail_mode": 0,
+  "sort_mode": 0,
+  "items": [
+    {
+      "path": "/mnt/games/retro/snes/Legend of the Mystical Ninja, The (USA).sfc",
+      "label": "Legend of the Mystical Ninja, The (USA)",
+      "core_path": "DETECT",
+      "core_name": "DETECT",
+      "crc32": "82479D6A|crc",
+      "db_name": "Nintendo - Super Nintendo Entertainment System.lpl"
+    }
+  ]
+}
