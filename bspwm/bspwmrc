@@ -63,9 +63,9 @@ bspc rule -a grafx2 desktop=^4 follow=on
 bspc rule -a "untitled - ArmorPaint" desktop=^4 follow=on
 bspc rule -a resolve desktop=^4
 
-bspc rule -a "PureRef" desktop=^5 
-bspc rule -a XnView MP desktop=^5
-bspc rule -a qimgv desktop=^5 #state=fullscreen
+bspc rule -a "PureRef" desktop=^5  follow=on
+bspc rule -a XnView MP desktop=^5 follow=on
+bspc rule -a qimgv desktop=^5 follow=on #state=fullscreen
 
 bspc rule -a discord desktop=^6
 bspc rule -a spotify desktop=^6
@@ -73,8 +73,8 @@ bspc rule -a spotify desktop=^6
 bspc rule -a Dwarf_Fortress desktop=^7 follow=on #state=fullscreen
 bspc rule -a "Minecraft Launcher" desktop=^7 follow=on #state=fullscreen
 bspc rule -a "Minecraft 1.18.1" desktop=^7 follow=on #state=fullscreen
-bspc rule -a "Steam" desktop=^7
-bspc rule -a "retroarch" desktop=^7
+bspc rule -a "Steam" desktop=^7 follow=on
+bspc rule -a "retroarch" desktop=^7 follow=on
 
 # set up a second screen if I have a script to do so.
 # if [ -x $DOTDIR/bin/secondDisplay.sh ]; then
@@ -87,3 +87,4 @@ $HOME/.config/dunst/launch.sh &
 kitty &
 # $HOME/local/Discord/Discord &
 greenclip daemon &
+blueman-applet &

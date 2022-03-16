@@ -16,7 +16,7 @@ Comment=Flash card based learning tool
 #Path=$HOME/apps/Anki
 
 # The executable of the application, possibly with arguments.
-Exec=/home/amy/apps/Anki/anki
+Exec=/home/amy/local/Anki/anki
 
 # The name of the icon that will be used to display this entry
 Icon=anki
