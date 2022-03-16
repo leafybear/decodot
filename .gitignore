@@ -29,9 +29,8 @@ zsh/zsh/history
 *.sublime-workspace
 *.sublime-project
 nnn/sessions
-blender/2.93/config/platform_support.txt
+nnn/bookmarks
 nvim/nvchad.nvim/plugin/packer_compiled.lua
-blender/2.93/scripts
 shell/oh-my-zsh/cache/.zsh-update
 shell/oh-my-zsh/cache
 shell/oh-my-zsh/custom
