@@ -1,9 +1,11 @@
 [Bookmarks]
 /mnt/visual/Visual/
 [Recent]
+/home/amy/documents/keys, ssh/
 /mnt/visual/b t donut/texture/DirtyGold01_MR_1K/
 /mnt/visual/b t donut/texture/
 /mnt/visual/b t donut/
+!Downloads
 /home/amy/downloads/
 !Home
 /home/amy/
@@ -11,4 +13,3 @@
 /mnt/visual/b toy plane/texture/
 /mnt/visual/b toy plane/
 /mnt/visual/b catan/render/
-/mnt/storage/renders/temp/
