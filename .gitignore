@@ -37,3 +37,4 @@ shell/oh-my-zsh/custom
 sys
 blender/*/config/platform_support.txt
 4kat
+qimgv/savedState.conf
