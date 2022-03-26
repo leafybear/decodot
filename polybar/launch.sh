@@ -9,6 +9,7 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
 polybar top >> /tmp/polybar1.log 2>&1 & disown
+# you can launch any bars that are defined
 
 # Launch a second bar if I have another display
 secondDisplayIsAvailable=$(xrandr --query | grep 'HDMI-A-2')
