@@ -1,5 +1,6 @@
 fonts	$HOME/.local/share/fonts
 icons	$HOME/.local/share/icons
+themes	$HOME/.themes
 xinitrc	$HOME/.xinitrc
 Xresources	$HOME/.Xresources
 xscreensaver	$HOME/.xscreensaver
