@@ -1,3 +1,5 @@
+/home/amy/visual.3d/b t gabbit beginners series/scene.blend
+/home/amy/visual.3d/b catan/catan hex.blend
 /mnt/visual/b t donut/donut part 3-5 condensation droplets.blend
 /mnt/visual/b t donut/donut part 3-4 realistic liquid.blend
 /home/amy/donut part 3-4 realistic liquid.blend
@@ -6,5 +8,3 @@
 /mnt/visual/b toy plane/toy plane v3 manual UV and turntable.blend
 /mnt/visual/b sandbox/catan hex.blend
 /mnt/visual/b t toy plane/toy plane v2 vertex bake.blend
-/mnt/visual/b sandbox/doodle-a.blend
-/mnt/visual/start-here.blend

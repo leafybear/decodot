@@ -1,6 +1,10 @@
 [Bookmarks]
 /mnt/visual/Visual/
+/home/amy/visual.3d/
 [Recent]
+/home/amy/visual.3d/asset library/blender themes/
+/home/amy/visual.3d/b t gabbit beginners series/
+/home/amy/visual.3d/b catan/
 /home/amy/documents/keys, ssh/
 /mnt/visual/b t donut/texture/DirtyGold01_MR_1K/
 /mnt/visual/b t donut/texture/
@@ -10,6 +14,3 @@
 !Home
 /home/amy/
 /mnt/visual/b sandbox/
-/mnt/visual/b toy plane/texture/
-/mnt/visual/b toy plane/
-/mnt/visual/b catan/render/
