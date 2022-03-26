@@ -15,31 +15,30 @@ source $HOME/.theme/bspwm
 bspc monitor -d cmd www 3d paint ? chat play 
 # bspc monitor -d        
 #         ﰟ           
-# bspc monitor -d                            גּ   ﴁ      﫢ﱣ ﱤ          ﯎           ﯢ ﬥ   ﳜ ﳝ ﳞ   ﳟ         ﳣ 擄麗璉שׂ 戮ﲃ ﲄ ﰟ ﳴ ﳵ 兀嗀縉      
-# bspc monitor -d shell browser blender paint extra chat play 
-# bspc monitor DisplayPort-0 -d cmd www art xtra
-# bspc monitor HDMI-A-2 -d hand eye ear 
+# bspc monitor DisplayPort-0 -d 1 2 3
+# bspc monitor HDMI-A-2 -d 1 2 3 
 
 # do some different config for the laptop screen
 case $HOSTNAME in
 	"Lavender")
 		bspc config window_gap      0
-		bspc config single_monocle 	true
+		bspc config split_ratio     0.5
 		;;
 	*)
-		bspc config window_gap      12
-		bspc config single_monocle 	false
+		bspc config window_gap      10 
+		bspc config split_ratio     0.33
 		;;
 esac
 
 # visual options
 bspc config border_width    0
+bspc config single_monocle 	true
+
 bspc config top_padding		0
 bspc config right_padding	0
 bspc config left_padding	0
 bspc config bottom_padding	0
 
-bspc config split_ratio         0.33
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
 bspc config focus_by_distance   true
