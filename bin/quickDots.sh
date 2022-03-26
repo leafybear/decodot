@@ -5,7 +5,7 @@ system=
 
 # Use the correct options on macOS and Linux
 if [[ `uname` == Darwin ]]; then
-	DOTDIR=$HOME/all/dots
+	DOTDIR=$HOME/everywhere/dots
 	system="macOS"
 else
 	DOTDIR=$HOME/dots
@@ -20,7 +20,7 @@ case $system in
 		python3 decodot.py $1 apps bin bspwm cheat deco-themes dunst git htop kitty mpv neofetch picom polybar qimgv ranger rofi shell sxhkd tmux x nnn nvim gitui
 		;;
 	macOS)
-		python3 decodot $1 bin git gitui nvim nnn ranger shell tmux
+		python3 decodot.py $1 bin git gitui nvim nnn ranger shell tmux
 		;;
 	*)
 		echo "Couldn't match this system."
