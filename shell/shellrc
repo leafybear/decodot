@@ -174,4 +174,4 @@ alias gb="git branch"
 # DIFF=$((898-1+1))
 # R=$(($(($RANDOM%$DIFF))+X))
 # pokeget -small $R
-
+alias lsblk="lsblk -o name,label,size,type,fstype,mountpoint,uuid"
