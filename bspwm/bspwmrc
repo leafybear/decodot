@@ -92,9 +92,21 @@ bspc rule -a "retroarch" desktop=^7 follow=on
 # 	bash $DOTDIR/bin/secondDisplay.sh
 # fi
 
+
+#### x settings and niceties
+xrdb $HOME/.Xresources
+xsetroot -name $HOSTNAME
+xsetroot -cursor_name left_ptr
+export XDG_CONFIG_HOME=$HOME/.config
+export BSPWM_STATE=$HOME/.bspwm-state.json
+
 # start up apps
+sh ~/.fehbg &
+picom --experimental-backends &
+xscreensaver -no-splash &
 $HOME/.config/polybar/launch.sh &
 $HOME/.config/dunst/launch.sh &
+
 kitty &
 # $HOME/local/Discord/Discord &
 greenclip daemon &
