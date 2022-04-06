@@ -7,5 +7,5 @@
 # :. : . : . : . : . : . : . : . : . : . : .:
 #!/bin/bash
 
-scrot ~/screens/%Y-%m-%d_%H%M%S.png
+scrot ~/photos/my\ screenshots/%Y-%m-%d_%H%M%S.png
 dunstify -h string:x-dunst-stack-tag:scrot screenshot!

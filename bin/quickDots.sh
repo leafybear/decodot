@@ -5,7 +5,7 @@ system=
 
 # Use the correct options on macOS and Linux
 if [[ `uname` == Darwin ]]; then
-	DOTDIR=$HOME/everywhere/dots
+	DOTDIR=$HOME/amy/dots
 	system="macOS"
 else
 	DOTDIR=$HOME/dots
