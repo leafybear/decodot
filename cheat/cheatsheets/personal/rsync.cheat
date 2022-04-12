@@ -1,0 +1,20 @@
+# general purpose copy job
+rsync -av
+
+# skip files that are newer on the receiver
+-u
+
+# delete files on the remote that aren't on the source
+--delete
+
+# exclude a file pattern in quotes
+--exclude=""
+
+# exclude using a list in file
+--exclude-from myExcludeFile
+
+# human readable numbers
+-h
+
+# show percentage progress
+-P
