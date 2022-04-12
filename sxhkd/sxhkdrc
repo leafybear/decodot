@@ -5,6 +5,8 @@ super + Return
 
 super + space
 	rofi -show combi 
+Caps_Lock
+	rofi -show combi 
 
 super + p
 	rofimoji --skin-tone medium-light 
