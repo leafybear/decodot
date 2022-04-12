@@ -150,7 +150,7 @@ alias svim="sudo -E nvim "
 # Launch Krita with DPI scale factor
 alias krita="env QT_SCALE_FACTOR=1.6 krita"
 alias focus-wacom="xinput map-to-output 17 DisplayPort-0"
-alias tubetoots="fd -a -e \"mp4\" . ~/visual/tubetoots | fzf | (nohup xargs -I{} mpv \"{}\" >/dev/null 2>&1 &)"
+alias tubetoots="fd -a -e \"mp4\" . ~/tubetoots | fzf | (nohup xargs -I{} mpv \"{}\" >/dev/null 2>&1 &)"
 alias getWindowName="xprop | grep WM_CLAS"
 alias getKeyName=""
 
